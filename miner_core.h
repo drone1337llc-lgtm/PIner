@@ -8,9 +8,8 @@
 #include "sha256_optimized.h"
 #include "led_manager.h"
 
-// INCREASED: More stack for WDT safety
-#define MINING_STACK_SIZE 10240    // 10KB (was 8KB)
-#define MINING_TASK_PRIORITY 2     // LOWER priority (was 3) - let IDLE run
+#define MINING_STACK_SIZE 10240
+#define MINING_TASK_PRIORITY 2
 #define NONCES_PER_JOB 0x4000
 
 struct JobRequest {
@@ -36,6 +35,10 @@ struct MiningStats {
     std::atomic<uint8_t> core1_active{0};
     uint32_t last_hash_time{0};
     uint32_t last_share_time{0};
+    
+    // NEW: Rolling window for accurate hashrate
+    std::atomic<uint32_t> last_hash_count{0};
+    uint32_t last_hashrate_time{0};
 };
 
 class MinerCore {
@@ -46,9 +49,6 @@ public:
     bool begin();
     void startMining();
     void stopMining();
-
-    std::atomic<uint32_t> m_total_hashes{0};
-    uint32_t getTotalHashes() const { return m_total_hashes.load(); }
     
     void setNewJob(const JobRequest& job);
     
@@ -56,6 +56,8 @@ public:
     static uint32_t getFoundNonce();
     
     double getHashrate() const;
+    void updateHashrate();  // NEW: Call this periodically
+    uint32_t getTotalHashes() const { return m_total_hashes.load(); }
     uint32_t getHashes() const { return m_stats.hashes.load(); }
     MiningStats& getStats() { return m_stats; }
 
@@ -63,6 +65,8 @@ private:
     static MinerCore* s_instance;
     
     MiningStats m_stats;
+    std::atomic<uint32_t> m_total_hashes{0};  // Lifetime counter (never reset)
+    
     JobRequest m_current_job;
     std::atomic<uint32_t> m_found_nonce;
     std::atomic<bool> m_job_available;

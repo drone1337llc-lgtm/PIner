@@ -18,6 +18,9 @@ MinerCore::MinerCore()
     m_stats.core1_active = 0;
     m_stats.last_hash_time = 0;
     m_stats.last_share_time = 0;
+    m_stats.last_hash_count = 0;
+    m_stats.last_hashrate_time = 0;
+    m_total_hashes = 0;
 }
 
 MinerCore::~MinerCore() {
@@ -41,6 +44,11 @@ void MinerCore::setNewJob(const JobRequest& job) {
 bool MinerCore::begin() {
     LED.begin();
     LED.setPattern(LED_NO_JOB);
+    
+    // Initialize rolling window
+    m_stats.last_hash_count.store(0);
+    m_stats.last_hashrate_time = millis();
+    m_total_hashes.store(0);
     
     xTaskCreatePinnedToCore(ledTask, "LedTask", 2048, this, 1, NULL, 0);
     
@@ -123,7 +131,7 @@ void MinerCore::miningLoop(int core_id) {
     uint32_t core_hashes = 0;
     uint32_t last_report = 0;
     uint32_t batch_count = 0;
-    const uint32_t BATCH_SIZE = 500;  // Reduced from 1000 for better reporting
+    const uint32_t BATCH_SIZE = 500;
     
     while (true) {
         esp_task_wdt_reset();
@@ -167,12 +175,12 @@ void MinerCore::miningLoop(int core_id) {
                 break;
             }
             
-            m_stats.hashes++;
-            m_total_hashes++;
+            // FIXED: Increment BOTH counters
+            m_stats.hashes.fetch_add(1, std::memory_order_relaxed);  // For I2C reporting
+            m_total_hashes.fetch_add(1, std::memory_order_relaxed);  // For hashrate (never reset)
             core_hashes++;
             batch_count++;
             
-            // FIXED: Yield less frequently (every 500 instead of 1000)
             if (batch_count >= BATCH_SIZE) {
                 batch_count = 0;
                 vTaskDelay(1 / portTICK_PERIOD_MS);
@@ -193,10 +201,11 @@ void MinerCore::miningLoop(int core_id) {
     }
 }
 
-
 void MinerCore::startMining() { 
     m_stats.mining_active = true; 
     m_stats.last_hash_time = millis();
+    m_stats.last_hashrate_time = millis();
+    m_stats.last_hash_count.store(0);
     Serial.println("[MINER] Mining started");
 }
 
@@ -213,8 +222,30 @@ uint32_t MinerCore::getFoundNonce() {
     return s_instance->m_found_nonce.exchange(0xFFFFFFFF); 
 }
 
+// NEW: Rolling window hashrate calculation
+void MinerCore::updateHashrate() {
+    uint32_t current_time = millis();
+    uint32_t current_hashes = m_total_hashes.load();
+    
+    uint32_t last_time = m_stats.last_hashrate_time;
+    uint32_t last_hashes = m_stats.last_hash_count.load();
+    
+    uint32_t time_delta = current_time - last_time;
+    
+    // Calculate every 2 seconds
+    if (time_delta >= 2000) {
+        uint32_t hash_delta = current_hashes - last_hashes;
+        
+        if (time_delta > 0) {
+            double hashrate = (hash_delta * 1000.0) / time_delta;
+            m_stats.hashrate.store(hashrate);
+        }
+        
+        m_stats.last_hash_count.store(current_hashes);
+        m_stats.last_hashrate_time = current_time;
+    }
+}
+
 double MinerCore::getHashrate() const {
-    uint32_t elapsed = millis() - m_stats.last_hash_time;
-    if (elapsed == 0 || elapsed > 10000) return 0;
-    return (m_stats.hashes.load() * 1000.0) / elapsed;
+    return m_stats.hashrate.load();
 }

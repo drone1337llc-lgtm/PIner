@@ -92,12 +92,13 @@ void loop()
         Serial.printf("[SHARE] Found: 0x%08X\n", found_nonce);
     }
 
-    // FIXED: Report hashes EVERY loop iteration (not just when > 0)
+    // Report hashes to I2C master
     uint32_t hashes = miner.getAndResetHashes();
     i2c_slave->addHashes(hashes);
-
-    // Report to I2C master
     i2c_slave->setFoundNonce(g_found_nonce);
+
+    // NEW: Update hashrate calculation
+    miner.updateHashrate();
 
     // Debug: Show hash rate every 5 seconds
     static uint32_t last_debug = 0;
@@ -105,9 +106,10 @@ void loop()
     {
         double hr = miner.getHashrate();
         Serial.printf("[DEBUG] Hashrate: %.1f KH/s | Total: %lu\n",
-                      hr / 1000.0, miner.getTotalHashes()); // CHANGED
+                      hr / 1000.0, miner.getTotalHashes());
         last_debug = millis();
     }
 
     delay(10);
 }
+
