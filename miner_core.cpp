@@ -168,6 +168,7 @@ void MinerCore::miningLoop(int core_id) {
             }
             
             m_stats.hashes++;
+            m_total_hashes++;
             core_hashes++;
             batch_count++;
             
@@ -214,6 +215,6 @@ uint32_t MinerCore::getFoundNonce() {
 
 double MinerCore::getHashrate() const {
     uint32_t elapsed = millis() - m_stats.last_hash_time;
-    if (elapsed == 0) return 0;
+    if (elapsed == 0 || elapsed > 10000) return 0;
     return (m_stats.hashes.load() * 1000.0) / elapsed;
 }

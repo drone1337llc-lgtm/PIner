@@ -46,6 +46,9 @@ public:
     bool begin();
     void startMining();
     void stopMining();
+
+    std::atomic<uint32_t> m_total_hashes{0};
+    uint32_t getTotalHashes() const { return m_total_hashes.load(); }
     
     void setNewJob(const JobRequest& job);
     
