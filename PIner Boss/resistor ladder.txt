@@ -1,0 +1,209 @@
+Slot #,Resistor to GND,Target Voltage,ADC Value (approx),I2C Address
+1,0Ω (Direct GND),0.00V,0,0x10
+2,2.2kΩ,0.59V,730,0x11
+3,4.7kΩ,1.05V,1300,0x12
+4,10kΩ,1.65V,2048,0x13
+5,22kΩ,2.27V,2800,0x14
+6,47kΩ,2.72V,3370,0x15
+7,100kΩ,3.00V,3720,0x16
+8,Open (No Resistor),3.30V,4095,0x17
+
+A resistor ladder allows each ESP32 to "sniff" its physical position on the backplane and self-assign an I2C address. Since you have 4 separate buses, this ensures that even if you swap an ESP32 from one board to another, it immediately knows its new identity without a firmware flash.
+
+### The Hardware Walkthrough
+
+For each of the 8 slots on your backplane, you will create a simple voltage divider. All ESP32s will have their **GPIO 34** (or any ADC-capable pin) connected to a specific "Address Pin" on the backplane socket.
+
+**The Circuit Design:**
+* **VCC (3.3V):** Connect a **10kΩ resistor** to the Address Pin (this is your pull-up).
+* **GND:** Connect a slot-specific resistor from the Address Pin to Ground.
+* **Formula:** The voltage at the pin is $V_{out} = 3.3V \cdot \frac{R_{slot}}{10k\Omega + R_{slot}}$.
+
+**Recommended Resistor Values (to GND):**
+To ensure the ESP32 ADC can clearly distinguish between slots despite its non-linearity, use these widely spaced values:
+
+| Slot # | Resistor to GND | Target Voltage | ADC Value (approx) | I2C Address |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | 0Ω (Direct GND) | 0.00V | 0 | `0x10` |
+| 2 | 2.2kΩ | 0.59V | 730 | `0x11` |
+| 3 | 4.7kΩ | 1.05V | 1300 | `0x12` |
+| 4 | 10kΩ | 1.65V | 2048 | `0x13` |
+| 5 | 22kΩ | 2.27V | 2800 | `0x14` |
+| 6 | 47kΩ | 2.72V | 3370 | `0x15` |
+| 7 | 100kΩ | 3.00V | 3720 | `0x16` |
+| 8 | Open (No Resistor) | 3.30V | 4095 | `0x17` |
+
+
+
+---
+
+### Code Corrections: `src/esp32_slave_miner.ino.cpp`
+
+We need to add a function to read this voltage and map it to an address **before** initializing the I2C peripheral.
+
+```cpp
+#include <Arduino.h>
+#include <Wire.h>
+#include "miner_core.h"
+#include "i2c_slave.h"
+
+#define ADDR_PIN 34 // Must be an ADC pin
+#define BASE_ADDR 0x10
+
+// Map ADC values to 0-7 slot IDs with generous "buckets" for noise
+uint8_t getSlotID() {
+    int val = 0;
+    for(int i=0; i<10; i++) val += analogRead(ADDR_PIN); // Average 10 reads for stability
+    val /= 10;
+
+    if (val < 300)  return 0; // Slot 1
+    if (val < 1000) return 1; // Slot 2
+    if (val < 1600) return 2; // Slot 3
+    if (val < 2400) return 3; // Slot 4
+    if (val < 3000) return 4; // Slot 5
+    if (val < 3500) return 5; // Slot 6
+    if (val < 3900) return 6; // Slot 7
+    return 7;                 // Slot 8 (Open)
+}
+
+// Global objects (don't initialize yet)
+I2CSlave* i2c_slave = nullptr;
+MinerCore miner;
+
+void setup() {
+    Serial.begin(115200);
+    analogReadResolution(12); // Ensure 12-bit (0-4095)
+    
+    uint8_t slot = getSlotID();
+    uint8_t myAddr = BASE_ADDR + slot;
+    
+    Serial.printf("\n--- BOOTING ---\n");
+    Serial.printf("Detected Slot: %d\n", slot + 1);
+    Serial.printf("Assigned I2C Address: 0x%02X\n", myAddr);
+
+    // Now initialize I2C with the dynamic address
+    i2c_slave = new I2CSlave(myAddr, 21, 22);
+    Wire.setBufferSize(128); 
+
+    if (!i2c_slave->begin()) {
+        Serial.println("I2C Slave Init Failed");
+        while(1);
+    }
+    
+    miner.begin();
+    miner.startMining();
+    Serial.println("System Online.");
+}
+
+void loop() {
+    if (i2c_slave->hasNewJob()) {
+        JobI2cRequest raw_job = i2c_slave->getCurrentJob();
+        
+        // Pack into internal struct (as per previous scripts)
+        JobRequest m_job;
+        m_job.job_id = raw_job.id;
+        m_job.difficulty = raw_job.difficulty;
+        m_job.nonce_start = raw_job.nonce_start;
+        memcpy(m_job.version, raw_job.buffer, 4);
+        memcpy(m_job.prev_block_hash, raw_job.buffer + 4, 32);
+        memcpy(m_job.merkle_root, raw_job.buffer + 36, 32);
+        memcpy(m_job.ntime, raw_job.buffer + 68, 4);
+        memcpy(m_job.nbits, raw_job.buffer + 72, 4);
+
+        miner.setNewJob(m_job);
+        i2c_slave->clearNewJob();
+    }
+    delay(10);
+}
+```
+
+### Critical Considerations for your Rig:
+1.  **ADC Accuracy:** ESP32 ADCs are sensitive to WiFi/Radio noise. Since you are mining (high CPU/RF noise), the `analogRead` averaging in the code is mandatory. 
+2.  **Pull-ups:** Your backplane already has SDA/SCL pull-ups for the I2C bus. Don't confuse those with the 10kΩ pull-up used for the Address Pin.
+3.  **Address Range:** I started at `0x10`. Ensure your Pi (Master) knows to scan from `0x10` to `0x17` on each of the 4 buses.
+
+Does your backplane design allow you to easily solder those specific ground resistors into each socket?
+
+
+
+
+
+
+
+
+
+
+
+#include <Arduino.h>
+#include <Wire.h>
+#include "miner_core.h"
+#include "i2c_slave.h"
+
+#define ADDR_PIN 34 // Must be an ADC pin
+#define BASE_ADDR 0x10
+
+// Map ADC values to 0-7 slot IDs with generous "buckets" for noise
+uint8_t getSlotID() {
+    int val = 0;
+    for(int i=0; i<10; i++) val += analogRead(ADDR_PIN); // Average 10 reads for stability
+    val /= 10;
+
+    if (val < 300)  return 0; // Slot 1
+    if (val < 1000) return 1; // Slot 2
+    if (val < 1600) return 2; // Slot 3
+    if (val < 2400) return 3; // Slot 4
+    if (val < 3000) return 4; // Slot 5
+    if (val < 3500) return 5; // Slot 6
+    if (val < 3900) return 6; // Slot 7
+    return 7;                 // Slot 8 (Open)
+}
+
+// Global objects (don't initialize yet)
+I2CSlave* i2c_slave = nullptr;
+MinerCore miner;
+
+void setup() {
+    Serial.begin(115200);
+    analogReadResolution(12); // Ensure 12-bit (0-4095)
+    
+    uint8_t slot = getSlotID();
+    uint8_t myAddr = BASE_ADDR + slot;
+    
+    Serial.printf("\n--- BOOTING ---\n");
+    Serial.printf("Detected Slot: %d\n", slot + 1);
+    Serial.printf("Assigned I2C Address: 0x%02X\n", myAddr);
+
+    // Now initialize I2C with the dynamic address
+    i2c_slave = new I2CSlave(myAddr, 21, 22);
+    Wire.setBufferSize(128); 
+
+    if (!i2c_slave->begin()) {
+        Serial.println("I2C Slave Init Failed");
+        while(1);
+    }
+    
+    miner.begin();
+    miner.startMining();
+    Serial.println("System Online.");
+}
+
+void loop() {
+    if (i2c_slave->hasNewJob()) {
+        JobI2cRequest raw_job = i2c_slave->getCurrentJob();
+        
+        // Pack into internal struct (as per previous scripts)
+        JobRequest m_job;
+        m_job.job_id = raw_job.id;
+        m_job.difficulty = raw_job.difficulty;
+        m_job.nonce_start = raw_job.nonce_start;
+        memcpy(m_job.version, raw_job.buffer, 4);
+        memcpy(m_job.prev_block_hash, raw_job.buffer + 4, 32);
+        memcpy(m_job.merkle_root, raw_job.buffer + 36, 32);
+        memcpy(m_job.ntime, raw_job.buffer + 68, 4);
+        memcpy(m_job.nbits, raw_job.buffer + 72, 4);
+
+        miner.setNewJob(m_job);
+        i2c_slave->clearNewJob();
+    }
+    delay(10);
+}
