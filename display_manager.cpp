@@ -16,8 +16,9 @@ DisplayManager::~DisplayManager() {
 
 bool DisplayManager::begin() {
     tft.init();
-    tft.setRotation(0);  // Portrait orientation
-    digitalWrite(TFT_BL, HIGH);  // Turn on backlight
+    tft.setRotation(0);
+    pinMode(TFT_BL_PIN, OUTPUT);
+    digitalWrite(TFT_BL_PIN, HIGH);
     
     tft.fillScreen(TFT_BLACK);
     tft.drawRect(0, 0, TFT_WIDTH, TFT_HEIGHT, TFT_GOLD);
@@ -49,14 +50,13 @@ void DisplayManager::showBootScreen() {
     delay(2000);
 }
 
-void DisplayManager::updateStats(const MiningStats& stats) {
+void DisplayManager::updateStats(const DisplayStats& stats) {
     m_current_stats = stats;
     
     uint32_t now = millis();
     if (now - m_last_update >= DISPLAY_UPDATE_INTERVAL) {
         m_last_update = now;
         
-        // Auto-rotate pages
         if (now - m_last_page_change >= STATS_PAGE_INTERVAL) {
             m_current_page = (m_current_page + 1) % 2;
             m_last_page_change = now;
@@ -82,7 +82,6 @@ void DisplayManager::drawHeader() {
     tft.setCursor(5, 4);
     tft.println("ESP32 I2C Miner");
     
-    // Status indicator
     tft.fillCircle(TFT_WIDTH - 10, 10, 5, m_current_stats.mining_active ? TFT_GREEN : TFT_RED);
 }
 
@@ -90,9 +89,8 @@ void DisplayManager::drawStatsPage1() {
     tft.setTextColor(TFT_YELLOW);
     tft.setTextSize(2);
     
-    // Hashrate
     tft.setCursor(5, 35);
-    tft.println("Hashrate:");
+    tft.print("Hashrate:");
     
     char buffer[32];
     formatHashrate(m_current_stats.hashrate, buffer, sizeof(buffer));
@@ -100,20 +98,18 @@ void DisplayManager::drawStatsPage1() {
     tft.setCursor(5, 55);
     tft.println(buffer);
     
-    // Total Hashes
     tft.setTextColor(TFT_YELLOW);
     tft.setCursor(5, 85);
-    tft.println("Hashes:");
+    tft.print("Total:");
     
     tft.setTextColor(TFT_WHITE);
-    snprintf(buffer, sizeof(buffer), "%lu", m_current_stats.hashes);
+    snprintf(buffer, sizeof(buffer), "%lu", m_current_stats.total_hashes);
     tft.setCursor(5, 105);
     tft.println(buffer);
     
-    // Shares Found
     tft.setTextColor(TFT_YELLOW);
     tft.setCursor(5, 135);
-    tft.println("Shares:");
+    tft.print("Shares:");
     
     tft.setTextColor(TFT_GREEN);
     snprintf(buffer, sizeof(buffer), "%lu", m_current_stats.shares_found);
@@ -121,42 +117,48 @@ void DisplayManager::drawStatsPage1() {
     tft.println(buffer);
 }
 
+
 void DisplayManager::drawStatsPage2() {
     tft.setTextColor(TFT_YELLOW);
     tft.setTextSize(2);
     
     // Jobs Received
     tft.setCursor(5, 35);
-    tft.println("Jobs:");
-    
+    tft.print("Jobs:");
     tft.setTextColor(TFT_WHITE);
     char buffer[32];
     snprintf(buffer, sizeof(buffer), "%lu", m_current_stats.jobs_received);
-    tft.setCursor(5, 55);
+    tft.setCursor(70, 35);  // Right side
     tft.println(buffer);
     
     // CRC Errors
     tft.setTextColor(TFT_YELLOW);
-    tft.setCursor(5, 85);
-    tft.println("CRC Err:");
-    
+    tft.setCursor(5, 65);
+    tft.print("CRC:");
     tft.setTextColor(m_current_stats.crc_errors > 0 ? TFT_RED : TFT_GREEN);
     snprintf(buffer, sizeof(buffer), "%lu", m_current_stats.crc_errors);
-    tft.setCursor(5, 105);
+    tft.setCursor(70, 65);
     tft.println(buffer);
     
-    // Core Distribution
+    // Core Status - Side by side with indicators
     tft.setTextColor(TFT_YELLOW);
-    tft.setCursor(5, 135);
-    tft.println("Cores:");
+    tft.setCursor(5, 95);
+    tft.print("Cores:");
     
-    tft.setTextColor(TFT_CYAN);
-    snprintf(buffer, sizeof(buffer), "0:%s 1:%s", 
-             m_current_stats.core0_active ? "ON" : "OFF", 
-             m_current_stats.core1_active ? "ON" : "OFF");
-    tft.setCursor(5, 155);
-    tft.println(buffer);
+    // Core 0
+    tft.setTextColor(m_current_stats.core0_active ? TFT_GREEN : TFT_RED);
+    tft.setCursor(5, 115);
+    tft.print("Core0: ");
+    tft.println(m_current_stats.core0_active ? "ON" : "OFF");
+    
+    // Core 1
+    tft.setTextColor(m_current_stats.core1_active ? TFT_GREEN : TFT_RED);
+    tft.setCursor(5, 135);
+    tft.print("Core1: ");
+    tft.println(m_current_stats.core1_active ? "ON" : "OFF");
 }
+
+
 
 void DisplayManager::drawButtonHints() {
     tft.fillRect(0, TFT_HEIGHT - 20, TFT_WIDTH, 20, TFT_NAVY);
@@ -185,8 +187,7 @@ void DisplayManager::clearScreen() {
 }
 
 void DisplayManager::setBrightness(uint8_t brightness) {
-    // PWM brightness control could be added here
-    digitalWrite(TFT_BL, brightness > 0 ? HIGH : LOW);
+    digitalWrite(TFT_BL_PIN, brightness > 0 ? HIGH : LOW);
 }
 
 void DisplayManager::handleButtons() {
@@ -206,8 +207,7 @@ void DisplayManager::handleButtons() {
         if (millis() - button1LastChange >= BOUNCING_MS && 
             button1LastReportedState != button1LastState) {
             
-            if (!button1LastState) {  // Button pressed (LOW)
-                // Right button - Reset stats
+            if (!button1LastState) {
                 m_current_stats.hashes = 0;
                 m_current_stats.shares_found = 0;
                 m_current_stats.crc_errors = 0;
@@ -225,8 +225,7 @@ void DisplayManager::handleButtons() {
         if (millis() - button2LastChange >= BOUNCING_MS && 
             button2LastReportedState != button2LastState) {
             
-            if (!button2LastState) {  // Button pressed (LOW)
-                // Left button - Force page change
+            if (!button2LastState) {
                 m_current_page = (m_current_page + 1) % 2;
                 m_last_page_change = millis();
                 clearScreen();

@@ -119,6 +119,12 @@ void MinerCore::miningLoop(int core_id) {
     uint8_t header[80];
     uint8_t hash[32];
     uint32_t wdt_counter = 0;
+
+    if (core_id == 0) {
+        m_stats.core0_active.store(1);
+    } else {
+        m_stats.core1_active.store(1);
+    }
     
     Serial.printf("[CORE%d] Mining started on core %d\n", core_id, xPortGetCoreID());
     
@@ -249,3 +255,19 @@ void MinerCore::updateHashrate() {
 double MinerCore::getHashrate() const {
     return m_stats.hashrate.load();
 }
+
+#ifdef LCD
+DisplayStats MinerCore::getDisplayStats() const {
+    DisplayStats stats;
+    stats.hashes = m_stats.hashes.load();
+    stats.total_hashes = m_total_hashes.load();
+    stats.shares_found = m_stats.shares_found.load();
+    stats.hashrate = m_stats.hashrate.load();
+    stats.jobs_received = m_stats.jobs_received.load();
+    stats.crc_errors = m_stats.crc_errors.load();
+    stats.mining_active = m_stats.mining_active.load();
+    stats.core0_active = m_stats.core0_active.load();
+    stats.core1_active = m_stats.core1_active.load();
+    return stats;
+}
+#endif

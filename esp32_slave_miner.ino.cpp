@@ -3,7 +3,13 @@
 #include "miner_core.h"
 #include "i2c_slave.h"
 
+#ifdef LCD
+#include "display_manager.h"  // Included AFTER miner_core.h
+#define ADDR_PIN 27
+#endif
+#if defined(esp32dev) || defined(esp32c3)
 #define ADDR_PIN 34
+#endif
 #define BASE_ADDR 0x10
 
 uint8_t getSlotID()
@@ -28,12 +34,15 @@ I2CSlave *i2c_slave = nullptr;
 MinerCore miner;
 volatile uint32_t g_found_nonce = 0xFFFFFFFF;
 
+#ifdef LCD
+DisplayManager display;
+#endif
+
 void setup()
 {
     Serial.begin(115200);
     analogReadResolution(12);
 
-    // FIXED: Disable Core 0 WDT
     disableCore0WDT();
 
     uint8_t slot = getSlotID();
@@ -44,17 +53,26 @@ void setup()
                   slot + 1, myAddr, ESP.getCpuFreqMHz());
     Serial.printf("Free heap: %u bytes\n", ESP.getFreeHeap());
 
+#ifdef LCD
+    Serial.println("Initializing LCD...");
+    if (!display.begin()) {
+        Serial.println("LCD Init Failed");
+    } else {
+        display.showBootScreen();
+        Serial.println("LCD Ready");
+    }
+#endif
+
     i2c_slave = new I2CSlave(myAddr, 21, 22);
     if (!i2c_slave->begin())
     {
         Serial.println("I2C Init Failed");
-        while (1)
-            ;
+        while (1);
     }
 
     miner.begin();
     miner.startMining();
-    Serial.println("System Online - WDT Configured");
+    Serial.println("System Online - Mining Started");
 }
 
 void loop()
@@ -97,19 +115,27 @@ void loop()
     i2c_slave->addHashes(hashes);
     i2c_slave->setFoundNonce(g_found_nonce);
 
-    // NEW: Update hashrate calculation
+    // Update hashrate calculation
     miner.updateHashrate();
 
-    // Debug: Show hash rate every 5 seconds
+    // Update LCD display
+#ifdef LCD
+    DisplayStats stats = miner.getDisplayStats();
+    display.updateStats(stats);
+    display.handleButtons();
+#endif
+
+    // Debug output
     static uint32_t last_debug = 0;
     if (millis() - last_debug >= 5000)
     {
         double hr = miner.getHashrate();
-        Serial.printf("[DEBUG] Hashrate: %.1f KH/s | Total: %lu\n",
-                      hr / 1000.0, miner.getTotalHashes());
+        Serial.printf("[DEBUG] Hashrate: %.1f KH/s | Total: %lu | Session: %lu\n",
+                      hr / 1000.0, 
+                      miner.getTotalHashes(),
+                      miner.getHashes());
         last_debug = millis();
     }
 
     delay(10);
 }
-

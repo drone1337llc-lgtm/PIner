@@ -8,6 +8,10 @@
 #include "sha256_optimized.h"
 #include "led_manager.h"
 
+#ifdef LCD
+#include "display_manager.h"  // Include for DisplayStats
+#endif
+
 #define MINING_STACK_SIZE 10240
 #define MINING_TASK_PRIORITY 2
 #define NONCES_PER_JOB 0x4000
@@ -24,6 +28,7 @@ struct JobRequest {
     uint8_t ntime[4];
 };
 
+// Atomic version for internal mining state ONLY
 struct MiningStats {
     std::atomic<uint32_t> hashes{0};
     std::atomic<uint32_t> shares_found{0};
@@ -33,10 +38,9 @@ struct MiningStats {
     std::atomic<bool> mining_active{false};
     std::atomic<uint8_t> core0_active{0};
     std::atomic<uint8_t> core1_active{0};
+    std::atomic<uint32_t> total_hashes{0};
     uint32_t last_hash_time{0};
     uint32_t last_share_time{0};
-    
-    // NEW: Rolling window for accurate hashrate
     std::atomic<uint32_t> last_hash_count{0};
     uint32_t last_hashrate_time{0};
 };
@@ -56,16 +60,20 @@ public:
     static uint32_t getFoundNonce();
     
     double getHashrate() const;
-    void updateHashrate();  // NEW: Call this periodically
+    void updateHashrate();
     uint32_t getTotalHashes() const { return m_total_hashes.load(); }
     uint32_t getHashes() const { return m_stats.hashes.load(); }
-    MiningStats& getStats() { return m_stats; }
-
+    
+    // Get non-atomic copy for display
+#ifdef LCD
+    DisplayStats getDisplayStats() const;
+#endif
+    
 private:
     static MinerCore* s_instance;
     
     MiningStats m_stats;
-    std::atomic<uint32_t> m_total_hashes{0};  // Lifetime counter (never reset)
+    std::atomic<uint32_t> m_total_hashes{0};
     
     JobRequest m_current_job;
     std::atomic<uint32_t> m_found_nonce;

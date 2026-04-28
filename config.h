@@ -7,6 +7,7 @@
 #define I2C_CLOCK_SPEED 800000
 
 #define MINING_STACK_SIZE 10240    
+#define NONCES_PER_JOB 0x4000
 
 #ifdef LCD
 // Display Configuration
