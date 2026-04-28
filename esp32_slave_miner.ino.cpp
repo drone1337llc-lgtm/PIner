@@ -1,3 +1,4 @@
+#include "config.h"  
 #include <Arduino.h>
 #include <Wire.h>
 #include "miner_core.h"
@@ -11,6 +12,9 @@
 #define ADDR_PIN 34
 #endif
 #define BASE_ADDR 0x10
+#define HEARTBEAT_TIMEOUT_MS 5000
+unsigned long last_heartbeat = 0;
+bool mining_enabled = false;
 
 uint8_t getSlotID()
 {
@@ -37,6 +41,22 @@ volatile uint32_t g_found_nonce = 0xFFFFFFFF;
 #ifdef LCD
 DisplayManager display;
 #endif
+
+void onI2CCommand(uint8_t cmd) {
+    if (cmd == I2C_CMD_PING) {
+        last_heartbeat = millis();  // Reset heartbeat timer
+        mining_enabled = true;       // Keep mining active
+    }
+    else if (cmd == I2C_CMD_RESET) {
+        mining_enabled = false;      // Stop immediately
+        last_heartbeat = millis();
+    }
+    else if (cmd == I2C_CMD_FEED) {
+        last_heartbeat = millis();
+        mining_enabled = true;
+        // ... process job ...
+    }
+}
 
 void setup()
 {
@@ -77,6 +97,11 @@ void setup()
 
 void loop()
 {
+    if (mining_enabled && (millis() - last_heartbeat > HEARTBEAT_TIMEOUT_MS)) {
+        Serial.println("[WARN] Heartbeat timeout - stopping mining");
+        mining_enabled = false;
+        // Stop hashing task
+    }
     // Get job if available
     if (i2c_slave->hasNewJob())
     {

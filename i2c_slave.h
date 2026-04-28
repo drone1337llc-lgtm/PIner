@@ -6,10 +6,6 @@
 #include <atomic>
 #include "config.h"
 
-#define I2C_CMD_FEED            0xA1
-#define I2C_CMD_REQUEST_RESULT  0xA9
-#define I2C_CMD_SLAVE_RESULT    0xAA
-
 // MUST MATCH PI SIDE EXACTLY
 #pragma pack(push, 1)
 struct JobI2cRequest {
