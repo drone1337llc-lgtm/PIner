@@ -1,4 +1,18 @@
 #include "led_manager.h"
+#include "config.h"
+
+// ============================================================================
+// SINGLETON INSTANCE
+// ============================================================================
+
+LedManager& LedManager::getInstance() {
+    static LedManager instance;
+    return instance;
+}
+
+// ============================================================================
+// CONSTRUCTOR
+// ============================================================================
 
 LedManager::LedManager() 
     : m_current_pattern(LED_OFF)
@@ -7,16 +21,19 @@ LedManager::LedManager()
     , m_led_state(false) {
 }
 
-LedManager& LedManager::getInstance() {
-    static LedManager instance;
-    return instance;
-}
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
 
 void LedManager::begin() {
     pinMode(LED_PIN, OUTPUT);
     setLed(false);
-    Serial.println("[LED] Manager initialized");
+    DEBUG_PRINTLN("[LED] Manager initialized");
 }
+
+// ============================================================================
+// LED CONTROL
+// ============================================================================
 
 void LedManager::setLed(bool on) {
     digitalWrite(LED_PIN, on ? HIGH : LOW);
@@ -28,6 +45,10 @@ void LedManager::setPattern(LedPattern pattern) {
     m_pattern_state = 0;
     m_last_update = millis();
 }
+
+// ============================================================================
+// PATTERN UPDATE (NON-BLOCKING)
+// ============================================================================
 
 void LedManager::update() {
     uint32_t now = millis();
@@ -53,20 +74,16 @@ void LedManager::updatePattern(LedPattern pattern, uint32_t now) {
             break;
             
         case LED_MINING_ACTIVE:
-            // Fast pulse (500ms on, 500ms off)
-            if (now - m_last_update >= 500) {
-                m_pattern_state = !m_pattern_state;
-                setLed(m_pattern_state);
-                m_last_update = now;
-            }
+            // Solid on while hashing
+            setLed(true);
             break;
             
         case LED_SHARE_FOUND:
-            // Bright flash (3 quick blinks)
-            if (now - m_last_update >= 150) {
+            // Quick flash (3 blinks)
+            if (now - m_last_update >= 100) {
                 m_pattern_state++;
-                if (m_pattern_state >= 6) {  // 3 on/off cycles
-                    setPattern(LED_MINING_ACTIVE);  // Return to active
+                if (m_pattern_state >= 6) {
+                    setPattern(LED_MINING_ACTIVE);
                     m_pattern_state = 0;
                 } else {
                     setLed(m_pattern_state % 2 == 0);
@@ -76,7 +93,7 @@ void LedManager::updatePattern(LedPattern pattern, uint32_t now) {
             break;
             
         case LED_ERROR:
-            // Fast blink (200ms on, 200ms off)
+            // Fast blink (200ms)
             if (now - m_last_update >= 200) {
                 m_pattern_state = !m_pattern_state;
                 setLed(m_pattern_state);
@@ -85,10 +102,19 @@ void LedManager::updatePattern(LedPattern pattern, uint32_t now) {
             break;
             
         case LED_NO_JOB:
-            // Very slow blink (3 seconds on, 3 seconds off)
+            // Very slow blink (3 seconds)
             if (now - m_last_update >= 3000) {
                 m_pattern_state = !m_pattern_state;
                 setLed(m_pattern_state);
+                m_last_update = now;
+            }
+            break;
+            
+        case LED_NO_HEARTBEAT:
+            // Alternating fast/slow
+            if (now - m_last_update >= 500) {
+                m_pattern_state++;
+                setLed((m_pattern_state % 4) < 2);
                 m_last_update = now;
             }
             break;

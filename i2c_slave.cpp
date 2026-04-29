@@ -1,8 +1,11 @@
 #include "i2c_slave.h"
+#include "config.h"
 
 I2CSlave* I2CSlave::s_instance = nullptr;
 
-// MUST MATCH PI SIDE EXACTLY
+// ============================================================================
+// CRC8 TABLE (MUST MATCH PI MASTER EXACTLY)
+// ============================================================================
 static const uint8_t CRC8_TABLE[256] = {
     0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97,
     0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
@@ -38,91 +41,174 @@ static const uint8_t CRC8_TABLE[256] = {
     0x3B, 0x0A, 0x59, 0x68, 0xFF, 0xCE, 0x9D, 0xAC
 };
 
+// ============================================================================
+// CONSTRUCTOR
+// ============================================================================
+
+I2CSlave::I2CSlave(uint8_t addr) 
+    : m_addr(addr)
+    , m_new_job_available(false)
+    , m_hashes_since_poll(0)
+    , m_found_nonce(0xFFFFFFFF)
+    , m_last_heartbeat(millis())
+    , m_jobs_received(0)
+    , m_crc_errors(0)
+    , m_i2c_requests(0)
+    , m_mining_enabled(true) {
+    s_instance = this;
+    memset(&m_current_job, 0, sizeof(m_current_job));
+}
+
+I2CSlave::~I2CSlave() {
+    s_instance = nullptr;
+}
+
+// ============================================================================
+// INITIALIZATION
+// ============================================================================
+
+void I2CSlave::begin(uint8_t address) {
+    DEBUG_PRINTF("[I2C] Starting slave at 0x%02X\n", address);
+    
+    Wire.begin(address, I2C_SDA_PIN, I2C_SCL_PIN, I2C_CLOCK_SPEED);
+    Wire.onReceive(handleReceive);
+    Wire.onRequest(handleRequest);
+    
+    m_addr = address;
+    m_last_heartbeat = millis();  // FIXED: Direct assignment for volatile
+    m_mining_enabled = true;
+    
+    DEBUG_PRINTF("[I2C] Slave started successfully\n");
+}
+
+// ============================================================================
+// CRC8 FUNCTIONS
+// ============================================================================
+
 uint8_t I2CSlave::calculateCRC8(const void* data, size_t len) {
-    const uint8_t* ptr = (const uint8_t*)data;
-    uint8_t crc = 0;
+    const uint8_t* ptr = static_cast<const uint8_t*>(data);
+    uint8_t crc = 0;  // MUST match Pi (0, not 0xFF)
+    
     for (size_t i = 0; i < len; i++) {
         crc = CRC8_TABLE[crc ^ ptr[i]];
     }
+    
     return crc;
 }
 
-I2CSlave::I2CSlave(uint8_t addr, int sda, int scl) 
-    : m_addr(addr), m_sda(sda), m_scl(scl), m_new_job(false), m_found_nonce(0xFFFFFFFF) {
-    s_instance = this;
-    m_hashes_computed = 0;
+bool I2CSlave::verifyCRC(void* data, size_t len) {
+    uint8_t* ptr = static_cast<uint8_t*>(data);
     
-    m_result.cmd = I2C_CMD_SLAVE_RESULT;
-    m_result.crc = 0;
-    m_result.id = 0;
-    m_result.reserved = 0;
-    m_result.nonce = 0xFFFFFFFF;
-    m_result.processed_nonce = 0;
+    uint8_t received_crc = ptr[1];
+    ptr[1] = 0;
+    uint8_t calculated_crc = calculateCRC8(data, len);
+    ptr[1] = received_crc;
+    
+    return (calculated_crc == received_crc);
 }
 
-bool I2CSlave::begin() {
-    if (!Wire.begin(m_addr, m_sda, m_scl, 800000)) {
-        Serial.println("[I2C] Failed to initialize");
-        return false;
+// ============================================================================
+// I2C RECEIVE HANDLER (PI -> ESP32)
+// ============================================================================
+
+void I2CSlave::handleReceive(int len) {
+    if (!s_instance) return;
+    
+    s_instance->m_i2c_requests++;
+    
+    if (len < 1) return;
+    
+    uint8_t cmd = Wire.read();
+    len--;
+    
+    DEBUG_PRINTF("[I2C] RX cmd=0x%02X len=%d\n", cmd, len);
+    
+    switch (cmd) {
+        case I2C_CMD_PING:
+            s_instance->m_last_heartbeat = millis();  // FIXED: Direct assignment
+            DEBUG_PRINTLN("[I2C] PING received");
+            break;
+            
+        case I2C_CMD_RESET:
+            DEBUG_PRINTLN("[I2C] RESET received - restarting!");
+            ESP.restart();
+            break;
+            
+        case I2C_CMD_STOP:
+            s_instance->m_mining_enabled = false;  // FIXED: Direct assignment
+            DEBUG_PRINTLN("[I2C] STOP received");
+            break;
+            
+        case I2C_CMD_FEED:
+            if (len >= 87) {
+                JobI2cRequest temp;
+                temp.cmd = cmd;
+                Wire.readBytes((uint8_t*)&temp.crc, 87);
+                
+                if (s_instance->verifyCRC(&temp, sizeof(temp))) {
+                    s_instance->m_current_job = temp;
+                    s_instance->m_new_job_available.store(true);
+                    s_instance->m_last_heartbeat = millis();  // FIXED
+                    s_instance->m_mining_enabled = true;  // FIXED
+                    s_instance->m_jobs_received++;
+                    
+                    DEBUG_PRINTF("[I2C] Job accepted: id=%d nonce_start=%lu\n", 
+                                 temp.id, temp.nonce_start);
+                } else {
+                    s_instance->m_crc_errors++;
+                    DEBUG_PRINTLN("[I2C] Job CRC FAILED!");
+                }
+            } else {
+                DEBUG_PRINTF("[I2C] Wrong packet size: got %d\n", len);
+                while (Wire.available()) Wire.read();
+            }
+            break;
+            
+        case I2C_CMD_REQUEST_RESULT:
+            DEBUG_PRINTLN("[I2C] RESULT REQUEST received");
+            break;
+            
+        default:
+            DEBUG_PRINTF("[I2C] Unknown command: 0x%02X\n", cmd);
+            break;
     }
-    Wire.onReceive(onReceive);
-    Wire.onRequest(onRequest);
-    Serial.printf("[I2C] Slave started at 0x%02X @ 800kHz\n", m_addr);
-    return true;
 }
 
-void I2CSlave::onReceive(int len) {
-    if (len != sizeof(JobI2cRequest)) {
-        Serial.printf("[I2C] Wrong packet size: %d (expected %d)\n", len, sizeof(JobI2cRequest));
-        while (Wire.available()) Wire.read();
-        return;
-    }
+// ============================================================================
+// I2C REQUEST HANDLER (ESP32 -> PI)
+// ============================================================================
 
-    JobI2cRequest temp;
-    Wire.readBytes((uint8_t*)&temp, sizeof(JobI2cRequest));
+void I2CSlave::handleRequest() {
+    if (!s_instance) return;
     
-    uint8_t received_crc = temp.crc;
-    temp.crc = 0;
-    uint8_t calculated_crc = calculateCRC8(&temp, sizeof(JobI2cRequest));
+    s_instance->m_i2c_requests++;
     
-    if (received_crc == calculated_crc) {
-        s_instance->m_incoming_job = temp;
-        s_instance->m_new_job.store(true, std::memory_order_release);
-        Serial.printf("[I2C] ✓ Job received: ID=%d, nonce_start=0x%08X, diff=%.1f\n", 
-                      temp.id, temp.nonce_start, temp.difficulty);
-    } else {
-        Serial.printf("[I2C] ✗ CRC mismatch: received=0x%02X, calc=0x%02X\n", 
-                      received_crc, calculated_crc);
+    // Copy values BEFORE resetting
+    uint32_t found_nonce = s_instance->m_found_nonce.load();
+    uint32_t hashes = s_instance->m_hashes_since_poll.load();
+    uint8_t job_id = s_instance->m_current_job.id;
+    
+    // Prepare result packet
+    JobI2cResult res;
+    res.cmd = I2C_CMD_SLAVE_RESULT;
+    res.id = job_id;
+    res.reserved = 0;
+    res.nonce = found_nonce;
+    res.processed_nonce = hashes;
+    
+    // Reset AFTER copying
+    if (found_nonce != 0xFFFFFFFF) {
+        s_instance->m_found_nonce.store(0xFFFFFFFF);
     }
-}
-
-void I2CSlave::onRequest() {
-    uint32_t found = s_instance->m_found_nonce.load(std::memory_order_acquire);
-    uint32_t hashes = s_instance->m_hashes_computed.load(std::memory_order_acquire);
-    uint8_t job_id = s_instance->m_incoming_job.id;
+    s_instance->m_hashes_since_poll.store(0);
     
-    s_instance->m_result.cmd = I2C_CMD_SLAVE_RESULT;
-    s_instance->m_result.id = job_id;
-    s_instance->m_result.reserved = 0;
-    s_instance->m_result.nonce = found;
-    s_instance->m_result.processed_nonce = hashes;
+    // Calculate CRC
+    res.crc = 0;
+    res.crc = s_instance->calculateCRC8(&res, sizeof(res));
     
-    if (found != 0xFFFFFFFF) {
-        s_instance->m_found_nonce.store(0xFFFFFFFF, std::memory_order_release);
-        Serial.printf("[I2C] ✓ Reported nonce 0x%08X, hashes=%u\n", found, hashes);
-    }
+    // Send result
+    Wire.write((uint8_t*)&res, sizeof(JobI2cResult));
     
-    s_instance->m_result.crc = 0;
-    s_instance->m_result.crc = calculateCRC8(&s_instance->m_result, sizeof(JobI2cResult));
-    
-    Wire.write((uint8_t*)&s_instance->m_result, sizeof(JobI2cResult));
-    
-    static uint32_t request_count = 0;
-    request_count++;
-    if (request_count % 10 == 0) {
-        Serial.printf("[I2C] Sent: nonce=0x%08X, hashes=%u, crc=0x%02X\n", 
-                      s_instance->m_result.nonce, 
-                      s_instance->m_result.processed_nonce,
-                      s_instance->m_result.crc);
-    }
+    DEBUG_PRINTF("[I2C] TX result: nonce=0x%08X hashes=%lu\n", 
+                 res.nonce, res.processed_nonce);
 }

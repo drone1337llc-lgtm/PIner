@@ -3,19 +3,25 @@
 
 #include <Arduino.h>
 #include <atomic>
+#include "config.h"
 
-// LED Pin Configuration
-#define LED_PIN 2  // Built-in LED on most ESP32 boards
+// ============================================================================
+// LED PATTERNS
+// ============================================================================
 
-// LED Patterns
 enum LedPattern {
     LED_OFF = 0,
     LED_MINING_IDLE,      // Slow pulse - mining, no shares
-    LED_MINING_ACTIVE,    // Fast pulse - hashing actively
-    LED_SHARE_FOUND,      // Bright flash - share found!
-    LED_ERROR,            // Fast blink - error/no connection
-    LED_NO_JOB            // Slow blink - waiting for job
+    LED_MINING_ACTIVE,    // On - actively hashing
+    LED_SHARE_FOUND,      // Flash - share found!
+    LED_ERROR,            // Fast blink - error
+    LED_NO_JOB,           // Slow blink - waiting for job
+    LED_NO_HEARTBEAT      // Alternating - PI disconnected
 };
+
+// ============================================================================
+// LED MANAGER CLASS
+// ============================================================================
 
 class LedManager {
 public:
@@ -24,23 +30,21 @@ public:
     void begin();
     void setPattern(LedPattern pattern);
     LedPattern getPattern() const { return m_current_pattern.load(); }
-    
-    // Call this periodically from a task (non-blocking)
-    void update();
+    void update();  // Call periodically (non-blocking)
     
 private:
     LedManager();
     
-    std::atomic<LedPattern> m_current_pattern;
-    uint32_t m_last_update;
-    uint32_t m_pattern_state;
-    bool m_led_state;
+    std::atomic<LedPattern> m_current_pattern{LED_OFF};
+    uint32_t m_last_update = 0;
+    uint32_t m_pattern_state = 0;
+    bool m_led_state = false;
     
     void setLed(bool on);
     void updatePattern(LedPattern pattern, uint32_t now);
 };
 
-// Global instance
+// Global instance macro
 #define LED LedManager::getInstance()
 
-#endif // LED_MANAGER_H
+#endif

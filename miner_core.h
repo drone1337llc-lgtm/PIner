@@ -3,43 +3,15 @@
 
 #include <Arduino.h>
 #include <atomic>
-#include <freertos/FreeRTOS.h>
-#include <freertos/task.h>
-#include "sha256_optimized.h"
-#include "led_manager.h"
+#include <mbedtls/sha256.h>
 #include "config.h"
 
-#ifdef LCD
-#include "display_manager.h"  // Include for DisplayStats
-#endif
-
 struct JobRequest {
-    uint8_t job_id;
-    float difficulty;
-    uint32_t nonce_start;
-    uint32_t nonce_range;
-    uint8_t merkle_root[32];
-    uint8_t prev_block_hash[32];
-    uint8_t version[4];
-    uint8_t nbits[4];
-    uint8_t ntime[4];
-};
-
-// Atomic version for internal mining state ONLY
-struct MiningStats {
-    std::atomic<uint32_t> hashes{0};
-    std::atomic<uint32_t> shares_found{0};
-    std::atomic<uint32_t> jobs_received{0};
-    std::atomic<uint32_t> crc_errors{0};
-    std::atomic<double> hashrate{0.0};
-    std::atomic<bool> mining_active{false};
-    std::atomic<uint8_t> core0_active{0};
-    std::atomic<uint8_t> core1_active{0};
-    std::atomic<uint32_t> total_hashes{0};
-    uint32_t last_hash_time{0};
-    uint32_t last_share_time{0};
-    std::atomic<uint32_t> last_hash_count{0};
-    uint32_t last_hashrate_time{0};
+    uint8_t     header_bytes[80];
+    uint32_t    job_id;
+    float       difficulty;
+    uint32_t    nonce_start;
+    uint32_t    nonce_range;
 };
 
 class MinerCore {
@@ -47,42 +19,29 @@ public:
     MinerCore();
     ~MinerCore();
     
-    bool begin();
-    void startMining();
-    void stopMining();
-    
+    void begin();
+    void run();
     void setNewJob(const JobRequest& job);
-    
-    static uint32_t getAndResetHashes();
-    static uint32_t getFoundNonce();
-    
-    double getHashrate() const;
-    void updateHashrate();
-    uint32_t getTotalHashes() const { return m_total_hashes.load(); }
-    uint32_t getHashes() const { return m_stats.hashes.load(); }
-    
-    // Get non-atomic copy for display
-#ifdef LCD
-    DisplayStats getDisplayStats() const;
-#endif
-    
+    uint32_t getAndResetHashes();
+    uint32_t getFoundNonce();
+    void clearFoundNonce();
+    bool isMining() const { return m_mining_active.load(); }
+    uint32_t getJobsProcessed() const { return m_jobs_processed; }
+
 private:
-    static MinerCore* s_instance;
-    
-    MiningStats m_stats;
-    std::atomic<uint32_t> m_total_hashes{0};
-    
     JobRequest m_current_job;
-    std::atomic<uint32_t> m_found_nonce;
-    std::atomic<bool> m_job_available;
-    volatile uint8_t m_working_job_id;
+    mbedtls_sha256_context m_ctx_static;
+    mbedtls_sha256_context m_ctx_active;
     
-    void miningLoop(int core_id);
-    static void miningTask0(void* p) { ((MinerCore*)p)->miningLoop(0); }
-    static void miningTask1(void* p) { ((MinerCore*)p)->miningLoop(1); }
-    static void ledTask(void* p);
+    uint8_t m_header_work[80];
+    uint32_t m_nonce_counter;
+    uint32_t m_nonce_end;
     
-    inline bool computeHash(const uint8_t* header, uint32_t nonce, uint8_t* hash);
+    std::atomic<uint32_t> m_hashes_done{0};
+    std::atomic<uint32_t> m_found_nonce{0xFFFFFFFF};
+    std::atomic<bool> m_new_job{false};
+    std::atomic<bool> m_mining_active{false};
+    std::atomic<uint32_t> m_jobs_processed{0};
 };
 
-#endif // MINER_CORE_H
+#endif
