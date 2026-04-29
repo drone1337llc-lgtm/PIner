@@ -7,9 +7,20 @@
 #define LGFX_USE_V1
 #include <LovyanGFX.hpp>
 #include "i2c_protocol.h"
-#include "config.h" // Ensure WiFi/Pool credentials are in here
+#include "config.h"
 
-// --- CRC8 Table from Gist ---
+// --- Professional UI Color Palette (BGR Corrected) ---
+#define C_BG          0x0000 // Deep Black
+#define C_HEADER_BG   0xBDD7 // Light Grey for Headers
+#define C_PANEL       0x2104 // Gunmetal Grey Panels
+#define C_TEXT        0xFFFF // Pure White
+
+// Status Colors
+#define C_STATUS_OK    0x03E0 // Matrix Green
+#define C_STATUS_WARN  0xFDA0 // Safety Orange
+#define C_STATUS_CRIT  0xF800 // Power Red
+
+// --- 1. GLOBALS & CRC8 ---
 const uint8_t s_crc8_table[256] = {
     0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97, 0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
     0x43, 0x72, 0x21, 0x10, 0x87, 0xB6, 0xE5, 0xD4, 0xFA, 0xCB, 0x98, 0xA9, 0x3E, 0x0F, 0x5C, 0x6D,
@@ -37,28 +48,28 @@ uint8_t CommandCrc8(const void* data, size_t len) {
     return crc;
 }
 
-// --- Waveshare 3.5 LCD Config ---
+// --- 2. HARDWARE DRIVER ---
 class LGFX_Waveshare : public lgfx::LGFX_Device {
     lgfx::Panel_ST7796  _panel_instance;
     lgfx::Bus_SPI       _bus_instance;
-    lgfx::Touch_FT5x06  _touch_instance;
+    lgfx::Touch_FT5x06  _touch_instance; 
 public:
     LGFX_Waveshare() {
         {
             auto cfg = _bus_instance.config();
-            cfg.spi_host = HSPI_HOST; cfg.spi_mode = 0; cfg.freq_write = 40000000;
-            cfg.pin_sclk = 14; cfg.pin_mosi = 13; cfg.pin_miso = 12; cfg.pin_dc = 2;
+            cfg.spi_host = VSPI_HOST; cfg.freq_write = 40000000;
+            cfg.pin_sclk = 18; cfg.pin_mosi = 23; cfg.pin_miso = 19; cfg.pin_dc = 27;
             _bus_instance.config(cfg); _panel_instance.setBus(&_bus_instance);
         }
         {
             auto cfg = _panel_instance.config();
-            cfg.pin_cs = 15; cfg.pin_rst = -1; cfg.panel_width = 320; cfg.panel_height = 480;
+            cfg.pin_cs = 5; cfg.panel_width = 320; cfg.panel_height = 480;
+            cfg.invert = true; cfg.rgb_order = true;
             _panel_instance.config(cfg);
         }
         {
             auto cfg = _touch_instance.config();
-            cfg.pin_int = 33; cfg.bus_shared = true; cfg.i2c_port = 0; cfg.i2c_addr = 0x38;
-            cfg.pin_sda = 21; cfg.pin_scl = 22; cfg.freq = 400000;
+            cfg.pin_int = 37; cfg.i2c_addr = 0x38; cfg.pin_sda = 21; cfg.pin_scl = 22;
             _touch_instance.config(cfg); _panel_instance.setTouch(&_touch_instance);
         }
         setPanel(&_panel_instance);
@@ -67,40 +78,34 @@ public:
 
 LGFX_Waveshare tft;
 LGFX_Sprite canvas(&tft);
-
-// --- Stats & State ---
 WiFiClient poolClient;
-WebServer server(8080);
-std::vector<uint8_t> slaves;
+std::vector<uint8_t> active_slaves;
+bool i2c_ready = false;
 
 struct {
-    uint64_t total_hashes = 0;
-    uint32_t shares_accepted = 0;
-    uint32_t crc_errors = 0;
+    uint64_t hashes = 0;
+    uint32_t accepted = 0;
+    uint32_t rejected = 0;
     uint64_t start_time = 0;
-    float difficulty = 0.0001;
-    String job_id = "None";
+    float difficulty = 0;
+    String job_id = "INIT";
     uint8_t header[76];
     bool new_job = false;
+    bool wifi_up = false;
 } stats;
 
-void initIOExpander() {
-    Wire.beginTransmission(0x20); Wire.write(0x03); Wire.write(0xFC); Wire.endTransmission();
-    Wire.beginTransmission(0x20); Wire.write(0x01); Wire.write(0x03); Wire.endTransmission();
-}
-
+// --- 3. UTILITIES & STRATUM ---
 void hexToBytes(String hex, uint8_t* bytes) {
     for (unsigned int i = 0; i < hex.length(); i += 2) {
         bytes[i / 2] = (char)strtol(hex.substring(i, i + 2).c_str(), NULL, 16);
     }
 }
 
-// --- Stratum Logic ---
 void handleStratum() {
     if (!poolClient.connected()) {
         if (poolClient.connect(POOL_HOST, POOL_PORT)) {
-            poolClient.print("{\"id\":1,\"method\":\"mining.subscribe\",\"params\":[]}\n");
-            poolClient.printf("{\"id\":2,\"method\":\"mining.authorize\",\"params\":[\"%s\",\"%s\"]}\n", POOL_USER, POOL_PASS);
+            poolClient.print("{\"id\":1,\"method\":\"subscribe\",\"params\":[]}\n");
+            poolClient.printf("{\"id\":2,\"method\":\"authorize\",\"params\":[\"%s\",\"%s\"]}\n", POOL_USER, POOL_PASS);
         }
         return;
     }
@@ -110,11 +115,11 @@ void handleStratum() {
         if (deserializeJson(doc, line)) return;
         if (doc["method"] == "mining.notify") {
             stats.job_id = doc["params"][0].as<String>();
-            hexToBytes(doc["params"][1].as<String>(), &stats.header[0]);  // Version
-            hexToBytes(doc["params"][2].as<String>(), &stats.header[4]);  // PrevHash
-            hexToBytes(doc["params"][3].as<String>(), &stats.header[36]); // Merkle
-            hexToBytes(doc["params"][7].as<String>(), &stats.header[68]); // NTime
-            hexToBytes(doc["params"][8].as<String>(), &stats.header[72]); // NBits
+            hexToBytes(doc["params"][1].as<String>(), &stats.header[0]);
+            hexToBytes(doc["params"][2].as<String>(), &stats.header[4]);
+            hexToBytes(doc["params"][3].as<String>(), &stats.header[36]);
+            hexToBytes(doc["params"][7].as<String>(), &stats.header[68]);
+            hexToBytes(doc["params"][8].as<String>(), &stats.header[72]);
             stats.new_job = true;
         } else if (doc["method"] == "mining.set_difficulty") {
             stats.difficulty = doc["params"][0].as<float>();
@@ -122,86 +127,129 @@ void handleStratum() {
     }
 }
 
-// --- I2C Mining Core (Core 1) ---
-void i2cTask(void* pvParameters) {
-    while (true) {
-        if (slaves.empty()) { vTaskDelay(1000); continue; }
+// --- 4. TASKS ---
+void i2cTask(void* pv) {
+    while (!i2c_ready) vTaskDelay(100 / portTICK_PERIOD_MS);
+    while (1) {
+        active_slaves.clear();
+        for (uint8_t i = 0x10; i <= 0x77; i++) {
+            Wire.beginTransmission(i);
+            if (Wire.endTransmission() == 0 && i != 0x20 && i != 0x38) active_slaves.push_back(i);
+        }
         
-        // 1. FEED
-        if (stats.new_job) {
-            uint8_t nonce_offset = 0x20; 
-            for (uint8_t addr : slaves) {
-                JobI2cRequest req;
-                req.cmd = I2C_CMD_FEED;
-                req.id = 1;
-                req.nonce_start_byte = nonce_offset;
-                nonce_offset += 0x10;
-                req.difficulty = stats.difficulty;
+        if (!active_slaves.empty() && stats.new_job) {
+            uint8_t n_offset = 0x10;
+            for (uint8_t addr : active_slaves) {
+                JobI2cRequest req; req.cmd = 0xA1; req.nonce_start_byte = n_offset;
+                n_offset += 0x10; req.difficulty = stats.difficulty;
                 memcpy(req.buffer, stats.header, 76);
                 req.crc = CommandCrc8(&req, sizeof(req));
-
-                Wire.beginTransmission(addr);
-                Wire.write((uint8_t*)&req, sizeof(req));
-                Wire.endTransmission();
-                vTaskDelay(5);
+                Wire.beginTransmission(addr); Wire.write((uint8_t*)&req, sizeof(req)); Wire.endTransmission();
             }
             stats.new_job = false;
         }
+        vTaskDelay(2000 / portTICK_PERIOD_MS);
+    }
+}
 
-        // 2. HARVEST (Gist Logic)
-        uint8_t harvest_req[2];
-        harvest_req[0] = I2C_CMD_REQUEST_RESULT;
-        harvest_req[1] = CommandCrc8(harvest_req, 2);
+void uiTask(void* pv) {
+    tft.init(); tft.setRotation(0);
+    canvas.setPsram(true); canvas.setColorDepth(8);
+    canvas.createSprite(320, 480);
+    
+    while (1) {
+        canvas.fillSprite(C_BG);
+        canvas.setTextDatum(middle_center);
 
-        for (uint8_t addr : slaves) {
-            Wire.beginTransmission(addr);
-            Wire.write(harvest_req, 2);
-            Wire.endTransmission();
-            vTaskDelay(5);
+        // --- 1. HEADER (Size 3) ---
+        canvas.fillRect(0, 0, 320, 65, C_HEADER_BG);
+        canvas.setTextColor(C_BG); canvas.setTextSize(3);
+        canvas.drawString("Piner Monitor", 130, 32);
+        canvas.fillCircle(295, 32, 10, stats.wifi_up ? C_STATUS_OK : C_STATUS_CRIT);
 
-            if (Wire.requestFrom(addr, (uint8_t)sizeof(JobI2cResult)) == sizeof(JobI2cResult)) {
-                JobI2cResult res;
-                Wire.readBytes((uint8_t*)&res, sizeof(res));
-                if (CommandCrc8(&res, sizeof(res)) == res.crc) {
-                    stats.total_hashes += res.processed_nonce;
-                    if (res.nonce != 0xFFFFFFFF) {
-                        poolClient.printf("{\"id\":4,\"method\":\"mining.submit\",\"params\":[\"%s\",\"%s\",\"00000000\",\"%08x\"]}\n", 
-                            POOL_USER, stats.job_id.c_str(), res.nonce);
-                        stats.shares_accepted++;
-                    }
-                } else { stats.crc_errors++; }
+        // --- 2. HASHRATE HERO (Large Size 6) ---
+        uint64_t uptime_sec = (millis() - stats.start_time) / 1000;
+        float hr = (uptime_sec > 0) ? (stats.hashes / (float)uptime_sec) / 1000.0 : 0.00;
+        canvas.setTextColor(0x7BEF); canvas.setTextSize(2); 
+        canvas.drawString("GLOBAL HASHRATE", 160, 90); // Moved label
+        
+        canvas.setTextColor(hr > 0 ? C_STATUS_OK : C_STATUS_WARN); canvas.setTextSize(6); 
+        canvas.setCursor(100, 150); // Lowered digits by 20px
+        canvas.printf("%.2f", hr);
+        canvas.setTextSize(2); canvas.drawString(" kH/s", 270, 160);
+
+        // --- 3. METRICS PANEL (Centered) ---
+        canvas.fillRect(10, 200, 300, 105, C_PANEL);
+        canvas.setTextColor(0x7BEF); canvas.setTextSize(2);
+        canvas.drawString("UPTIME", 80, 220);
+        canvas.drawString("DIFFICULTY", 240, 220);
+        canvas.drawString("ACCEPTED", 80, 270);
+        canvas.drawString("SUCCESS", 240, 270);
+
+        canvas.setTextColor(C_TEXT);
+        int h = uptime_sec / 3600; int m = (uptime_sec % 3600) / 60; int s = uptime_sec % 60;
+        canvas.drawString(String(h) + ":" + String(m) + ":" + String(s), 80, 242); // Lowered by ~2px
+        canvas.drawString(String(stats.difficulty, 4), 240, 242);
+        
+        canvas.setTextColor(C_STATUS_OK);
+        canvas.drawString(String(stats.accepted), 80, 292);
+        float success = (stats.accepted + stats.rejected > 0) ? 
+                        (stats.accepted * 100.0 / (stats.accepted + stats.rejected)) : 100.0;
+        canvas.drawString(String(success, 1) + "%", 240, 292);
+
+        // --- 4. 3x4 TOPOLOGY GRID ---
+        canvas.fillRect(0, 315, 320, 35, C_HEADER_BG);
+        canvas.setTextColor(C_BG); canvas.setTextSize(2);
+        canvas.drawString("NETWORK TOPOLOGY", 160, 333);
+
+        for (int i = 0; i < 12; i++) {
+            int col = i % 3;
+            int row = i / 3;
+            int x = 20 + (col * 95); 
+            int y = 360 + (row * 40);
+
+            bool active = (i < active_slaves.size());
+            canvas.fillRoundRect(x, y, 90, 35, 4, active ? C_STATUS_OK : C_PANEL);
+            canvas.setTextColor(active ? C_BG : 0x7BEF);
+            canvas.setTextSize(2);
+            if (active) {
+                canvas.drawString("0x" + String(active_slaves[i], HEX), x + 45, y + 17);
+            } else {
+                canvas.drawString("---", x + 45, y + 17);
             }
         }
-        vTaskDelay(500);
-    }
-}
-
-// --- UI Dashboard ---
-void displayTask(void* pvParameters) {
-    tft.init(); tft.setRotation(0); canvas.createSprite(320, 480);
-    while (true) {
-        canvas.fillSprite(TFT_BLACK);
-        canvas.setTextColor(TFT_GREEN); canvas.setTextSize(2);
-        canvas.drawString("ESPINER MASTER", 10, 10);
-        uint64_t uptime = (millis() - stats.start_time) / 1000;
-        float hr = (uptime > 0) ? (stats.total_hashes / (float)uptime) / 1000.0 : 0;
-        canvas.setCursor(10, 60); canvas.printf("Hashrate: %.2f kH/s", hr);
-        canvas.setCursor(10, 90); canvas.printf("Accepted: %u", stats.shares_accepted);
-        canvas.setCursor(10, 120); canvas.printf("Workers: %d", slaves.size());
         canvas.pushSprite(0, 0);
-        vTaskDelay(500);
+        vTaskDelay(500 / portTICK_PERIOD_MS);
     }
 }
 
+// --- 5. SETUP & LOOP ---
 void setup() {
-    Serial.begin(115200); stats.start_time = millis();
-    Wire.begin(21, 22, 100000); initIOExpander();
-    for (uint8_t i = 0x10; i <= 0x77; i++) {
-        Wire.beginTransmission(i); if (Wire.endTransmission() == 0 && i != 0x20 && i != 0x38) slaves.push_back(i);
-    }
+    Serial.begin(115200); delay(2000);
+    stats.start_time = millis();
+    Wire.begin(21, 22, 100000);
+    
+    // LCD Power sequence
+    Wire.beginTransmission(0x20); Wire.write(0x03); Wire.write(0xFC); Wire.endTransmission();
+    Wire.beginTransmission(0x20); Wire.write(0x01); Wire.write(0x01); Wire.endTransmission();
+    delay(20);
+    Wire.beginTransmission(0x20); Wire.write(0x01); Wire.write(0x00); Wire.endTransmission();
+    delay(20);
+    Wire.beginTransmission(0x20); Wire.write(0x01); Wire.write(0x03); Wire.endTransmission();
+    pinMode(TFT_BL, OUTPUT); digitalWrite(TFT_BL, HIGH);
+
+    i2c_ready = true;
     WiFi.begin(WIFI_SSID, WIFI_PASS);
-    xTaskCreatePinnedToCore(displayTask, "UI", 8192, NULL, 1, NULL, 0);
-    xTaskCreatePinnedToCore(i2cTask, "Mining", 4096, NULL, 1, NULL, 1);
+    xTaskCreatePinnedToCore(uiTask, "UI", 8192, NULL, 1, NULL, 0);
+    xTaskCreatePinnedToCore(i2cTask, "I2C", 4096, NULL, 1, NULL, 1);
 }
 
-void loop() { handleStratum(); server.handleClient(); vTaskDelay(10); }
+void loop() {
+    if (WiFi.status() == WL_CONNECTED) {
+        stats.wifi_up = true;
+        handleStratum();
+    } else {
+        stats.wifi_up = false;
+    }
+    vTaskDelay(10);
+}
