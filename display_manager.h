@@ -25,8 +25,6 @@ public:
     void showBootScreen();
     void updateStats(const DisplayStats& stats);
     void handleButtons();
-    
-    // Explicit declarations to fix "no declaration matches"
     void showMiningScreen();
     void showStatsScreen();
     void setBrightness(uint8_t brightness);

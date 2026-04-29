@@ -91,13 +91,10 @@ void loop() {
     // Check heartbeat timeout
     if (i2c_slave->m_mining_enabled && 
         (millis() - i2c_slave->m_last_heartbeat > HEARTBEAT_TIMEOUT_MS)) {
-        Serial.println("[WARN] Heartbeat timeout - stopping mining");
         i2c_slave->m_mining_enabled = false;
     }
     
-    // ONLY MINE IF ENABLED
     if (i2c_slave->m_mining_enabled) {
-        // Get job if available
         if (i2c_slave->hasNewJob()) {
             JobI2cRequest raw_job = i2c_slave->getCurrentJob();
             
@@ -108,42 +105,46 @@ void loop() {
             m_job.nonce_range = NONCES_PER_JOB;
             memcpy(m_job.header_bytes, raw_job.buffer, 76);
             
-            Serial.printf("[JOB] ID=%d, nonces %lu-%lu\n",
-                          m_job.job_id,
-                          m_job.nonce_start,
-                          m_job.nonce_start + m_job.nonce_range - 1);
-            
             miner.setNewJob(m_job);
             i2c_slave->clearNewJob();
         }
         
-        // === THIS IS CRITICAL - CALL run() EVERY LOOP ===
         miner.run();
     }
     
-    // Always report hashes to I2C master
+    // Report hashes to I2C
     uint32_t hashes = miner.getAndResetHashes();
     i2c_slave->addHashes(hashes);
     
     // Report found nonce
     uint32_t found_nonce = miner.getFoundNonce();
     if (found_nonce != 0xFFFFFFFF) {
-        Serial.printf("[SHARE] Found: 0x%08X\n", found_nonce);
         i2c_slave->setFoundNonce(found_nonce);
         miner.clearFoundNonce();
     }
     
-    // Debug output every 5 seconds
-    static uint32_t last_debug = 0;
-    if (millis() - last_debug >= 5000) {
-        Serial.printf("[DEBUG] Mining: %s | Hashes this cycle: %lu\n",
-                      i2c_slave->m_mining_enabled ? "YES" : "NO",
-                      hashes);
-        last_debug = millis();
-    }
+    // Update hashrate calculation
+    miner.updateHashrate();
     
-    delay(1);  // Small delay to prevent watchdog
+    // Update LCD display
+#ifdef LCD
+    DisplayStats stats;
+    stats.hashrate = miner.getHashrate();
+    stats.total_hashes = miner.getTotalHashes();
+    stats.shares_found = 0;  // Track separately if needed
+    stats.jobs_received = miner.getJobsProcessed();
+    stats.crc_errors = i2c_slave->m_crc_errors;
+    stats.mining_active = miner.isMining();
+    stats.core0_active = true;
+    stats.core1_active = true;
+    
+    display.updateStats(stats);
+    display.handleButtons();
+#endif
+    
+    // NO DELAY - MAXIMIZE HASH TIME
 }
+
 
 
 
