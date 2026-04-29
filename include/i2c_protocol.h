@@ -12,8 +12,7 @@ struct JobI2cRequest {
     uint8_t     cmd;
     uint8_t     crc;
     uint8_t     id;
-    uint8_t     reserved;
-    uint32_t    nonce_start;
+    uint8_t     nonce_start_byte; // From your Gist: uses uint8_t for start offset
     float       difficulty;
     uint8_t     buffer[76];
 };
@@ -22,7 +21,6 @@ struct JobI2cResult {
     uint8_t     cmd;
     uint8_t     crc;
     uint8_t     id;
-    uint8_t     reserved;
     uint32_t    nonce;
     uint32_t    processed_nonce;
 };
