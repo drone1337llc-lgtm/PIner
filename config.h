@@ -15,6 +15,7 @@
 #define HEARTBEAT_TIMEOUT_MS    5000
 
 #define MINING_STACK_SIZE 10240    
+#define MINING_TASK_PRIORITY 2
 #define NONCES_PER_JOB          0x10000
 
 #ifdef LCD

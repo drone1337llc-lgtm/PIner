@@ -3,7 +3,7 @@
 I2CSlave* I2CSlave::s_instance = nullptr;
 
 // MUST MATCH PI SIDE EXACTLY
-const uint8_t I2CSlave::s_crc8_table[256] = {
+static const uint8_t CRC8_TABLE[256] = {
     0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97,
     0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
     0x43, 0x72, 0x21, 0x10, 0x87, 0xB6, 0xE5, 0xD4,
@@ -40,9 +40,9 @@ const uint8_t I2CSlave::s_crc8_table[256] = {
 
 uint8_t I2CSlave::calculateCRC8(const void* data, size_t len) {
     const uint8_t* ptr = (const uint8_t*)data;
-    uint8_t crc = 0;  // MUST START AT 0 (not 0xFF)
+    uint8_t crc = 0;
     for (size_t i = 0; i < len; i++) {
-        crc = s_crc8_table[crc ^ ptr[i]];
+        crc = CRC8_TABLE[crc ^ ptr[i]];
     }
     return crc;
 }
@@ -52,7 +52,6 @@ I2CSlave::I2CSlave(uint8_t addr, int sda, int scl)
     s_instance = this;
     m_hashes_computed = 0;
     
-    // Initialize result structure
     m_result.cmd = I2C_CMD_SLAVE_RESULT;
     m_result.crc = 0;
     m_result.id = 0;
@@ -82,7 +81,6 @@ void I2CSlave::onReceive(int len) {
     JobI2cRequest temp;
     Wire.readBytes((uint8_t*)&temp, sizeof(JobI2cRequest));
     
-    // Verify CRC
     uint8_t received_crc = temp.crc;
     temp.crc = 0;
     uint8_t calculated_crc = calculateCRC8(&temp, sizeof(JobI2cRequest));
@@ -99,32 +97,26 @@ void I2CSlave::onReceive(int len) {
 }
 
 void I2CSlave::onRequest() {
-    // CRITICAL: Read all values BEFORE modifying anything
     uint32_t found = s_instance->m_found_nonce.load(std::memory_order_acquire);
     uint32_t hashes = s_instance->m_hashes_computed.load(std::memory_order_acquire);
     uint8_t job_id = s_instance->m_incoming_job.id;
     
-    // Set result structure
     s_instance->m_result.cmd = I2C_CMD_SLAVE_RESULT;
     s_instance->m_result.id = job_id;
     s_instance->m_result.reserved = 0;
     s_instance->m_result.nonce = found;
     s_instance->m_result.processed_nonce = hashes;
     
-    // Clear nonce AFTER reading (prevent race condition)
     if (found != 0xFFFFFFFF) {
         s_instance->m_found_nonce.store(0xFFFFFFFF, std::memory_order_release);
         Serial.printf("[I2C] ✓ Reported nonce 0x%08X, hashes=%u\n", found, hashes);
     }
     
-    // Calculate CRC (with crc field zeroed)
     s_instance->m_result.crc = 0;
     s_instance->m_result.crc = calculateCRC8(&s_instance->m_result, sizeof(JobI2cResult));
     
-    // Send to master
     Wire.write((uint8_t*)&s_instance->m_result, sizeof(JobI2cResult));
     
-    // Debug every 10th request
     static uint32_t request_count = 0;
     request_count++;
     if (request_count % 10 == 0) {

@@ -7,14 +7,11 @@
 #include <freertos/task.h>
 #include "sha256_optimized.h"
 #include "led_manager.h"
+#include "config.h"
 
 #ifdef LCD
 #include "display_manager.h"  // Include for DisplayStats
 #endif
-
-#define MINING_STACK_SIZE 10240
-#define MINING_TASK_PRIORITY 2
-#define NONCES_PER_JOB 0x4000
 
 struct JobRequest {
     uint8_t job_id;
