@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "ESPiner",
+			"path": "../ESPiner"
+		}
+	],
+	"settings": {}
+}
