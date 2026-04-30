@@ -8,7 +8,7 @@
 
     // Cluster I2C (Wire1) - Dedicated to your slaves
     #define CLUSTER_SDA 17 
-    #define CLUSTER_SCL 18
+    #define CLUSTER_SCL 16
     #define I2C_FREQ 400000 // 400kHz is stable for short runs
 #endif
 

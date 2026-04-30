@@ -24,7 +24,7 @@ uint8_t crc8_compute(const void* data, size_t len) {
 }
 
 #define CLUSTER_SDA 17 
-#define CLUSTER_SCL 18
+#define CLUSTER_SCL 16
 TwoWire ClusterBus = TwoWire(1); 
 
 struct SlaveData {
@@ -100,38 +100,83 @@ void i2cTask(void* pv) {
 // --- UI IMPLEMENTATION ---
 void initDisplay() {
     tft.init();
-    tft.setRotation(1);
+    tft.setRotation(1); // Adjust 1 or 3 for your physical mounting
+    
+    // Use 8-bit color to save RAM and prevent flickering
+    canvas.setColorDepth(8); 
     canvas.createSprite(tft.width(), tft.height());
+    
+    canvas.fillSprite(TFT_BLACK);
+    canvas.pushSprite(0, 0);
 }
 
 void updateUI(int slaveCount, float diff, uint32_t uptime, String status) {
     canvas.fillSprite(TFT_BLACK);
+
+    // --- 1. HEADER BAR ---
+    canvas.fillRect(0, 0, 320, 40, tft.color565(40, 40, 40)); // Dark grey header
     canvas.setTextColor(TFT_GOLD);
     canvas.setTextSize(2);
-    canvas.setCursor(10, 10);
-    canvas.printf("ESPiner Master S3");
+    canvas.setCursor(15, 12);
+    canvas.print("ESPINER CLUSTER");
     
-    canvas.drawFastHLine(0, 35, tft.width(), TFT_DARKGREY);
-    
-    canvas.setTextColor(TFT_WHITE);
-    canvas.setTextSize(1);
-    canvas.setCursor(10, 50);
-    canvas.printf("Slaves Online: %d", slaveCount);
-    
-    canvas.setCursor(10, 70);
-    canvas.printf("Diff: %.2f", diff);
-    
-    canvas.setCursor(10, 90);
-    canvas.printf("Shares: %lu", stats.total_shares);
-    
-    canvas.setCursor(10, 110);
-    canvas.printf("Uptime: %lus", uptime);
+    // Accent line under header
+    canvas.drawFastHLine(0, 40, 320, TFT_ORANGE);
 
-    // Status Bar at bottom
-    canvas.fillRect(0, tft.height()-25, tft.width(), 25, TFT_BLUE);
-    canvas.setCursor(10, tft.height()-18);
-    canvas.printf("NET: %s", status.c_str());
+    // --- 2. LEFT SIDE: MAIN STATS ---
+    canvas.setTextSize(2);
+    canvas.setTextColor(TFT_WHITE);
     
+    canvas.setCursor(15, 60);
+    canvas.printf("DIFF: %.1f", diff);
+    
+    canvas.setCursor(15, 95);
+    canvas.printf("SHARES: %lu", stats.total_shares);
+    
+    canvas.setTextSize(1);
+    canvas.setTextColor(TFT_LIGHTGREY);
+    canvas.setCursor(15, 130);
+    canvas.printf("UPTIME: %02d:%02d:%02d", (uptime/3600), (uptime%3600)/60, uptime%60);
+
+    // --- 3. RIGHT SIDE: 2x4 SLAVE GRID ---
+    int boxW = 60;
+    int boxH = 35;
+    int startX = 180;
+    int startY = 60;
+    int padding = 10;
+
+    for (int i = 0; i < 8; i++) {
+        int col = i % 2;
+        int row = i / 2;
+        int x = startX + (col * (boxW + padding));
+        int y = startY + (row * (boxH + padding));
+
+        // Check if a slave exists for this index
+        if (i < slave_list.size()) {
+            // OCCUPIED - Green Box
+            canvas.fillRoundRect(x, y, boxW, boxH, 4, tft.color565(0, 150, 0)); 
+            canvas.setTextColor(TFT_WHITE);
+            canvas.setTextSize(1);
+            // Center the hex address
+            canvas.setCursor(x + 12, y + 13);
+            canvas.printf("0x%02X", slave_list[i].address);
+        } else {
+            // EMPTY - Grey Box
+            canvas.drawRoundRect(x, y, boxW, boxH, 4, TFT_DARKGREY);
+            canvas.setTextColor(TFT_DARKGREY);
+            canvas.setTextSize(1);
+            canvas.setCursor(x + 18, y + 13);
+            canvas.print("---");
+        }
+    }
+
+    // --- 4. FOOTER STATUS ---
+    canvas.fillRect(0, 215, 320, 25, tft.color565(0, 80, 150)); // Blue footer
+    canvas.setTextColor(TFT_WHITE);
+    canvas.setCursor(15, 222);
+    canvas.printf("NET: %s | SLAVES: %d/8", status.c_str(), slaveCount);
+
+    // --- 5. PUSH TO SCREEN (The "Anti-Flicker" Magic) ---
     canvas.pushSprite(0, 0);
 }
 

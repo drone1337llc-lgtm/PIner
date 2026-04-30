@@ -1,7 +1,7 @@
 # Optimized bundle script with better performance and error handling
 param(
     [string]$OutputFile = "all_scripts_bundle.txt",
-    [string[]]$ExcludeFolders = @("build", "bin", ".git", "obj", "dist", "__pycache__")
+    [string[]]$ExcludeFolders = @("build", "bin", ".git", "obj", "dist", "__pycache__", "lib", "logs", "test", "ESPiner Worker", ".vscode", ".pio")
 )
 
 # Performance optimization: Use .NET methods for file operations
