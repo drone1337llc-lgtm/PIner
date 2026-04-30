@@ -5,23 +5,15 @@
 #include <atomic>
 #include "config.h"
 
-// ============================================================================
-// LED PATTERNS
-// ============================================================================
-
 enum LedPattern {
     LED_OFF = 0,
-    LED_MINING_IDLE,      // Slow pulse - mining, no shares
-    LED_MINING_ACTIVE,    // On - actively hashing
-    LED_SHARE_FOUND,      // Flash - share found!
-    LED_ERROR,            // Fast blink - error
-    LED_NO_JOB,           // Slow blink - waiting for job
-    LED_NO_HEARTBEAT      // Alternating - PI disconnected
+    LED_MINING_IDLE,
+    LED_MINING_ACTIVE,
+    LED_SHARE_FOUND,
+    LED_ERROR,
+    LED_NO_JOB,
+    LED_NO_HEARTBEAT
 };
-
-// ============================================================================
-// LED MANAGER CLASS
-// ============================================================================
 
 class LedManager {
 public:
@@ -29,8 +21,8 @@ public:
     
     void begin();
     void setPattern(LedPattern pattern);
-    LedPattern getPattern() const { return m_current_pattern.load(); }
-    void update();  // Call periodically (non-blocking)
+    LedPattern getPattern() const { return m_current_pattern.load(std::memory_order_acquire); }
+    void update();
     
 private:
     LedManager();
@@ -44,7 +36,6 @@ private:
     void updatePattern(LedPattern pattern, uint32_t now);
 };
 
-// Global instance macro
 #define LED LedManager::getInstance()
 
 #endif

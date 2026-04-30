@@ -17,7 +17,6 @@
 // ============================================================================
 
 #ifdef LCD
-  // TTGO T-Display with screen
   #define LADDER_PIN          27
   #define BUTTON1_GPIO        35
   #define BUTTON2_GPIO        0
@@ -25,7 +24,6 @@
   #define DISPLAY_UPDATE_INTERVAL 2000
   #define STATS_PAGE_INTERVAL 8000
 #else
-  // ESP32 DevKit without screen
   #define LADDER_PIN          34
 #endif
 
@@ -51,15 +49,29 @@
 #define HEARTBEAT_TIMEOUT_MS  10000
 
 #ifndef MINING_STACK_SIZE
-  #define MINING_STACK_SIZE   12000
+  #define MINING_STACK_SIZE   8192
 #endif
+
+// Performance tuning
+#define HASH_BATCH_SIZE       4096
+#define HASHRATE_UPDATE_MS    1000
+#define WDT_TIMEOUT_MS        5000
+
+// NOTE: CONFIG_MBEDTLS_HARDWARE_SHA is already defined by ESP32 framework
+// Don't redefine it here
 
 // ============================================================================
 // DEBUG (DISABLED FOR SPEED)
 // ============================================================================
 
-#define DEBUG_PRINT(x)
-#define DEBUG_PRINTLN(x)
-#define DEBUG_PRINTF(...)
+#ifdef DEBUG_MINER
+  #define DEBUG_PRINT(x)      Serial.print(x)
+  #define DEBUG_PRINTLN(x)    Serial.println(x)
+  #define DEBUG_PRINTF(...)   Serial.printf(__VA_ARGS__)
+#else
+  #define DEBUG_PRINT(x)
+  #define DEBUG_PRINTLN(x)
+  #define DEBUG_PRINTF(...)
+#endif
 
 #endif

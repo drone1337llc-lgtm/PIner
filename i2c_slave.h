@@ -14,7 +14,7 @@
 #define I2C_CMD_RESET           0xAC
 #define I2C_CMD_STOP            0xAD
 
-// I2C Protocol Structures
+// I2C Protocol Structures (packed for efficiency)
 #pragma pack(push, 1)
 
 struct JobI2cRequest {
@@ -51,23 +51,23 @@ public:
     JobI2cRequest getCurrentJob() const { return m_current_job; }
     void clearNewJob() { m_new_job_available.store(false); }
     
-    // Hash counting
+    // Hash counting (atomic for multi-core safety)
     void addHashes(uint32_t hashes) { 
-        m_hashes_since_poll.fetch_add(hashes); 
+        m_hashes_since_poll.fetch_add(hashes, std::memory_order_relaxed); 
     }
     
     // Nonce handling
     void setFoundNonce(uint32_t nonce) { 
-        m_found_nonce.store(nonce); 
+        m_found_nonce.store(nonce, std::memory_order_release); 
     }
     uint32_t getFoundNonce() const { 
-        return m_found_nonce.load(); 
+        return m_found_nonce.load(std::memory_order_acquire); 
     }
     void clearFoundNonce() {
-        m_found_nonce.store(0xFFFFFFFF);
+        m_found_nonce.store(0xFFFFFFFF, std::memory_order_release);
     }
 
-    // Public state
+    // Public state (volatile for cross-core visibility)
     volatile bool m_mining_enabled;
     volatile unsigned long m_last_heartbeat;
     uint32_t m_jobs_received;
