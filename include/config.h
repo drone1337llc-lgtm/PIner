@@ -20,7 +20,7 @@
 #define WIFI_PASS       "FluffyBentley"
 
 // Stratum Pool Settings
-#define POOL_HOST       "pool.solomining.de"
+#define POOL_URL       "pool.solomining.de"
 #define POOL_PORT       3333
 #define POOL_USER       "bc1q5057sfxgs5nc5703wk9x7ecvsc95042tmyskk8"
 #define POOL_PASS       "x"

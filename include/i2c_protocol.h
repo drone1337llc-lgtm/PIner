@@ -7,6 +7,23 @@
 #define I2C_CMD_REQUEST_RESULT  0xA9
 #define I2C_CMD_SLAVE_RESULT    0xAA
 
+struct SlaveData {
+    uint8_t address;
+    uint32_t last_seen;
+    uint32_t shares;
+    float hashrate;
+};
+
+// Update stats to track real pool performance
+struct {
+    float difficulty = 0;
+    uint8_t header[76];
+    bool new_job = false;
+    uint32_t total_shares = 0;
+    uint32_t rejected_shares = 0; 
+    String pool_status = "Connecting...";
+} stats;
+
 #pragma pack(push, 1)
 struct JobI2cRequest {
     uint8_t     cmd;
