@@ -17,7 +17,6 @@ public:
             cfg.spi_host = VSPI_HOST; // Standard for Pins 18/23
             cfg.spi_mode = 0;
             cfg.freq_write = 40000000;
-            cfg.freq_write = 20000000; // 16MHz is rock solid for standard ESP32
             cfg.freq_read = 20000000;
             cfg.pin_sclk = 18; // D18
             cfg.pin_mosi = 23; // D23
@@ -54,6 +53,7 @@ extern LGFX_Master tft;
 extern LGFX_Sprite canvas;
 
 void initDisplay();
+// Ensure this line has exactly 5 parameters:
 void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status);
 
 #endif

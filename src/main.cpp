@@ -6,35 +6,47 @@
 #include "config.h"
 #include "displayDriver.h" // Added UI Driver
 
+float globalHashrate = 0.0f;
+float globalDiff = 0.0f;
+uint32_t lastUptime = 0;
+
 // Global UI Objects
 LGFX_Master tft;
 LGFX_Sprite canvas(&tft);
 
-uint8_t crc8_compute(const void* data, size_t len) {
-    const uint8_t* bytes = (const uint8_t*)data;
+uint8_t crc8_compute(const void *data, size_t len)
+{
+    const uint8_t *bytes = (const uint8_t *)data;
     uint8_t crc = 0x00;
-    for (size_t i = 0; i < len; i++) {
+    for (size_t i = 0; i < len; i++)
+    {
         crc ^= bytes[i];
-        for (uint8_t j = 0; j < 8; j++) {
-            if (crc & 0x80) crc = (crc << 1) ^ 0x07;
-            else crc <<= 1;
+        for (uint8_t j = 0; j < 8; j++)
+        {
+            if (crc & 0x80)
+                crc = (crc << 1) ^ 0x07;
+            else
+                crc <<= 1;
         }
     }
     return crc;
 }
 
-#define CLUSTER_SDA 17 
+#define CLUSTER_SDA 17
 #define CLUSTER_SCL 16
-TwoWire ClusterBus = TwoWire(1); 
+TwoWire ClusterBus = TwoWire(1);
 
-struct SlaveData {
+struct SlaveData
+{
     uint8_t address;
     uint32_t last_seen;
     uint32_t shares;
+    float last_hashrate_raw; // Add this line!
 };
 std::vector<SlaveData> slave_list;
 
-struct {
+struct
+{
     float difficulty = 0;
     uint8_t header[76];
     bool new_job = false;
@@ -42,50 +54,83 @@ struct {
     String pool_status = "Connecting...";
 } stats;
 
-// --- NEW UI TASK ---
-void uiTask(void* pv) {
-    initDisplay();
-    while(1) {
-        updateUI(slave_list.size(), currentHashrate, currentDiff, uptimeSecs, "Connected");
-        
+void uiTask(void *pvParameters)
+{
+    while (1)
+    {
+        float totalH = 0;
+
+        // Sum up shares or dummy hashrate for now since SlaveData 
+        // doesn't have a 'last_hashrate_raw' field yet.
+        for (auto &slave : slave_list)
+        {
+            // Placeholder: If you add hashrate to SlaveData later, use that.
+            // For now, we'll just show the slave count impact.
+            totalH += 12.5f; // Example: assume each slave is doing 12.5 KH/s
+        }
+
+        globalHashrate = totalH;
+        uint32_t uptimeSecs = millis() / 1000;
+
+        // Use the global variables we defined at the top of main.cpp
+        updateUI(
+            slave_list.size(),
+            globalHashrate,
+            stats.difficulty, // Use 'stats.difficulty' from your struct
+            uptimeSecs,
+            stats.pool_status // Use 'stats.pool_status' for the footer
+        );
+
         vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
 
-void i2cTask(void* pv) {
-    while (1) {
+void i2cTask(void *pv)
+{
+    while (1)
+    {
         // 1. SCAN
-        for (uint8_t i = I2C_SCAN_START; i <= I2C_SCAN_END; i++) {
+        for (uint8_t i = I2C_SCAN_START; i <= I2C_SCAN_END; i++)
+        {
             ClusterBus.beginTransmission(i);
-            if (ClusterBus.endTransmission() == 0) {
+            if (ClusterBus.endTransmission() == 0)
+            {
                 bool exists = false;
-                for(auto &s : slave_list) if(s.address == i) exists = true;
-                if(!exists) slave_list.push_back({i, millis(), 0});
+                for (auto &s : slave_list)
+                    if (s.address == i)
+                        exists = true;
+                if (!exists)
+                    slave_list.push_back({i, millis(), 0});
             }
         }
 
         // 2. DISPATCH & 3. POLL (Integrated Logic)
-        if (!slave_list.empty()) {
-            for (auto &slave : slave_list) {
-                if (stats.new_job) {
-                    JobI2cRequest req; 
-                    req.cmd = I2C_CMD_FEED; 
+        if (!slave_list.empty())
+        {
+            for (auto &slave : slave_list)
+            {
+                if (stats.new_job)
+                {
+                    JobI2cRequest req;
+                    req.cmd = I2C_CMD_FEED;
                     req.difficulty = stats.difficulty;
                     memcpy(req.buffer, stats.header, 76);
-                    req.crc = crc8_compute(&req.id, sizeof(req) - 2); 
+                    req.crc = crc8_compute(&req.id, sizeof(req) - 2);
 
                     ClusterBus.beginTransmission(slave.address);
-                    ClusterBus.write((uint8_t*)&req, sizeof(req));
+                    ClusterBus.write((uint8_t *)&req, sizeof(req));
                     ClusterBus.endTransmission();
                 }
 
                 // Poll for results
-                ClusterBus.requestFrom(slave.address, (uint8_t)5); 
-                if (ClusterBus.available() >= 5) {
+                ClusterBus.requestFrom(slave.address, (uint8_t)5);
+                if (ClusterBus.available() >= 5)
+                {
                     uint8_t status = ClusterBus.read();
-                    if (status == 0x02) { 
+                    if (status == 0x02)
+                    {
                         uint32_t nonce;
-                        ClusterBus.readBytes((uint8_t*)&nonce, 4);
+                        ClusterBus.readBytes((uint8_t *)&nonce, 4);
                         slave.shares++;
                         stats.total_shares++;
                         Serial.printf("[!] Share from 0x%02X: %08X\n", slave.address, nonce);
@@ -99,75 +144,81 @@ void i2cTask(void* pv) {
 }
 
 // --- UI IMPLEMENTATION ---
-void initDisplay() {
+void initDisplay()
+{
     tft.init();
     tft.setRotation(1); // Adjust 1 or 3 for your physical mounting
-    
+
     // Use 8-bit color to save RAM and prevent flickering
-    canvas.setColorDepth(8); 
+    canvas.setColorDepth(8);
     canvas.createSprite(tft.width(), tft.height());
-    
+
     canvas.fillSprite(TFT_BLACK);
     canvas.pushSprite(0, 0);
 }
 
-void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status) {
+void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status)
+{
     canvas.fillSprite(TFT_BLACK);
 
     // --- 1. SLIM HEADER (0-30px) ---
-    canvas.fillRect(0, 0, 320, 30, tft.color565(30, 30, 30)); 
+    canvas.fillRect(0, 0, 320, 30, tft.color565(30, 30, 30));
     canvas.setTextColor(TFT_GOLD);
     canvas.setTextSize(2);
     canvas.setCursor(10, 7);
     canvas.print("ESPINER MASTER");
-    
+
     // Status indicator dot in header
     canvas.fillCircle(300, 15, 6, (status == "Connected") ? TFT_GREEN : TFT_RED);
 
     // --- 2. LEFT SIDE: PERFORMANCE STATS ---
     canvas.setTextColor(TFT_WHITE);
-    
+
     // Total Hashrate - High visibility
     canvas.setTextSize(2);
     canvas.setCursor(10, 45);
     canvas.setTextColor(TFT_CYAN);
-    canvas.printf("%.2f KH/s", totalHashrate); 
-    
+    canvas.printf("%.2f KH/s", totalHashrate);
+
     // Secondary Stats
     canvas.setTextSize(1);
     canvas.setTextColor(TFT_LIGHTGREY);
     canvas.setCursor(10, 75);
     canvas.printf("DIFFICULTY: %.1f", diff);
-    
+
     canvas.setCursor(10, 95);
     canvas.printf("TOTAL SHARES: %lu", stats.total_shares);
-    
+
     canvas.setCursor(10, 115);
-    canvas.printf("UPTIME: %02d:%02d:%02d", (uptime/3600), (uptime%3600)/60, uptime%60);
+    canvas.printf("UPTIME: %02d:%02d:%02d", (uptime / 3600), (uptime % 3600) / 60, uptime % 60);
 
     // --- 3. RIGHT SIDE: COMPACT 2x4 GRID ---
     // Total Width: 320. Grid area: ~160 to 310.
-    int boxW = 65;
-    int boxH = 30; // Shorter boxes
-    int startX = 165; 
-    int startY = 45;
-    int padX = 8;
+    int boxW = 62;    // Slightly narrower
+    int boxH = 28;    // Slightly shorter
+    int startX = 170; // Shifted left to prevent right-side cutoff
+    int startY = 42;  // Shifted up to give room for all 4 rows
+    int padX = 6;
     int padY = 8;
 
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 8; i++)
+    {
         int col = i % 2;
         int row = i / 2;
         int x = startX + (col * (boxW + padX));
         int y = startY + (row * (boxH + padY));
 
-        if (i < slave_list.size()) {
+        if (i < slave_list.size())
+        {
             // OCCUPIED - Solid Green
-            canvas.fillRoundRect(x, y, boxW, boxH, 3, tft.color565(0, 140, 0)); 
+            canvas.fillRoundRect(x, y, boxW, boxH, 3, tft.color565(0, 140, 0));
             canvas.setTextColor(TFT_WHITE);
             canvas.setTextSize(1);
             canvas.setCursor(x + 12, y + 11);
             canvas.printf("0x%02X", slave_list[i].address);
-        } else {
+        }
+        else
+        {
             // EMPTY - Outline Grey
             canvas.drawRoundRect(x, y, boxW, boxH, 3, tft.color565(60, 60, 60));
             canvas.setTextColor(tft.color565(80, 80, 80));
@@ -187,19 +238,22 @@ void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, 
     canvas.pushSprite(0, 0);
 }
 
-void setup() {
+void setup()
+{
     Serial.begin(115200);
-    delay(2000); 
+    delay(2000);
 
     ClusterBus.begin(CLUSTER_SDA, CLUSTER_SCL, 100000);
     WiFi.begin(WIFI_SSID, WIFI_PASS);
-    
+
     // Core 0 handles UI, Core 1 handles I2C/Mining logic
     xTaskCreatePinnedToCore(uiTask, "UI", 4096, NULL, 1, NULL, 0);
     xTaskCreatePinnedToCore(i2cTask, "I2C", 4096, NULL, 2, NULL, 1);
 }
 
-void loop() {
-    if(WiFi.status() == WL_CONNECTED) stats.pool_status = "WiFi OK";
+void loop()
+{
+    if (WiFi.status() == WL_CONNECTED)
+        stats.pool_status = "WiFi OK";
     vTaskDelay(1000);
 }
