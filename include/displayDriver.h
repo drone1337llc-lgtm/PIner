@@ -27,15 +27,20 @@ public:
         }
         {
             auto cfg = _panel_instance.config();
-            cfg.pin_cs = 15; // D15
-            cfg.pin_rst = 4; // D4
+            cfg.pin_cs = 15;
+            cfg.pin_rst = 4;
             cfg.invert = true;
-            cfg.memory_width = 240;
-            cfg.memory_height = 320;
-            cfg.panel_width = 240;
-            cfg.panel_height = 320;
-            cfg.offset_x = 0;
+            
+            // These settings are specific to the 170-190px high "Bar" displays
+            cfg.memory_width  = 240; // Internal controller width
+            cfg.memory_height = 320; // Internal controller height
+            cfg.panel_width   = 170; // Physical width (swapped because of rotation)
+            cfg.panel_height  = 320; // Physical height
+            
+            // Adjust these offsets to stop the "jumbled/flashing" edges
+            cfg.offset_x = 35; // This usually fixes the horizontal cutoff
             cfg.offset_y = 0;
+            
             cfg.bus_shared = true;
             _panel_instance.config(cfg);
         }

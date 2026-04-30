@@ -60,7 +60,7 @@ void uiTask(void *pvParameters)
     {
         float totalH = 0;
 
-        // Sum up shares or dummy hashrate for now since SlaveData 
+        // Sum up shares or dummy hashrate for now since SlaveData
         // doesn't have a 'last_hashrate_raw' field yet.
         for (auto &slave : slave_list)
         {
@@ -161,80 +161,94 @@ void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, 
 {
     canvas.fillSprite(TFT_BLACK);
 
-    // --- 1. SLIM HEADER (0-30px) ---
-    canvas.fillRect(0, 0, 320, 30, tft.color565(30, 30, 30));
-    canvas.setTextColor(TFT_GOLD);
-    canvas.setTextSize(2);
-    canvas.setCursor(10, 7);
-    canvas.print("ESPINER MASTER");
-
-    // Status indicator dot in header
-    canvas.fillCircle(300, 15, 6, (status == "Connected") ? TFT_GREEN : TFT_RED);
-
-    // --- 2. LEFT SIDE: PERFORMANCE STATS ---
+    // --- 1. TOP BANNER: Explicit Dark Grey ---
+    // Using hex to force grey: 0x4208 is a solid dark grey
+    canvas.fillRect(0, 0, 320, 25, 0x4208); 
     canvas.setTextColor(TFT_WHITE);
-
-    // Total Hashrate - High visibility
     canvas.setTextSize(2);
-    canvas.setCursor(10, 45);
-    canvas.setTextColor(TFT_CYAN);
-    canvas.printf("%.2f KH/s", totalHashrate);
+    canvas.setCursor(10, 5); 
+    canvas.print("ESPiner Master");
+    
+    canvas.setCursor(236, 5);
+    canvas.printf("D:%.1f", diff);
 
-    // Secondary Stats
-    canvas.setTextSize(1);
+    // --- 2. PERFORMANCE: Centered in 80px stats area ---
+    int statsWidth = 85; 
+    
+    // Hashrate Logic: Red (0) -> Yellow (1-100) -> Green (>100)
+    uint16_t hashColor;
+    if (totalHashrate <= 0.01f) hashColor = TFT_RED;
+    else if (totalHashrate <= 100.0f) hashColor = TFT_YELLOW;
+    else hashColor = TFT_GREEN;
+
+    canvas.setTextColor(hashColor);
+    canvas.setTextSize(4); 
+    // Manual center for ~4-5 characters in 80px:
+    canvas.setCursor(80, 50); 
+    canvas.printf("%.2f", totalHashrate);
+    
+    canvas.setTextSize(2);
+    canvas.setCursor(80, 80);
+    canvas.print("KH/s");
+
+    // Shares: Moved down slightly, space removed
+    canvas.setTextColor(TFT_WHITE);
+    canvas.setTextSize(2);
+    canvas.setCursor(10, 105);
+    canvas.printf("S:%lu", stats.total_shares); // Removed space
+
+    // ACC: Moved lower, text closer
+    canvas.setTextSize(2);
     canvas.setTextColor(TFT_LIGHTGREY);
-    canvas.setCursor(10, 75);
-    canvas.printf("DIFFICULTY: %.1f", diff);
+    canvas.setCursor(10, 125);
+    canvas.print("ACC:100%"); // Removed space
 
-    canvas.setCursor(10, 95);
-    canvas.printf("TOTAL SHARES: %lu", stats.total_shares);
+    // --- 3. THE GRID: Right Side (Shifted up to clear footer) ---
+    int boxW = 68;    
+    int boxH = 24;    // Slightly shorter to prevent bottom cutoff
+    int startX = 176; 
+    int startY = 34;  // Shifted up 2px
+    int padX = 4;
+    int padY = 4;     // Tighter padding
 
-    canvas.setCursor(10, 115);
-    canvas.printf("UPTIME: %02d:%02d:%02d", (uptime / 3600), (uptime % 3600) / 60, uptime % 60);
-
-    // --- 3. RIGHT SIDE: COMPACT 2x4 GRID ---
-    // Total Width: 320. Grid area: ~160 to 310.
-    int boxW = 62;    // Slightly narrower
-    int boxH = 28;    // Slightly shorter
-    int startX = 170; // Shifted left to prevent right-side cutoff
-    int startY = 42;  // Shifted up to give room for all 4 rows
-    int padX = 6;
-    int padY = 8;
-
-    for (int i = 0; i < 8; i++)
-    {
+    for (int i = 0; i < 8; i++) {
         int col = i % 2;
         int row = i / 2;
         int x = startX + (col * (boxW + padX));
         int y = startY + (row * (boxH + padY));
 
-        if (i < slave_list.size())
-        {
-            // OCCUPIED - Solid Green
-            canvas.fillRoundRect(x, y, boxW, boxH, 3, tft.color565(0, 140, 0));
+        if (i < slave_list.size()) {
+            // OCCUPIED: Grey fill, White outline, White address
+            canvas.fillRoundRect(x, y, boxW, boxH, 3, 0x7BEF); // Solid Grey
+            canvas.drawRoundRect(x, y, boxW, boxH, 3, TFT_WHITE);
             canvas.setTextColor(TFT_WHITE);
             canvas.setTextSize(1);
-            canvas.setCursor(x + 12, y + 11);
+            // Centering address (approx 30px wide)
+            canvas.setCursor(x + (boxW - 30) / 2, y + 8);
             canvas.printf("0x%02X", slave_list[i].address);
-        }
-        else
-        {
-            // EMPTY - Outline Grey
-            canvas.drawRoundRect(x, y, boxW, boxH, 3, tft.color565(60, 60, 60));
-            canvas.setTextColor(tft.color565(80, 80, 80));
-            canvas.setCursor(x + 22, y + 11);
+        } else {
+            // EMPTY: Grey fill, Red outline, White dashes
+            canvas.fillRoundRect(x, y, boxW, boxH, 3, 0x4208); // Darker Grey
+            canvas.drawRoundRect(x, y, boxW, boxH, 3, TFT_RED);
+            canvas.setTextColor(TFT_WHITE); // Dashes are now white
+            canvas.setTextSize(1);
+            // Centering dashes (approx 18px wide)
+            canvas.setCursor(x + (boxW - 18) / 2, y + 8);
             canvas.print("---");
         }
     }
 
-    // --- 4. FOOTER ---
-    canvas.fillRect(0, 215, 320, 25, tft.color565(0, 50, 120));
+    // --- 4. FOOTER: Red with White Centered Text ---
+    // Lowered height to 25px and shifted Y to ensure boxes clear it
+    canvas.fillRect(0, 145, 320, 25, TFT_RED); 
     canvas.setTextColor(TFT_WHITE);
-    canvas.setTextSize(1);
-    canvas.setCursor(10, 222);
-    canvas.printf("NODE: %s | SLAVES: %d/8", status.c_str(), slaveCount);
+    canvas.setTextSize(2);
+    
+    String footerMsg = "NODE:" + status;
+    int footerX = (320 - (footerMsg.length() * 12)) / 2;
+    canvas.setCursor(max(5, footerX), 150);
+    canvas.print(footerMsg);
 
-    // --- 5. SMOOTH REFRESH ---
     canvas.pushSprite(0, 0);
 }
 
@@ -243,11 +257,14 @@ void setup()
     Serial.begin(115200);
     delay(2000);
 
+    // --- MUST INITIALIZE DISPLAY FIRST ---
+    initDisplay();
+
     ClusterBus.begin(CLUSTER_SDA, CLUSTER_SCL, 100000);
     WiFi.begin(WIFI_SSID, WIFI_PASS);
 
-    // Core 0 handles UI, Core 1 handles I2C/Mining logic
-    xTaskCreatePinnedToCore(uiTask, "UI", 4096, NULL, 1, NULL, 0);
+    // Increase UI stack slightly to avoid crashes with String manipulation
+    xTaskCreatePinnedToCore(uiTask, "UI", 8192, NULL, 1, NULL, 0);
     xTaskCreatePinnedToCore(i2cTask, "I2C", 4096, NULL, 2, NULL, 1);
 }
 
