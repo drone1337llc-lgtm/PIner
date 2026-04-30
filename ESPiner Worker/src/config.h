@@ -1,6 +1,10 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#ifndef DEBUG_PRINTF
+  #define DEBUG_PRINTF(...) Serial.printf(__VA_ARGS__)
+#endif
+
 #include <Arduino.h>
 
 // ============================================================================

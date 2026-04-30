@@ -28,13 +28,17 @@
 // I2C Settings
 #define SDA_PIN         21
 #define SCL_PIN         22
-#define I2C_FREQ        100000   // Reduced to 100kHz for stability
+#ifndef I2C_FREQ
+  #define I2C_FREQ 100000
+#endif  // Reduced to 100kHz for stability
 #define I2C_BUFFER_SIZE 128      // Essential for 84-byte payloads
 
 // Mining Logic
 #define I2C_SCAN_START        0x10
 #define I2C_SCAN_END          0x40
-#define MAX_SLAVES            31
+#ifndef MAX_SLAVES
+  #define MAX_SLAVES 31
+#endif
 #define NONCE_RANGE_PER_SLAVE 0x20000
 
 #endif
