@@ -54,6 +54,6 @@ extern LGFX_Master tft;
 extern LGFX_Sprite canvas;
 
 void initDisplay();
-void updateUI(int slaveCount, float diff, uint32_t uptime, String status);
+void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status);
 
 #endif

@@ -46,8 +46,9 @@ struct {
 void uiTask(void* pv) {
     initDisplay();
     while(1) {
-        updateUI(slave_list.size(), stats.difficulty, millis()/1000, stats.pool_status);
-        vTaskDelay(500 / portTICK_PERIOD_MS);
+        updateUI(slave_list.size(), currentHashrate, currentDiff, uptimeSecs, "Connected");
+        
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
 
@@ -110,73 +111,79 @@ void initDisplay() {
     canvas.pushSprite(0, 0);
 }
 
-void updateUI(int slaveCount, float diff, uint32_t uptime, String status) {
+void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status) {
     canvas.fillSprite(TFT_BLACK);
 
-    // --- 1. HEADER BAR ---
-    canvas.fillRect(0, 0, 320, 40, tft.color565(40, 40, 40)); // Dark grey header
+    // --- 1. SLIM HEADER (0-30px) ---
+    canvas.fillRect(0, 0, 320, 30, tft.color565(30, 30, 30)); 
     canvas.setTextColor(TFT_GOLD);
     canvas.setTextSize(2);
-    canvas.setCursor(15, 12);
-    canvas.print("ESPINER CLUSTER");
+    canvas.setCursor(10, 7);
+    canvas.print("ESPINER MASTER");
     
-    // Accent line under header
-    canvas.drawFastHLine(0, 40, 320, TFT_ORANGE);
+    // Status indicator dot in header
+    canvas.fillCircle(300, 15, 6, (status == "Connected") ? TFT_GREEN : TFT_RED);
 
-    // --- 2. LEFT SIDE: MAIN STATS ---
-    canvas.setTextSize(2);
+    // --- 2. LEFT SIDE: PERFORMANCE STATS ---
     canvas.setTextColor(TFT_WHITE);
     
-    canvas.setCursor(15, 60);
-    canvas.printf("DIFF: %.1f", diff);
+    // Total Hashrate - High visibility
+    canvas.setTextSize(2);
+    canvas.setCursor(10, 45);
+    canvas.setTextColor(TFT_CYAN);
+    canvas.printf("%.2f KH/s", totalHashrate); 
     
-    canvas.setCursor(15, 95);
-    canvas.printf("SHARES: %lu", stats.total_shares);
-    
+    // Secondary Stats
     canvas.setTextSize(1);
     canvas.setTextColor(TFT_LIGHTGREY);
-    canvas.setCursor(15, 130);
+    canvas.setCursor(10, 75);
+    canvas.printf("DIFFICULTY: %.1f", diff);
+    
+    canvas.setCursor(10, 95);
+    canvas.printf("TOTAL SHARES: %lu", stats.total_shares);
+    
+    canvas.setCursor(10, 115);
     canvas.printf("UPTIME: %02d:%02d:%02d", (uptime/3600), (uptime%3600)/60, uptime%60);
 
-    // --- 3. RIGHT SIDE: 2x4 SLAVE GRID ---
-    int boxW = 60;
-    int boxH = 35;
-    int startX = 180;
-    int startY = 60;
-    int padding = 10;
+    // --- 3. RIGHT SIDE: COMPACT 2x4 GRID ---
+    // Total Width: 320. Grid area: ~160 to 310.
+    int boxW = 65;
+    int boxH = 30; // Shorter boxes
+    int startX = 165; 
+    int startY = 45;
+    int padX = 8;
+    int padY = 8;
 
     for (int i = 0; i < 8; i++) {
         int col = i % 2;
         int row = i / 2;
-        int x = startX + (col * (boxW + padding));
-        int y = startY + (row * (boxH + padding));
+        int x = startX + (col * (boxW + padX));
+        int y = startY + (row * (boxH + padY));
 
-        // Check if a slave exists for this index
         if (i < slave_list.size()) {
-            // OCCUPIED - Green Box
-            canvas.fillRoundRect(x, y, boxW, boxH, 4, tft.color565(0, 150, 0)); 
+            // OCCUPIED - Solid Green
+            canvas.fillRoundRect(x, y, boxW, boxH, 3, tft.color565(0, 140, 0)); 
             canvas.setTextColor(TFT_WHITE);
             canvas.setTextSize(1);
-            // Center the hex address
-            canvas.setCursor(x + 12, y + 13);
+            canvas.setCursor(x + 12, y + 11);
             canvas.printf("0x%02X", slave_list[i].address);
         } else {
-            // EMPTY - Grey Box
-            canvas.drawRoundRect(x, y, boxW, boxH, 4, TFT_DARKGREY);
-            canvas.setTextColor(TFT_DARKGREY);
-            canvas.setTextSize(1);
-            canvas.setCursor(x + 18, y + 13);
+            // EMPTY - Outline Grey
+            canvas.drawRoundRect(x, y, boxW, boxH, 3, tft.color565(60, 60, 60));
+            canvas.setTextColor(tft.color565(80, 80, 80));
+            canvas.setCursor(x + 22, y + 11);
             canvas.print("---");
         }
     }
 
-    // --- 4. FOOTER STATUS ---
-    canvas.fillRect(0, 215, 320, 25, tft.color565(0, 80, 150)); // Blue footer
+    // --- 4. FOOTER ---
+    canvas.fillRect(0, 215, 320, 25, tft.color565(0, 50, 120));
     canvas.setTextColor(TFT_WHITE);
-    canvas.setCursor(15, 222);
-    canvas.printf("NET: %s | SLAVES: %d/8", status.c_str(), slaveCount);
+    canvas.setTextSize(1);
+    canvas.setCursor(10, 222);
+    canvas.printf("NODE: %s | SLAVES: %d/8", status.c_str(), slaveCount);
 
-    // --- 5. PUSH TO SCREEN (The "Anti-Flicker" Magic) ---
+    // --- 5. SMOOTH REFRESH ---
     canvas.pushSprite(0, 0);
 }
 
