@@ -1,0 +1,82 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1344
+load:0x40078000,len:13936
+load:0x40080400,len:3600
+entry 0x400805f0
+
+=== TTGO T-Display Mining Master ===
+[Display] Initialized - 240x135
+[I2C] Initializing with SDA=21, SCL=22
+
+=== I2C BUS DIAGNOSTIC ===
+Scanning range: 0x10 to 0x70
+SDA Pin: 21, SCL Pin: 22
+I2C Frequency: 50000 Hz
+==========================
+
+Pin State Check (BEFORE scan):
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH
+
+Pin State Check (AFTER scan):
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH
+
+=== SCAN COMPLETE ===
+⚠ NO DEVICES FOUND!
+
+Troubleshooting Checklist:
+  1. Check SDA/SCL wiring (Master GPIO21/22 ↔ Slave)
+  2. Verify COMMON GND between all boards
+  3. Check 4.7k pull-up resistors on SDA & SCL
+  4. Ensure all slave boards are powered
+  5. POWER CYCLE all slaves (unplug/replug power)
+  6. Check for address conflicts in slave logs
+======================
+
+[I2C] ⚠ WARNING: No slaves detected - continuing anyway
+[I2C] Master initialized
+[WiFi] Connecting to Patricia27680...
+.
+[WiFi] Connected! IP: 192.168.68.21
+[I2C] Starting I2C task...
+[I2C] Scanning for slaves...
+
+=== I2C BUS DIAGNOSTIC ===
+Scanning range: 0x10 to 0x70
+SDA Pin: 21, SCL Pin: 22
+I2C Frequency: 50000 Hz
+==========================
+
+Pin State Check (BEFORE scan):
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH
+=== Ready ===
+[Pool] Connecting...
+[Pool] Connected!
+[Stratum] Sending subscribe...
+{"id": 1, "method": "mining.subscribe", "params": ["ESPMiner/2.0"]}
+[Stratum] Subscribed - Extranonce1: ff1596df, Size: 4
+[Stratum] Sending authorize...
+{"id": 2, "method": "mining.authorize", "params": ["bc1q5057sfxgs5nc5703wk9x7ecvsc95042tmyskk8", "x"]}
+[Stratum] Suggest difficulty: {"id":3,"method":"mining.suggest_difficulty","params":[0.010000]}
+
+[Pool] Ready
+[108628][I][WiFiClient.cpp:539] connected(): Unexpected: RES: 0, ERR: 119
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 100000.000000
+[Pool] Difficulty updated: 100000.000000
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3ea8fd8 parsed successfully
+[Pool] New job received
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 0.010000
+[Pool] Difficulty updated: 0.010000
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3ea9483 parsed successfully
+[Pool] New job received

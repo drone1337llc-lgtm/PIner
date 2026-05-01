@@ -1,0 +1,16 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1344
+load:0x40078000,len:13936
+load:0x40080400,len:3600
+entry 0x400805f0
+
+=== TTGO T-Display Mining Master ===
+[Display] Sprite created: 240x135
+[Display] Initialized
+[I2C] Initializing with SDA=21, SCL=22
+[I2C] Running bus scan...

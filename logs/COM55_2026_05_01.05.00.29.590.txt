@@ -1,0 +1,11 @@
+[I2C] Initializing with SDA=21, SCL=22
+
+=== I2C BUS DIAGNOSTIC ===
+Scanning range: 0x10 to 0x70
+SDA Pin: 21, SCL Pin: 22
+I2C Frequency: 50000 Hz
+==========================
+
+Pin State Check (BEFORE scan):
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH

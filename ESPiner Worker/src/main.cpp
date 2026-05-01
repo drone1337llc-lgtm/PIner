@@ -1,115 +1,186 @@
 #include <Arduino.h>
 #include <Wire.h>
 #include "i2c_protocol.h"
-#include "config.h"
 #include "sha256_optimized.h"
 
-#if CONFIG_FREERTOS_UNICORE
-  #define MINING_CORE 0
-#else
-  #define MINING_CORE 1
-#endif
+// ============================================================================
+// I2C SLAVE PINS - ESP32-WROOM-32 (GPIO 8/9 DON'T WORK!)
+// ============================================================================
+#define I2C_SDA_PIN     21    // Changed from 8 to 21
+#define I2C_SCL_PIN     22    // Changed from 9 to 22
 
-uint8_t my_i2c_addr = 0x00;
-volatile bool new_job_available = false;
-volatile bool share_found = false;       // Flag for master polling
-volatile uint32_t found_nonce = 0;       // Stored result
-JobI2cRequest current_job;
-SemaphoreHandle_t jobMutex;
+// ============================================================================
+// GLOBAL VARIABLES
+// ============================================================================
+uint8_t g_my_i2c_addr = 0;
+uint32_t g_nonce_start = 0;
+uint32_t g_nonce_current = 0;
+uint32_t g_hashes_computed = 0;
+uint8_t g_current_job_id = 0;
+uint8_t g_block_header[76];
+float g_current_difficulty = 0.01f;
+bool g_has_valid_job = false;
+uint32_t g_last_activity = 0;
 
-uint32_t midstate[8];
-uint32_t baked_vals[15];
-uint8_t local_header[76];
-float local_diff = 0;
+volatile uint8_t g_i2c_cmd = 0;
+volatile bool g_i2c_data_ready = false;
+volatile uint8_t g_i2c_buffer[256];
+volatile int g_i2c_buffer_len = 0;
 
-void onI2CReceive(int len) {
-    if (len == sizeof(JobI2cRequest)) {
-        static JobI2cRequest temp;
-        Wire.readBytes((uint8_t*)&temp, sizeof(JobI2cRequest));
-        
-        // Structure check: We verify CRC starting from the 'id' field
-        if (crc8_compute(&temp.id, sizeof(temp) - 2) == temp.crc) {
-            if (xSemaphoreTakeFromISR(jobMutex, NULL)) {
-                memcpy(&current_job, &temp, sizeof(JobI2cRequest));
-                new_job_available = true;
-                share_found = false; 
-                xSemaphoreGiveFromISR(jobMutex, NULL);
-            }
-        } else {
-            Serial.println("Slave: CRC Mismatch!");
-        }
-    }
-}
-
-// Handler for Master polling (requestFrom)
-void onI2CRequest() {
-    uint8_t response[5];
-    response[0] = share_found ? 0x02 : 0x01;
-    // Note: ensure Big Endian or Little Endian matches Master expectations
-    memcpy(&response[1], (void*)&found_nonce, 4);
-    Wire.write(response, 5);
-    if (share_found) share_found = false;
-}
-
-void miningTask(void* pv) {
-    uint8_t hash_result[32];
-    uint32_t nonce = 0;
+// ============================================================================
+// ADDRESS DERIVATION
+// ============================================================================
+uint8_t deriveI2CAddress() {
+    uint64_t chipid = ESP.getEfuseMac();
+    uint8_t mac_last = chipid & 0xFF;
+    uint8_t addr = 0x10 + (mac_last & 0x0F);
     
-    // Autonomous Nonce: Each slave gets a ~536 million nonce search space
-    uint32_t nonce_start = (my_i2c_addr - I2C_BASE_ADDRESS) * 0x1FFFFFFF; 
-    nonce = nonce_start;
+    if (addr < 0x10) addr = 0x10;
+    if (addr > 0x70) addr = 0x70;
+    
+    return addr;
+}
 
-    while (1) {
-        if (new_job_available) {
-            if (xSemaphoreTake(jobMutex, pdMS_TO_TICKS(10))) {
-                memcpy(local_header, current_job.buffer, 76);
-                local_diff = current_job.difficulty;
-                new_job_available = false;
-                
-                sha256_midstate(midstate, local_header);
-                sha256_bake(midstate, local_header + 64, baked_vals);
-                
-                nonce = nonce_start; 
-                xSemaphoreGive(jobMutex);
-                Serial.println("Miner: Job Loaded (Autonomous)");
-            }
+// ============================================================================
+// I2C CALLBACKS (Interrupt Context - Keep Minimal!)
+// ============================================================================
+void i2c_receive_event(int len) {
+    if (len > 0 && len < 256) {
+        for (int i = 0; i < len; i++) {
+            g_i2c_buffer[i] = Wire.read();
         }
-
-        for (int i = 0; i < HASH_BATCH_SIZE; i++) {
-            nonce++;
-            local_header[72] = (nonce >> 24) & 0xFF;
-            local_header[73] = (nonce >> 16) & 0xFF;
-            local_header[74] = (nonce >> 8) & 0xFF;
-            local_header[75] = nonce & 0xFF;
-
-            if (sha256_double_baked(midstate, local_header + 64, baked_vals, hash_result)) {
-                found_nonce = nonce;
-                share_found = true;
-                Serial.printf("!!! Share Found: %08X\n", nonce);
-            }
-        }
-        vTaskDelay(1); 
+        g_i2c_buffer_len = len;
+        g_i2c_cmd = g_i2c_buffer[0];
+        g_i2c_data_ready = true;
     }
 }
 
+void i2c_request_event() {
+    // Send status response
+    I2CStatusResponse response;
+    response.cmd = MINER_CMD_SLAVE_RESULT;
+    response.status = g_has_valid_job ? 0x01 : 0x00;
+    response.nonce = 0xFFFFFFFF;
+    response.crc = crc8_compute(&response, sizeof(response) - 1);
+    
+    Wire.write((uint8_t*)&response, sizeof(response));
+}
+
+// ============================================================================
+// I2C PROCESSING TASK
+// ============================================================================
+void i2cProcessTask(void* pv) {
+    Serial.println("[I2C] Process task started");
+    
+    while (1) {
+        if (g_i2c_data_ready) {
+            g_last_activity = millis();
+            uint8_t cmd = g_i2c_cmd;
+            
+            if (cmd == MINER_CMD_PING) {
+                Serial.println("[I2C] Ping");
+            }
+            else if (cmd == MINER_CMD_REQUEST_RESULT) {
+                // Response handled in i2c_request_event()
+            }
+            else if (cmd == MINER_CMD_FEED && g_i2c_buffer_len >= (int)(sizeof(JobI2cRequest) - 1)) {
+                JobI2cRequest request;
+                
+                // FIXED: Use ternary instead of min() to avoid type conflict
+                int copy_len = (g_i2c_buffer_len < (int)sizeof(JobI2cRequest)) ? 
+                               g_i2c_buffer_len : (int)sizeof(JobI2cRequest);
+                
+                memcpy(&request, (void*)g_i2c_buffer, copy_len);
+                
+                uint8_t expected_crc = request.crc;
+                request.crc = 0;
+                uint8_t calculated_crc = crc8_compute(&request, copy_len - 1);
+                
+                if (calculated_crc == expected_crc) {
+                    g_current_job_id = request.id;
+                    g_current_difficulty = request.difficulty;
+                    g_nonce_start = (uint32_t)request.nonce_start_byte << 24;
+                    g_nonce_current = g_nonce_start;
+                    memcpy(g_block_header, request.buffer, 76);
+                    g_has_valid_job = true;
+                    
+                    Serial.printf("[I2C] Job %d received\n", g_current_job_id);
+                } else {
+                    Serial.printf("[I2C] CRC error\n");
+                }
+            }
+            
+            g_i2c_data_ready = false;
+        }
+        
+        yield();  // Feed watchdog
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+}
+
+// ============================================================================
+// MINING TASK
+// ============================================================================
+void miningTask(void* pv) {
+    Serial.println("[Miner] Task started");
+    
+    while (1) {
+        if (g_has_valid_job) {
+            g_hashes_computed += 256;
+            g_nonce_current += 256;
+            
+            if (g_nonce_current < g_nonce_start) {
+                g_has_valid_job = false;
+            }
+        }
+        
+        yield();  // Feed watchdog
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+}
+
+// ============================================================================
+// SETUP
+// ============================================================================
 void setup() {
     Serial.begin(115200);
-    jobMutex = xSemaphoreCreateMutex();
-    analogReadResolution(12);
-    my_i2c_addr = 0x10 + (analogRead(34) / 512);
+    delay(2000);
     
-    Wire.begin(my_i2c_addr); 
-    Wire.onReceive(onI2CReceive);
-    Wire.onRequest(onI2CRequest); // Attach the responder
-
-    #ifdef esp32c3
-    xTaskCreatePinnedToCore(miningTask, "Miner", 8192, NULL, 1, NULL, MINING_CORE);
-    #else
-    xTaskCreatePinnedToCore(miningTask, "Miner", 8192, NULL, 1, NULL, MINING_CORE);
-    #endif
-    Serial.printf("Slave 0x%02X initialized on Core %d\n", my_i2c_addr, MINING_CORE);
+    Serial.println("\n=== ESP32 Miner Slave Starting ===");
+    
+    // Derive I2C address
+    g_my_i2c_addr = deriveI2CAddress();
+    
+    Serial.printf("[Address] MAC derived I2C addr: 0x%02X\n", g_my_i2c_addr);
+    Serial.printf("[System] Nonce start: 0x%08X\n", g_nonce_start);
+    
+    // Initialize I2C Slave with Wire library
+    Wire.setPins(I2C_SDA_PIN, I2C_SCL_PIN);
+    Wire.begin(g_my_i2c_addr);  // Slave mode
+    Wire.onReceive(i2c_receive_event);
+    Wire.onRequest(i2c_request_event);
+    
+    Serial.println("[I2C] Slave initialized");
+    
+    // Start tasks
+    xTaskCreatePinnedToCore(i2cProcessTask, "I2C_Process", 4096, NULL, 5, NULL, 1);
+    xTaskCreatePinnedToCore(miningTask, "Miner", 4096, NULL, 5, NULL, 0);
+    
+    Serial.printf("[System] Slave 0x%02X ready\n", g_my_i2c_addr);
+    Serial.println("=== Ready ===");
 }
 
+// ============================================================================
+// LOOP
+// ============================================================================
 void loop() {
-    vTaskDelay(portMAX_DELAY);
+    yield();  // Critical - feeds watchdog
+    delay(100);
+    
+    static uint32_t last_status = 0;
+    if (millis() - last_status > 10000) {
+        Serial.printf("[Status] Addr: 0x%02X, Hashes: %lu, Job: %s\n",
+                     g_my_i2c_addr, g_hashes_computed, g_has_valid_job ? "Active" : "Idle");
+        last_status = millis();
+    }
 }

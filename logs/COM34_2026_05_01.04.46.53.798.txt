@@ -1,0 +1,10 @@
+
+=== ESP32 Miner Slave Starting ===
+[Address] MAC last byte: 0x10 -> I2C addr: 0x20
+[System] I2C Address: 0x20 (from MAC)
+[System] Nonce start: 0xFFFFFFF0
+[  2100][I][esp32-hal-i2c-slave.c:234] i2cSlaveInit(): Initialising I2C Slave: sda=8 scl=9 freq=100000, addr=0x20
+[I2C] Slave started
+[Miner] Task started on Core 0
+[System] Slave 0x20 initialized on Core 0
+=== Ready ===

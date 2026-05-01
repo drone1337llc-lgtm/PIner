@@ -2,10 +2,6 @@
 #include <string.h>
 #include <esp_system.h>
 
-// Remove HARDWARE_SHA256 code - let mbedTLS handle it
-// This avoids the CONFIG_MBEDTLS_HARDWARE_SHA redefinition warning
-
-// CRC8 table (must match Pi master exactly)
 DRAM_ATTR static const uint8_t CRC8_TABLE[256] = {
     0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97,
     0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
@@ -41,7 +37,6 @@ DRAM_ATTR static const uint8_t CRC8_TABLE[256] = {
     0x3B, 0x0A, 0x59, 0x68, 0xFF, 0xCE, 0x9D, 0xAC
 };
 
-// SHA256 constants
 DRAM_ATTR static const uint32_t K[64] = {
     0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
     0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5,
@@ -81,7 +76,6 @@ DRAM_ATTR static const uint32_t K[64] = {
         (h) = temp1 + temp2; \
     }
 
-// CRC8 computation
 IRAM_ATTR uint8_t crc8_compute(const void* data, size_t len) {
     const uint8_t* ptr = (const uint8_t*)data;
     uint8_t crc = 0;
@@ -91,7 +85,6 @@ IRAM_ATTR uint8_t crc8_compute(const void* data, size_t len) {
     return crc;
 }
 
-// Calculate midstate (first 64 bytes of block header)
 IRAM_ATTR void sha256_midstate(uint32_t* digest, const uint8_t* data) {
     uint32_t A[8] = {0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A,
                      0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19};
@@ -101,69 +94,65 @@ IRAM_ATTR void sha256_midstate(uint32_t* digest, const uint8_t* data) {
         W[i] = GET_UINT32_BE(data, i * 4);
     }
     
-    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[0], K[0]);
-    P(A[7], A[0], A[1], A[2], A[3], A[4], A[5], A[6], W[1], K[1]);
-    P(A[6], A[7], A[0], A[1], A[2], A[3], A[4], A[5], W[2], K[2]);
-    P(A[5], A[6], A[7], A[0], A[1], A[2], A[3], A[4], W[3], K[3]);
-    P(A[4], A[5], A[6], A[7], A[0], A[1], A[2], A[3], W[4], K[4]);
-    P(A[3], A[4], A[5], A[6], A[7], A[0], A[1], A[2], W[5], K[5]);
-    P(A[2], A[3], A[4], A[5], A[6], A[7], A[0], A[1], W[6], K[6]);
-    P(A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[0], W[7], K[7]);
-    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[8], K[8]);
-    P(A[7], A[0], A[1], A[2], A[3], A[4], A[5], A[6], W[9], K[9]);
-    P(A[6], A[7], A[0], A[1], A[2], A[3], A[4], A[5], W[10], K[10]);
-    P(A[5], A[6], A[7], A[0], A[1], A[2], A[3], A[4], W[11], K[11]);
-    P(A[4], A[5], A[6], A[7], A[0], A[1], A[2], A[3], W[12], K[12]);
-    P(A[3], A[4], A[5], A[6], A[7], A[0], A[1], A[2], W[13], K[13]);
-    P(A[2], A[3], A[4], A[5], A[6], A[7], A[0], A[1], W[14], K[14]);
-    P(A[1], A[2], A[3], A[4], A[5], A[6], A[7], A[0], W[15], K[15]);
+    for (int i = 0; i < 16; i++) {
+        P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[i], K[i]);
+        uint32_t tmp = A[7];
+        A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+        A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
+    }
     
     for (int i = 16; i < 64; i++) {
         W[i] = S1(W[i-2]) + W[i-7] + S0(W[i-15]) + W[i-16];
         P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[i], K[i]);
         uint32_t tmp = A[7];
-        for (int j = 7; j > 0; j--) A[j] = A[j-1];
-        A[0] = tmp;
+        A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+        A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     }
     
+    uint32_t H[8] = {0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A,
+                     0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19};
+    
     for (int i = 0; i < 8; i++) {
-        digest[i] = A[i] + ((i == 0) ? 0x6A09E667 : 
-                           (i == 1) ? 0xBB67AE85 :
-                           (i == 2) ? 0x3C6EF372 :
-                           (i == 3) ? 0xA54FF53A :
-                           (i == 4) ? 0x510E527F :
-                           (i == 5) ? 0x9B05688C :
-                           (i == 6) ? 0x1F83D9AB : 0x5BE0CD19);
+        digest[i] = A[i] + H[i];
     }
 }
 
-// Bake pre-calculated values for faster nonce iteration
 IRAM_ATTR void sha256_bake(const uint32_t* digest, const uint8_t* data, uint32_t* bake) {
+    uint32_t W[16], A[8], temp1, temp2;
+    
     bake[0] = GET_UINT32_BE(data, 0);
     bake[1] = GET_UINT32_BE(data, 4);
     bake[2] = GET_UINT32_BE(data, 8);
     
-    uint32_t A[8], temp1, temp2;
+    W[0] = bake[0];
+    W[1] = bake[1];
+    W[2] = bake[2];
+    W[3] = GET_UINT32_BE(data, 12);
+    
     for (int i = 0; i < 8; i++) A[i] = digest[i];
     
-    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], bake[0], K[0]);
-    P(A[7], A[0], A[1], A[2], A[3], A[4], A[5], A[6], bake[1], K[1]);
-    P(A[6], A[7], A[0], A[1], A[2], A[3], A[4], A[5], bake[2], K[2]);
+    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[0], K[0]);
+    uint32_t tmp = A[7]; A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+    A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     
-    bake[3] = S1(0) + 0 + S0(bake[1]) + bake[0];
-    bake[4] = S1(640) + 0 + S0(bake[2]) + bake[1];
+    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[1], K[1]);
+    tmp = A[7]; A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+    A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
+    
+    P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[2], K[2]);
+    tmp = A[7]; A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+    A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     
     for (int i = 0; i < 8; i++) {
         bake[5 + i] = A[i];
     }
     
-    temp1 = A[4] + S3(A[1]) + F1(A[1], A[2], A[3]) + K[3];
-    temp2 = S2(A[5]) + F0(A[5], A[6], A[7]);
-    bake[13] = temp1;
-    bake[14] = temp2;
+    bake[3] = 0;
+    bake[4] = 0;
+    bake[13] = 0;
+    bake[14] = 0;
 }
 
-// Fast double SHA256 using baked values
 IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data, 
                                     const uint32_t* bake, uint8_t* hash) {
     uint32_t A[8], W[64], temp1, temp2;
@@ -175,37 +164,34 @@ IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
     W[4] = 0x80000000;
     for (int i = 5; i < 15; i++) W[i] = 0;
     W[15] = 640;
-    W[16] = bake[3];
-    W[17] = bake[4];
     
     for (int i = 0; i < 8; i++) A[i] = bake[5 + i];
     
-    temp1 = bake[13] + W[3];
-    temp2 = bake[14];
-    A[0] += temp1;
-    A[4] = temp1 + temp2;
+    temp1 = A[4] + S3(A[1]) + F1(A[1], A[2], A[3]) + K[4];
+    temp2 = S2(A[0]) + F0(A[0], A[1], A[2]);
+    A[4] += temp1;
+    A[0] = temp1 + temp2;
     
-    for (int i = 4; i < 64; i++) {
-        if (i > 17) {
+    for (int i = 5; i < 64; i++) {
+        if (i > 15) {
             W[i] = S1(W[i-2]) + W[i-7] + S0(W[i-15]) + W[i-16];
         }
         P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[i], K[i]);
         uint32_t tmp = A[7];
-        for (int j = 7; j > 0; j--) A[j] = A[j-1];
-        A[0] = tmp;
+        A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+        A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     }
     
-    W[0] = A[0] + digest[0];
-    W[1] = A[1] + digest[1];
-    W[2] = A[2] + digest[2];
-    W[3] = A[3] + digest[3];
-    W[4] = A[4] + digest[4];
-    W[5] = A[5] + digest[5];
-    W[6] = A[6] + digest[6];
-    W[7] = A[7] + digest[7];
-    W[8] = 0x80000000;
-    for (int i = 9; i < 15; i++) W[i] = 0;
-    W[15] = 256;
+    uint32_t first_hash[8];
+    for (int i = 0; i < 8; i++) {
+        first_hash[i] = A[i] + ((i == 0) ? 0x6A09E667 : 
+                               (i == 1) ? 0xBB67AE85 :
+                               (i == 2) ? 0x3C6EF372 :
+                               (i == 3) ? 0xA54FF53A :
+                               (i == 4) ? 0x510E527F :
+                               (i == 5) ? 0x9B05688C :
+                               (i == 6) ? 0x1F83D9AB : 0x5BE0CD19);
+    }
     
     for (int i = 0; i < 8; i++) A[i] = ((i == 0) ? 0x6A09E667 : 
                                         (i == 1) ? 0xBB67AE85 :
@@ -215,18 +201,20 @@ IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
                                         (i == 5) ? 0x9B05688C :
                                         (i == 6) ? 0x1F83D9AB : 0x5BE0CD19);
     
+    W[0] = first_hash[0]; W[1] = first_hash[1]; W[2] = first_hash[2]; W[3] = first_hash[3];
+    W[4] = first_hash[4]; W[5] = first_hash[5]; W[6] = first_hash[6]; W[7] = first_hash[7];
+    W[8] = 0x80000000;
+    for (int i = 9; i < 15; i++) W[i] = 0;
+    W[15] = 256;
+    
     for (int i = 0; i < 64; i++) {
         if (i > 15) {
             W[i] = S1(W[i-2]) + W[i-7] + S0(W[i-15]) + W[i-16];
         }
         P(A[0], A[1], A[2], A[3], A[4], A[5], A[6], A[7], W[i], K[i]);
         uint32_t tmp = A[7];
-        for (int j = 7; j > 0; j--) A[j] = A[j-1];
-        A[0] = tmp;
-        
-        if (i == 60 && (A[7] & 0xFFFF) != 0) {
-            return false;
-        }
+        A[7] = A[6]; A[6] = A[5]; A[5] = A[4]; A[4] = A[3];
+        A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     }
     
     for (int i = 0; i < 8; i++) {
@@ -243,5 +231,5 @@ IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
         hash[i*4+3] = val & 0xFF;
     }
     
-    return true;
+    return (hash[30] == 0 && hash[31] == 0);
 }

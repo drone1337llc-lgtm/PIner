@@ -1,0 +1,15 @@
+
+=== ESP32 Miner Slave Starting ===
+[Address] MAC last byte: 0x9C -> I2C addr: 0x4C
+[System] I2C Address: 0x4C (from MAC)
+[System] Nonce start: 0x7FFFFFC4
+[  2100][I][esp32-hal-i2c-slave.c:234] i2cSlaveInit(): Initialising I2C Slave: sda=8 scl=9 freq=100000, addr=0x4c
+[  2111][W][esp32-hal-i2c-slave.c:540] i2c_slave_check_line_state(): invalid state sda(8)=1, scl(9)=0
+[  2120][W][esp32-hal-i2c-slave.c:544] i2c_slave_check_line_state(): Recovered after 0 Cycles
+[  2128][E][esp32-hal-i2c-slave.c:565] i2c_slave_check_line_state(): Bus Invalid State, Can't init sda=1, scl=1
+[  2138][E][esp32-hal-i2c-slave.c:309] i2cSlaveInit(): bad pin state
+[  2144][E][Wire.cpp:263] begin(): Slave Init ERROR
+[I2C] Slave started
+[Miner] Task started on Core 0
+[System] Slave 0x4C initialized on Core 0
+=== Ready ===

@@ -26,6 +26,8 @@ public:
     
 private:
     LedManager();
+    LedManager(const LedManager&) = delete;
+    LedManager& operator=(const LedManager&) = delete;
     
     std::atomic<LedPattern> m_current_pattern{LED_OFF};
     uint32_t m_last_update = 0;

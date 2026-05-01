@@ -1,0 +1,3 @@
+[Status] Addr: 0x10, Hashes: 3022592, Job: Active
+[Status] Addr: 0x10, Hashes: 3281152, Job: Active
+[Status] Addr: 0x10, Hashes: 3539712, Job: Active

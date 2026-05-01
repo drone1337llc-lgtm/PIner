@@ -1,7 +1,11 @@
-#ifdef LCD
 #ifndef DISPLAY_MANAGER_H
 #define DISPLAY_MANAGER_H
 
+#include <stdint.h>
+#include <stddef.h>
+#include <Arduino.h>
+
+#ifdef LCD
 #include <TFT_eSPI.h>
 #include "config.h"
 
@@ -31,7 +35,7 @@ public:
     void formatHashrate(double rate, char* buffer, size_t len);
 
 private:
-    TFT_eSPI tft = TFT_eSPI();
+    TFT_eSPI tft;
     uint32_t m_last_update;
     uint8_t m_current_page;
     uint32_t m_last_page_change;
@@ -44,5 +48,34 @@ private:
     void clearScreen();
 };
 
+#else
+
+// Stub implementation when LCD is disabled
+struct DisplayStats {
+    double hashrate;
+    uint32_t total_hashes;
+    uint32_t shares_found;
+    uint32_t jobs_received;
+    uint32_t crc_errors;
+    bool mining_active;
+    bool core0_active;
+    bool core1_active;
+};
+
+class DisplayManager {
+public:
+    DisplayManager() {}
+    ~DisplayManager() {}
+    bool begin() { return true; }
+    void showBootScreen() {}
+    void updateStats(const DisplayStats& stats) { (void)stats; }
+    void handleButtons() {}
+    void showMiningScreen() {}
+    void showStatsScreen() {}
+    void setBrightness(uint8_t brightness) { (void)brightness; }
+    void formatHashrate(double rate, char* buffer, size_t len) { (void)rate; (void)buffer; (void)len; }
+};
+
 #endif
+
 #endif

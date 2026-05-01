@@ -2,285 +2,292 @@
 #include <WiFi.h>
 #include <vector>
 #include "config.h"
+#ifdef SCREEN
 #include "displayDriver.h"
-#include "stratum.h"     // Your provided Stratum API
-#include "i2c_master.h"  // Your provided ESP-IDF I2C API
+#endif
+#include "stratum.h"
+#include "i2c_master.h"
+#include "i2c_protocol.h"
 
 WiFiClient client;
-bool is_mining = false;
-float globalHashrate = 0.0f;
-float globalDiff = 0.0f;
-uint32_t lastUptime = 0;
 
-// Stratum Global Objects
-mining_subscribe mWorker;
-mining_job mJob;
+bool g_is_mining = false;
+float g_total_hashrate = 0.0f;
+float g_current_difficulty = 0.01f;  // Start with LOW difficulty
+uint32_t g_total_shares = 0;
+uint32_t g_rejected_shares = 0;
+String g_pool_status = "Disconnected";
 
-// Global UI Objects
-LGFX_Master tft;
-LGFX_Sprite canvas(&tft);
+mining_subscribe g_worker;
+mining_job g_current_job;
 
-struct SlaveData {
-    uint8_t address;
-    uint32_t last_seen;
-    uint32_t shares;
-    float last_hashrate_raw;
-};
-std::vector<SlaveData> slave_list;
+std::vector<SlaveData> g_slave_list;
+std::vector<uint8_t> g_slave_addresses;
 
-struct {
-    float difficulty = MINIMUM_ACCEPTABLE_DIFFICULTY;
-    uint8_t header[76];
-    bool new_job = false;
-    uint32_t total_shares = 0;
-    uint32_t rejected_shares = 0;
-    String pool_status = "Connecting...";
-} stats;
+uint32_t g_last_scan_time = 0;
+uint32_t g_last_hashrate_calc = 0;
+uint32_t g_period_nonces = 0;
+uint8_t g_current_job_id = 0;
 
-// --- POOL CONNECTION LOGIC ---
+bool g_button1_pressed = false;
+bool g_button2_pressed = false;
+uint32_t g_last_button_check = 0;
+
+// Forward declaration for display access
+extern std::vector<SlaveData> g_slave_list;
+
+void checkButtons() {
+    if (millis() - g_last_button_check < 50) return;
+    g_last_button_check = millis();
+    
+    if (digitalRead(BUTTON1_PIN) == LOW) {
+        g_button1_pressed = true;
+        Serial.println("[BTN1] Pressed");
+    }
+    
+    if (digitalRead(BUTTON2_PIN) == LOW) {
+        g_button2_pressed = true;
+        Serial.println("[BTN2] Pressed");
+    }
+}
+
 bool connectToPool() {
     Serial.println("[Pool] Connecting...");
-    stats.pool_status = "Connecting...";
+    g_pool_status = "Connecting...";
     
     if (!client.connect(POOL_URL, POOL_PORT)) {
-        Serial.println("[Pool] Connection Failed");
-        stats.pool_status = "Retry...";
+        Serial.println("[Pool] Connection failed");
+        g_pool_status = "Retry...";
         return false;
     }
-
-    // Use your Stratum API to Handshake
-    if (!tx_mining_subscribe(client, mWorker)) return false;
-    if (!tx_mining_auth(client, POOL_USER, "x")) return false; // Replace "x" if your pool needs a pass
     
-    stats.pool_status = "Mining";
-    is_mining = true;
+    Serial.println("[Pool] Connected!");
+    
+    if (!tx_mining_subscribe(client, g_worker)) {
+        Serial.println("[Pool] Subscribe failed");
+        return false;
+    }
+    
+    if (!tx_mining_auth(client, POOL_USER, POOL_PASS)) {
+        Serial.println("[Pool] Auth failed");
+        return false;
+    }
+    
+    // Suggest lower difficulty for ESP32 mining
+    tx_suggest_difficulty(client, 0.01f);
+    
+    g_pool_status = "Mining";
+    g_is_mining = true;
+    Serial.println("[Pool] Ready");
     return true;
 }
 
-// --- TASKS ---
-void poolTask(void *pv) {
-    while(1) {
+void buildBlockHeader(uint8_t* header) {
+    memset(header, 0, 76);
+    
+    uint32_t version = strtoul(g_current_job.version.c_str(), NULL, 16);
+    header[0] = (version >> 24) & 0xFF;
+    header[1] = (version >> 16) & 0xFF;
+    header[2] = (version >> 8) & 0xFF;
+    header[3] = version & 0xFF;
+    
+    for (int i = 0; i < 32 && i < g_current_job.prev_block_hash.length() / 2; i++) {
+        char byteStr[3] = {g_current_job.prev_block_hash[i*2], 
+                          g_current_job.prev_block_hash[i*2+1], '\0'};
+        header[4 + i] = (uint8_t)strtoul(byteStr, NULL, 16);
+    }
+}
+
+void poolTask(void* pv) {
+    while (1) {
         if (WiFi.status() == WL_CONNECTED) {
             if (!client.connected()) {
-                is_mining = false;
+                g_is_mining = false;
+                g_pool_status = "Reconnecting...";
+                delay(5000);
                 connectToPool();
             } else {
-                // Listen for new jobs and difficulty changes
                 while (client.available()) {
                     String line = client.readStringUntil('\n');
                     stratum_method method = parse_mining_method(line);
                     
                     if (method == MINING_NOTIFY) {
-                        if (parse_mining_notify(line, mJob)) {
-                            stats.new_job = true;
-                            Serial.println("[Pool] New Job Received & Parsed");
+                        if (parse_mining_notify(line, g_current_job)) {
+                            Serial.println("[Pool] New job received");
+                            buildBlockHeader(g_current_job.header_bytes);
                         }
                     } else if (method == MINING_SET_DIFFICULTY) {
-                        parse_mining_set_difficulty(line, stats.difficulty);
+                        parse_mining_set_difficulty(line, g_current_difficulty);
+                        Serial.printf("[Pool] Difficulty updated: %.6f\n", g_current_difficulty);
                     }
                 }
             }
+        } else {
+            g_pool_status = "WiFi Disconnected";
+            g_is_mining = false;
         }
+        
         vTaskDelay(pdMS_TO_TICKS(50));
     }
 }
 
-void i2cTask(void *pv) {
-    uint8_t current_job_id = 0;
-    uint32_t last_hash_calc = millis();
-    uint32_t period_nonces = 0;
-
+void i2cTask(void* pv) {
+    Serial.println("[I2C] Starting I2C task...");
+    
     while (1) {
-        // 1. SCAN (Every 10s to keep bus clean)
-        static uint32_t lastScan = 0;
-        if (millis() - lastScan > 10000) {
-            std::vector<uint8_t> scanned = i2c_master_scan(0x08, 0x77);
-            slave_list.clear();
-            for (uint8_t addr : scanned) {
-                slave_list.push_back({addr, millis(), 0, 0.0f});
+        // I2C SCAN
+        if (millis() - g_last_scan_time >= I2C_SCAN_INTERVAL_MS) {
+            Serial.println("[I2C] Scanning for slaves...");
+            g_slave_addresses = i2c_master_scan(I2C_SCAN_START, I2C_SCAN_END);
+            
+            g_slave_list.clear();
+            for (uint8_t addr : g_slave_addresses) {
+                SlaveData slave;
+                slave.address = addr;
+                slave.last_seen = millis();
+                slave.shares = 0;
+                slave.hashrate = 0.0f;
+                slave.hashes_processed = 0;
+                g_slave_list.push_back(slave);
+                Serial.printf("[I2C] Added slave at 0x%02X\n", addr);
             }
-            lastScan = millis();
+            
+            Serial.printf("[I2C] Total slaves: %d\n", g_slave_list.size());
+            g_last_scan_time = millis();
         }
-
-        if (slave_list.empty() || !is_mining) {
+        
+        if (g_slave_list.empty()) {
+            Serial.println("[I2C] No slaves found, waiting...");
+            vTaskDelay(pdMS_TO_TICKS(2000));
+            continue;
+        }
+        
+        if (!g_is_mining) {
             vTaskDelay(pdMS_TO_TICKS(500));
             continue;
         }
-
-        // Extract raw addresses for your i2c_master functions
-        std::vector<uint8_t> slave_addrs;
-        for (auto &s : slave_list) slave_addrs.push_back(s.address);
-
-        // 2. FEED NEW JOB
-        if (stats.new_job) {
-            current_job_id++; 
-            // Note: Make sure stats.header is populated by your block-builder if required!
-            i2c_feed_slaves(slave_addrs, current_job_id, 0x00, stats.difficulty, stats.header);
-            stats.new_job = false;
+        
+        // FEED NEW JOB
+        if (g_current_job.job_id.length() > 0) {
+            g_current_job_id++;
+            uint8_t header[76];
+            buildBlockHeader(header);
+            
+            Serial.printf("[I2C] Feeding job %d to %d slaves\n", 
+                         g_current_job_id, g_slave_addresses.size());
+            
+            i2c_feed_slaves(g_slave_addresses, g_current_job_id, 0x00, 
+                           g_current_difficulty, header);
+            g_current_job.job_id = "";
         }
-
-        // 3. HIT & HARVEST
-        i2c_hit_slaves(slave_addrs);
-        vTaskDelay(pdMS_TO_TICKS(5)); // Brief pause so slaves can prepare the buffer
-
+        
+        // HIT SLAVES
+        i2c_hit_slaves(g_slave_addresses);
+        vTaskDelay(pdMS_TO_TICKS(5));
+        
+        // HARVEST RESULTS
         uint32_t processed_this_round = 0;
-        std::vector<uint32_t> found_nonces = i2c_harvest_slaves(slave_addrs, current_job_id, processed_this_round);
-        period_nonces += processed_this_round;
-
-        // 4. SUBMIT SHARES
+        std::vector<uint32_t> found_nonces = i2c_harvest_slaves(
+            g_slave_addresses, g_current_job_id, processed_this_round);
+        g_period_nonces += processed_this_round;
+        
+        // SUBMIT SHARES
         for (uint32_t nonce : found_nonces) {
             unsigned long submit_id;
-            if (tx_mining_submit(client, mWorker, mJob, nonce, submit_id)) {
-                stats.total_shares++;
-                Serial.printf("[!] Submitted Share: %08X\n", nonce);
+            if (tx_mining_submit(client, g_worker, g_current_job, nonce, submit_id)) {
+                g_total_shares++;
+                Serial.printf("[Share] Submitted: %08X (ID: %lu)\n", nonce, submit_id);
+                
+                // Update slave share count
+                for (auto& slave : g_slave_list) {
+                    slave.shares++;
+                }
             }
         }
-
-        // 5. CALCULATE HASHRATE (Every second)
-        if (millis() - last_hash_calc >= 1000) {
-            // Assumes processed_nonces is raw hashes. Convert to KH/s.
-            globalHashrate = (float)period_nonces / 1000.0f;
-            period_nonces = 0;
-            last_hash_calc = millis();
-        }
-
-        vTaskDelay(pdMS_TO_TICKS(100)); // I2C Polling Rate
-    }
-}
-
-// --- UI IMPLEMENTATION ---
-void initDisplay() {
-    tft.init();
-    tft.setRotation(1);
-    canvas.setColorDepth(8);
-    canvas.createSprite(tft.width(), tft.height());
-    canvas.fillSprite(TFT_BLACK);
-    canvas.pushSprite(0, 0);
-}
-
-void updateUI(int slaveCount, float totalHashrate, float diff, uint32_t uptime, String status, float acc) {
-    canvas.fillSprite(TFT_BLACK);
-    
-    // TOP BAR
-    canvas.fillRect(0, 0, 320, 25, 0x4208);
-    canvas.setTextColor(TFT_WHITE);
-    canvas.setTextSize(2);
-    canvas.setCursor(10, 5);
-    canvas.print("ESPiner Master");
-    
-    // DIFFICULTY (Dynamically right-aligned)
-    char diffStr[16];
-    snprintf(diffStr, sizeof(diffStr), "D:%.0f", diff); 
-    int diffWidth = canvas.textWidth(diffStr);
-    canvas.setCursor(315 - diffWidth, 5); // 320 width - text width - 5px padding
-    canvas.print(diffStr);
-    
-    // HASHRATE COLOR LOGIC
-    uint16_t hashColor;
-    if (totalHashrate <= 0.01f) hashColor = TFT_RED;
-    else if (totalHashrate <= 100.0f) hashColor = TFT_YELLOW;
-    else hashColor = TFT_GREEN;
-    
-    // HASHRATE VALUE (Truncated & Centered)
-    canvas.setTextColor(hashColor);
-    canvas.setTextSize(4);
-    
-    char hashStr[16];
-    snprintf(hashStr, sizeof(hashStr), "%.0f", totalHashrate); // %.0f removes decimals
-    int hashWidth = canvas.textWidth(hashStr);
-    
-    int leftCenter = 88; // Half of 176 (where the right-side boxes begin)
-    canvas.setCursor(leftCenter - (hashWidth / 2), 35);
-    canvas.print(hashStr);
-    
-    // HASHRATE LABEL (Centered)
-    canvas.setTextSize(2);
-    int unitWidth = canvas.textWidth("KH/s");
-    canvas.setCursor(leftCenter - (unitWidth / 2), 70);
-    canvas.print("KH/s");
-    
-    // SHARES
-    canvas.setTextColor(TFT_WHITE);
-    canvas.setTextSize(2);
-    canvas.setCursor(10, 105);
-    canvas.printf("S:%lu", stats.total_shares); 
-    
-    // ACCURACY
-    canvas.setTextColor(TFT_LIGHTGREY);
-    canvas.setCursor(10, 125);
-    canvas.printf("ACC:%.1f%%", acc); 
-    
-    // SLAVE BOXES
-    int boxW = 68, boxH = 24, startX = 176, startY = 32, padX = 4, padY = 4; 
-    for (int i = 0; i < 8; i++) {
-        int col = i % 2;
-        int row = i / 2;
-        int x = startX + (col * (boxW + padX));
-        int y = startY + (row * (boxH + padY));
         
-        if (i < slave_list.size()) {
-            canvas.fillRoundRect(x, y, boxW, boxH, 3, 0x7BEF); 
-            canvas.drawRoundRect(x, y, boxW, boxH, 3, TFT_WHITE);
-            canvas.setTextColor(TFT_WHITE);
-            canvas.setTextSize(1);
-            canvas.setCursor(x + (boxW - 30) / 2, y + 8);
-            canvas.printf("0x%02X", slave_list[i].address);
-        } else {
-            canvas.fillRoundRect(x, y, boxW, boxH, 3, 0x4208); 
-            canvas.drawRoundRect(x, y, boxW, boxH, 3, TFT_RED);
-            canvas.setTextColor(TFT_WHITE); 
-            canvas.setTextSize(1);
-            canvas.setCursor(x + (boxW - 18) / 2, y + 8);
-            canvas.print("---");
+        // CALCULATE HASHRATE
+        if (millis() - g_last_hashrate_calc >= HASHRATE_UPDATE_MS) {
+            g_total_hashrate = (float)g_period_nonces / 1000.0f;
+            Serial.printf("[Hashrate] %.2f KH/s\n", g_total_hashrate);
+            g_period_nonces = 0;
+            g_last_hashrate_calc = millis();
         }
+        
+        vTaskDelay(pdMS_TO_TICKS(I2C_POLL_INTERVAL_MS));
     }
-    
-    // FOOTER STATUS
-    canvas.fillRect(0, 145, 320, 25, TFT_RED);
-    canvas.setTextColor(TFT_WHITE);
-    canvas.setTextSize(2);
-    String footerMsg = "NODE:" + status;
-    int footerX = (320 - (footerMsg.length() * 12)) / 2;
-    canvas.setCursor(max(5, footerX), 150);
-    canvas.print(footerMsg);
-    
-    canvas.pushSprite(0, 0);
 }
-
-void uiTask(void *pvParameters) {
+#ifdef SCREEN
+void uiTask(void* pv) {
     while (1) {
-        float acc = 100.0f;
-        if (stats.total_shares + stats.rejected_shares > 0) {
-            acc = ((float)stats.total_shares / (stats.total_shares + stats.rejected_shares)) * 100.0f;
+        checkButtons();
+        
+        float accuracy = 100.0f;
+        if (g_total_shares + g_rejected_shares > 0) {
+            accuracy = ((float)g_total_shares / 
+                       (g_total_shares + g_rejected_shares)) * 100.0f;
         }
-
-        updateUI(slave_list.size(), globalHashrate, stats.difficulty, millis() / 1000, stats.pool_status, acc);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        
+        updateUI(g_slave_list.size(), g_total_hashrate, g_current_difficulty,
+                g_total_shares, g_pool_status, accuracy);
+        
+        vTaskDelay(pdMS_TO_TICKS(DISPLAY_UPDATE_MS));
     }
 }
-
+#endif
 void setup() {
     Serial.begin(115200);
     delay(2000);
     
-    initDisplay();
+    Serial.println("\n=== TTGO T-Display Mining Master ===");
     
-    // Initialize your custom ESP-IDF I2C Driver instead of Wire.begin()
-    if (i2c_master_start() == ESP_OK) {
-        Serial.println("I2C Master Init OK");
-    } else {
-        Serial.println("I2C Master Init FAILED");
+    pinMode(BUTTON1_PIN, INPUT_PULLUP);
+    pinMode(BUTTON2_PIN, INPUT_PULLUP);
+    
+    pinMode(ADC_POWER_PIN, OUTPUT);
+    digitalWrite(ADC_POWER_PIN, HIGH);
+    #ifdef SCREEN
+    initDisplay();
+    tft.fillScreen(TFT_BLACK);
+    tft.setTextColor(TFT_GREEN, TFT_BLACK);
+    tft.setTextSize(2);
+    tft.setCursor(40, 50);
+    tft.print("ESPMiner");
+    tft.setTextSize(1);
+    tft.setCursor(60, 80);
+    tft.print("TTGO T-Display");
+    delay(2000);
+    #endif
+    
+    if (i2c_master_init() != 0) {
+        Serial.println("[FATAL] I2C failed!");
+        while (1) delay(1000);
     }
-
+    
+    Serial.printf("[WiFi] Connecting to %s...\n", WIFI_SSID);
     WiFi.begin(WIFI_SSID, WIFI_PASS);
     
-    // Split the workload into specific cores
+    int wifi_attempts = 0;
+    while (WiFi.status() != WL_CONNECTED && wifi_attempts < 30) {
+        delay(500);
+        Serial.print(".");
+        wifi_attempts++;
+    }
+    
+    if (WiFi.status() == WL_CONNECTED) {
+        Serial.printf("\n[WiFi] Connected! IP: %s\n", WiFi.localIP().toString().c_str());
+    } else {
+        Serial.println("\n[WiFi] Failed!");
+        g_pool_status = "WiFi Failed";
+    }
+    #ifdef SCREEN
     xTaskCreatePinnedToCore(uiTask, "UI", 8192, NULL, 1, NULL, 0);
+    #endif
     xTaskCreatePinnedToCore(poolTask, "Pool", 8192, NULL, 1, NULL, 0);
     xTaskCreatePinnedToCore(i2cTask, "I2C", 8192, NULL, 2, NULL, 1);
+    
+    Serial.println("=== Ready ===");
 }
 
 void loop() {
-    // Left empty. FreeRTOS Tasks are handling everything!
     vTaskDelay(portMAX_DELAY);
 }

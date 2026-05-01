@@ -1,0 +1,63 @@
+[I2C] Initializing with SDA=21, SCL=22
+
+=== I2C BUS DIAGNOSTIC ===
+Scanning range: 0x10 to 0x70
+SDA Pin: 21, SCL Pin: 22
+I2C Frequency: 100000 Hz
+==========================
+
+Pin State Check:
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH
+✗ No response at 0x10 (error: 263)
+✗ No response at 0x11 (error: 263)
+✗ No response at 0x12 (error: 263)
+✗ No response at 0x13 (error: 263)
+✗ No response at 0x14 (error: 263)
+✗ No response at 0x15 (error: 263)
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1344
+load:0x40078000,len:13936
+load:0x40080400,len:3600
+entry 0x400805f0
+
+=== TTGO T-Display Mining Master ===
+[Display] Initialized - 240x135
+[I2C] Initializing with SDA=21, SCL=22
+
+=== I2C BUS DIAGNOSTIC ===
+Scanning range: 0x10 to 0x70
+SDA Pin: 21, SCL Pin: 22
+I2C Frequency: 100000 Hz
+==========================
+
+Pin State Check:
+  SDA (GPIO21): HIGH
+  SCL (GPIO22): HIGH
+✗ No response at 0x10 (error: 263)
+✗ No response at 0x11 (error: 263)
+✗ No response at 0x12 (error: 263)
+✗ No response at 0x13 (error: 263)
+✗ No response at 0x14 (error: 263)
+✗ No response at 0x15 (error: 263)
+
+=== SCAN COMPLETE ===
+⚠ NO DEVICES FOUND!
+
+Troubleshooting Checklist:
+  1. Check SDA/SCL wiring (Master GPIO21/22 ↔ Slave)
+  2. Verify COMMON GND between all boards
+  3. Check 4.7k pull-up resistors on SDA & SCL
+  4. Ensure all slave boards are powered (3.3V or 5V)
+  5. Verify each slave has a UNIQUE I2C address
+  6. Try reducing I2C_FREQ to 50000 in config.h
+  7. Check for address conflicts (two slaves same address)
+======================
+
+[I2C] ⚠ CRITICAL: No slaves detected!
+[FATAL] I2C failed!

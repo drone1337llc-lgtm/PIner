@@ -1,0 +1,49 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1344
+load:0x40078000,len:13936
+load:0x40080400,len:3600
+entry 0x400805f0
+
+=== TTGO T-Display Mining Master ===
+[Display] Initialized
+[I2C] Master initialized successfully
+[WiFi] Connecting to Patricia27680...
+..
+[WiFi] Connected! IP: 192.168.68.13
+=== Ready ===
+[Pool] Connecting...
+[Pool] Connected!
+[Stratum] Sending subscribe...
+{"id": 1, "method": "mining.subscribe", "params": ["ESPMiner/2.0"]}
+[Stratum] Subscribed - Extranonce1: be732b05, Size: 4
+[Stratum] Sending authorize...
+{"id": 2, "method": "mining.authorize", "params": ["bc1q5057sfxgs5nc5703wk9x7ecvsc95042tmyskk8", "x"]}
+[Pool] Ready
+[ 13163][I][WiFiClient.cpp:539] connected(): Unexpected: RES: 0, ERR: 119
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 100000.000000
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d636d2 parsed successfully
+[Pool] New job
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d63b5c parsed successfully
+[Pool] New job
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d63ffc parsed successfully
+[Pool] New job
+[I2C] Scan complete: 0 slaves found
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d64492 parsed successfully
+[Pool] New job
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d64934 parsed successfully
+[Pool] New job
+[I2C] Scan complete: 0 slaves found
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3d64dd0 parsed successfully
+[Pool] New job

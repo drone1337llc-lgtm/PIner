@@ -6,52 +6,50 @@
 #include <atomic>
 #include <cstring>
 #include "config.h"
-
-#pragma pack(push, 1)
-struct JobI2cRequest {
-    uint8_t  cmd;
-    uint8_t  nonce_start_byte; // Matching Master nonce offset logic
-    float    difficulty;
-    uint8_t  buffer[76];
-    uint8_t  crc;
-};
-
-struct JobI2cResult {
-    uint8_t  cmd;
-    uint8_t  id;
-    uint32_t nonce;
-    uint32_t hashrate_raw;
-    uint8_t  crc;
-};
-#pragma pack(pop)
+#include "i2c_protocol.h"
+#include "sha256_optimized.h"
 
 class I2CSlave {
 public:
-    I2CSlave(uint8_t addr);
-    void begin(uint8_t address);
+    static I2CSlave& getInstance();
     
-    bool hasNewJob();
+    void begin(uint8_t address);
+    uint8_t getAddress() const { return m_addr; }
+    
+    bool hasNewJob() const { return m_new_job_available.load(); }
     void getJob(JobI2cRequest &dest);
     void clearNewJob();
     
     void addHashes(uint32_t hashes) { m_hashes_since_poll.fetch_add(hashes); }
-    void setFoundNonce(uint32_t nonce) { m_found_nonce.store(nonce); }
-
+    void setFoundNonce(uint32_t nonce);
+    uint32_t getFoundNonce();
+    void clearFoundNonce();
+    
+    uint32_t getHashesSincePoll() { return m_hashes_since_poll.exchange(0); }
+    uint32_t getCrcErrors() const { return m_crc_errors; }
+    
     volatile bool m_mining_enabled;
-    uint32_t m_crc_errors = 0;
 
 private:
+    I2CSlave();
+    I2CSlave(const I2CSlave&) = delete;
+    I2CSlave& operator=(const I2CSlave&) = delete;
+    
     static I2CSlave* s_instance;
     static void handleReceive(int len);
     static void handleRequest();
     
     uint8_t m_addr;
-    SemaphoreHandle_t m_jobMutex;
-    bool m_new_job_available;
+    std::atomic<bool> m_new_job_available{false};
     JobI2cRequest m_current_job;
     
-    std::atomic<uint32_t> m_hashes_since_poll;
-    std::atomic<uint32_t> m_found_nonce;
+    std::atomic<uint32_t> m_hashes_since_poll{0};
+    std::atomic<uint32_t> m_found_nonce{0xFFFFFFFF};
+    std::atomic<uint32_t> m_crc_errors{0};
+    
+    SemaphoreHandle_t m_jobMutex;
 };
+
+#define I2C_SLAVE I2CSlave::getInstance()
 
 #endif

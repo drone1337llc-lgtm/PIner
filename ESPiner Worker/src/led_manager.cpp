@@ -35,7 +35,7 @@ void LedManager::update() {
 }
 
 void LedManager::updatePattern(LedPattern pattern, uint32_t now) {
-    if (now - m_last_update < 10) return;  // Min update interval
+    if (now - m_last_update < LED_UPDATE_INTERVAL_MS) return;
     
     switch (pattern) {
         case LED_OFF:

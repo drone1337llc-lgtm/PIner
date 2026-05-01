@@ -1,5 +1,7 @@
-#ifdef LCD
 #include "display_manager.h"
+
+#ifdef LCD
+#include <TFT_eSPI.h>
 
 DisplayManager::DisplayManager() 
     : m_last_update(0), m_current_page(0), m_last_page_change(0) {
@@ -25,9 +27,9 @@ void DisplayManager::showBootScreen() {
     tft.setTextSize(3);
     tft.setCursor(20, 40);
     tft.println("ESP MINER");
-    tft.setTextSize(3);
+    tft.setTextSize(2);
     tft.setCursor(120, 100);
-    tft.printf("Ready!");
+    tft.print("Ready!");
     delay(2000);
 }
 
@@ -37,10 +39,7 @@ void DisplayManager::updateStats(const DisplayStats& stats) {
     
     if (now - m_last_update >= DISPLAY_UPDATE_INTERVAL) {
         m_last_update = now;
-        
-        // Only clear stats area, not header
         tft.fillRect(0, 30, 240, 130, TFT_BLACK);
-        
         drawStatsPage1();
     }
 }
@@ -64,7 +63,6 @@ void DisplayManager::drawStatsPage1() {
     tft.setCursor(100, 115);
     tft.printf("%lu", m_current_stats.total_hashes);
     
-    // Mining status
     tft.setTextColor(m_current_stats.mining_active ? TFT_GREEN : TFT_RED, TFT_BLACK);
     tft.setCursor(80, 145);
     tft.print(m_current_stats.mining_active ? "MINING" : "IDLE");
