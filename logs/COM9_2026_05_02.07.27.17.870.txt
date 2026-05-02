@@ -400,3 +400,12 @@
 [Status] Total: 112502.00 H/s | Diff: 4.00 | Slaves: 7
 [Status] Total: 123439.00 H/s | Diff: 4.00 | Slaves: 7
 [Status] Total: 112501.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 123465.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 112478.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 123455.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 112486.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 121110.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 114839.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 123445.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 112495.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 121102.00 H/s | Diff: 4.00 | Slaves: 7
