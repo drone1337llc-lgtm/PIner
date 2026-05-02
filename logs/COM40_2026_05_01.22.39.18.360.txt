@@ -1,0 +1,81 @@
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Job] ID:141 Diff:10.00
+[Job] ID:148 Diff:10.00
+[Job] ID:156 Diff:10.00
+[Job] ID:164 Diff:10.00
+[Job] ID:172 Diff:10.00
+[Job] ID:180 Diff:10.00
+[Job] ID:188 Diff:10.00
+[Job] ID:196 Diff:10.00
+[Job] ID:204 Diff:10.00
+[Job] ID:212 Diff:10.00
+[Job] ID:220 Diff:10.00
+[Job] ID:228 Diff:10.00
+[Job] ID:236 Diff:10.00
+[Job] ID:243 Diff:10.00
+[Job] ID:252 Diff:10.00
+[Job] ID:3 Diff:10.00
+[Job] ID:6 Diff:10.00
+[Job] ID:11 Diff:10.00
+[Job] ID:20 Diff:10.00
+[Job] ID:27 Diff:10.00
+[Job] ID:36 Diff:10.00
+[Job] ID:44 Diff:10.00
+[Job] ID:51 Diff:10.00
+[Job] ID:60 Diff:10.00
+[Job] ID:67 Diff:10.00
+[Job] ID:76 Diff:10.00
+[Job] ID:83 Diff:10.00
+[Job] ID:92 Diff:10.00
+[Job] ID:100 Diff:10.00
+[Job] ID:107 Diff:10.00
+[Job] ID:116 Diff:10.00
+[Job] ID:123 Diff:10.00
+[Job] ID:125 Diff:10.00
+[Job] ID:131 Diff:10.00
+[Job] ID:139 Diff:10.00
+[Job] ID:147 Diff:10.00
+[Job] ID:155 Diff:10.00
+[Job] ID:163 Diff:10.00
+[Job] ID:171 Diff:10.00
+[Job] ID:182 Diff:10.00

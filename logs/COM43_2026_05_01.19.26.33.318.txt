@@ -1,0 +1,3 @@
+[Status] Addr: 0x1C, Hashes: 0, Job: Idle
+[Status] Addr: 0x1C, Hashes: 0, Job: Idle
+[Status] Addr: 0x1C, Hashes: 0, Job: Idle

@@ -1,3 +1,4 @@
+// --- FILE: displayDriver.cpp ---
 #ifdef SCREEN
 #include "displayDriver.h"
 #include "config.h"
@@ -5,159 +6,153 @@
 #include <WiFi.h>
 #include <driver/ledc.h>
 
-TFT_eSPI tft = TFT_eSPI();
-TFT_eSprite canvas = TFT_eSprite(&tft);
+#ifdef DISPLAY_USE_TFT_ESPI
+    TFT_eSPI tft = TFT_eSPI();
+    TFT_eSprite canvas = TFT_eSprite(&tft);
+#endif
 
-// PWM channel for backlight
 #define BACKLIGHT_CHANNEL 0
 #define BACKLIGHT_FREQ 5000
 #define BACKLIGHT_RESOLUTION 8
 
-// Grey color definitions
-#define GREY_DARK       0x39E7    // Dark grey
-#define GREY_MEDIUM     0x7BEF    // Medium grey
-#define GREY_LIGHT      0xBDF7    // Light grey
+#define GREY_DARK       0x39E7
+#define GREY_MEDIUM     0x7BEF
+#define GREY_LIGHT      0xBDF7
 
-void setBacklight(uint8_t brightness)
-{
-    // Brightness: 0 (off) to 255 (max)
+void setBacklight(uint8_t brightness) {
     ledcWrite(BACKLIGHT_CHANNEL, brightness);
 }
 
-void initDisplay()
-{
+void initDisplay() {
+#ifdef DISPLAY_USE_TFT_ESPI
     tft.init();
-    
-    // Use rotation 1 for proper landscape orientation on TTGO T-Display
-    tft.setRotation(3);
+    tft.setRotation(3); // Landscape
     tft.fillScreen(TFT_BLACK);
     
-    // Setup PWM for backlight control
-    ledcSetup(BACKLIGHT_CHANNEL, BACKLIGHT_FREQ, BACKLIGHT_RESOLUTION);
-    ledcAttachPin(TFT_BL_PIN, BACKLIGHT_CHANNEL);
-    setBacklight(200);  // Set brightness (0-255)
+    if (TFT_BL_PIN != -1) {
+        ledcSetup(BACKLIGHT_CHANNEL, BACKLIGHT_FREQ, BACKLIGHT_RESOLUTION);
+        ledcAttachPin(TFT_BL_PIN, BACKLIGHT_CHANNEL);
+        setBacklight(200); 
+    }
     
-    // Create sprite for double-buffering - MUST MATCH SCREEN_WIDTH x SCREEN_HEIGHT
     canvas.setColorDepth(8);
     canvas.createSprite(SCREEN_WIDTH, SCREEN_HEIGHT);
     canvas.fillSprite(TFT_BLACK);
     canvas.pushSprite(0, 0);
-    
+#endif
     Serial.printf("[Display] Initialized - %dx%d\n", SCREEN_WIDTH, SCREEN_HEIGHT);
 }
 
 void updateUI(int slaveCount, float totalHashrate, float diff,
-              uint32_t uptime, String status, float acc)
-{
-    canvas.fillSprite(TFT_BLACK);
+              uint32_t uptime, String status, float acc) {
     
+    canvas.fillSprite(TFT_BLACK);
+
+    // Dynamic UI Scaling Multipliers
+    int topBarH = max(25, SCREEN_HEIGHT / 10);
+    int botBarH = max(25, SCREEN_HEIGHT / 10);
+    int midY = topBarH;
+    int midH = SCREEN_HEIGHT - topBarH - botBarH;
+    
+    int tSizeLg = (SCREEN_WIDTH >= 480) ? 6 : 4;
+    int tSizeMd = (SCREEN_WIDTH >= 480) ? 3 : 2;
+    int tSizeSm = (SCREEN_WIDTH >= 480) ? 2 : 1;
+
     // ========================================================================
-    // TOP BAR - Increased to 25px for bigger text
+    // TOP BAR
     // ========================================================================
-    canvas.fillRect(0, 0, SCREEN_WIDTH, 25, GREY_DARK);
+    canvas.fillRect(0, 0, SCREEN_WIDTH, topBarH, GREY_DARK);
     canvas.setTextColor(TFT_WHITE, TFT_BLACK);
-    canvas.setTextSize(2);  // Bigger text
-    canvas.setCursor(5, 6);
-    canvas.print("ESPMiner");
+    canvas.setTextSize(tSizeMd);
+    canvas.setCursor(5, (topBarH / 2) - (8 * tSizeMd / 2));
+    canvas.print("ESPMiner Master");
     
     char diffStr[16];
     snprintf(diffStr, sizeof(diffStr), "D:%.2f", diff);
     int diffWidth = canvas.textWidth(diffStr);
-    canvas.setCursor(SCREEN_WIDTH - diffWidth - 5, 6);
+    canvas.setCursor(SCREEN_WIDTH - diffWidth - 5, (topBarH / 2) - (8 * tSizeMd / 2));
     canvas.print(diffStr);
     
     // ========================================================================
-    // LEFT SECTION - Hashrate, Shares, Acc (0 to SCREEN_WIDTH/2)
+    // LEFT SECTION - Hashrate Metrics
     // ========================================================================
-    int leftSectionWidth = SCREEN_WIDTH / 2;
-    int centerY = 65;  // Middle of usable area (25 to 110)
+    int leftW = SCREEN_WIDTH / 2;
+    int hashCenterY = midY + (midH / 2) - (8 * tSizeLg / 2);
     
-    // HASHRATE
-    uint16_t hashColor = (totalHashrate <= 0.01f) ? TFT_RED : (totalHashrate <= 100.0f) ? TFT_YELLOW
-                                                                                        : TFT_GREEN;
+    uint16_t hashColor = (totalHashrate <= 0.01f) ? TFT_RED : (totalHashrate <= 100.0f) ? TFT_YELLOW : TFT_GREEN;
     
     canvas.setTextColor(hashColor, TFT_BLACK);
-    canvas.setTextSize(4);  // Bigger hashrate text
+    canvas.setTextSize(tSizeLg);
     
     char hashStr[16];
     snprintf(hashStr, sizeof(hashStr), "%.0f", totalHashrate);
     int hashWidth = canvas.textWidth(hashStr);
     
-    // Centered in left section
-    canvas.setCursor((leftSectionWidth - hashWidth) / 2, centerY - 30);
+    canvas.setCursor((leftW - hashWidth) / 2, hashCenterY - (10 * tSizeLg));
     canvas.print(hashStr);
     
-    canvas.setTextSize(2);
+    canvas.setTextSize(tSizeMd);
     canvas.setTextColor(TFT_WHITE, TFT_BLACK);
     int unitWidth = canvas.textWidth("KH/s");
-    canvas.setCursor((leftSectionWidth - unitWidth) / 2, centerY + 0);
+    canvas.setCursor((leftW - unitWidth) / 2, hashCenterY + 5);
     canvas.print("KH/s");
     
-    // SHARES & ACC - Below hashrate in left section
-    canvas.setTextSize(1);
-    canvas.setTextColor(TFT_WHITE, TFT_BLACK);
-    canvas.setCursor(10, centerY + 20);
+    canvas.setTextSize(tSizeSm);
+    canvas.setCursor(10, midY + midH - (20 * tSizeSm));
     canvas.printf("Shares: %lu", uptime);
     
     canvas.setTextColor(GREY_LIGHT, TFT_BLACK);
-    canvas.setCursor(10, centerY + 30);
+    canvas.setCursor(10, midY + midH - (10 * tSizeSm));
     canvas.printf("Acc: %.1f%%", acc);
     
     // ========================================================================
-    // RIGHT SECTION - Slave Boxes (SCREEN_WIDTH/2 to SCREEN_WIDTH)
+    // RIGHT SECTION - Slave Rig Visualization
     // ========================================================================
-    int rightStartX = leftSectionWidth + 5;
-    int boxW = 52, boxH = 20;  // Slightly bigger boxes
-    int padX = 4, padY = 4;
-    int startY = 30;  // Start below top bar
+    int rightStartX = leftW + 5;
+    int padX = SCREEN_WIDTH * 0.01;
+    int padY = SCREEN_HEIGHT * 0.01;
     
-    // Calculate max rows that fit
-    int availableHeight = SCREEN_HEIGHT - 25 - 25 - startY;  // Minus top/bottom bars and start
-    int maxRows = availableHeight / (boxH + padY);
+    int cols = (SCREEN_WIDTH >= 480) ? 3 : 2;
+    int boxW = ((SCREEN_WIDTH - rightStartX) / cols) - (padX * 2);
+    int boxH = (SCREEN_HEIGHT >= 320) ? 40 : 20; 
     
-    for (int i = 0; i < 7; i++)
-    {
-        int col = i % 2;
-        int row = i / 2;
+    int startY = midY + padY;
+    int maxRows = midH / (boxH + padY);
+    int maxBoxes = maxRows * cols;
+    
+    for (int i = 0; i < maxBoxes; i++) {
+        int col = i % cols;
+        int row = i / cols;
         int x = rightStartX + (col * (boxW + padX));
         int y = startY + (row * (boxH + padY));
         
-        // Check if box would be outside screen bounds (above bottom bar)
-        if (y + boxH > SCREEN_HEIGHT - 25) {
-            continue;  // Skip boxes that would overlap status bar
-        }
-        
-        if (i < slaveCount)
-        {
+        if (i < slaveCount) {
             canvas.fillRoundRect(x, y, boxW, boxH, 3, GREY_MEDIUM);
             canvas.drawRoundRect(x, y, boxW, boxH, 3, TFT_WHITE);
             canvas.setTextColor(TFT_WHITE, TFT_BLACK);
-            canvas.setTextSize(1);
-            canvas.setCursor(x + 8, y + 6);
+            canvas.setTextSize(tSizeSm);
+            canvas.setCursor(x + (boxW * 0.15), y + (boxH * 0.25));
             canvas.printf("0x%02X", i + 0x10);
-        }
-        else
-        {
+        } else {
             canvas.fillRoundRect(x, y, boxW, boxH, 3, GREY_DARK);
             canvas.drawRoundRect(x, y, boxW, boxH, 3, GREY_MEDIUM);
             canvas.setTextColor(GREY_LIGHT, TFT_BLACK);
-            canvas.setTextSize(1);
-            canvas.setCursor(x + 18, y + 6);
+            canvas.setTextSize(tSizeSm);
+            canvas.setCursor(x + (boxW * 0.25), y + (boxH * 0.25));
             canvas.print("---");
         }
     }
     
     // ========================================================================
-    // BOTTOM STATUS BAR - Increased to 25px for bigger text
+    // BOTTOM STATUS BAR
     // ========================================================================
-    uint16_t statusColor = (status == "Mining") ? TFT_GREEN : (status == "Connecting...") ? TFT_YELLOW
-                                                                                          : TFT_RED;
+    uint16_t statusColor = (status == "Mining") ? TFT_GREEN : (status == "Connecting...") ? TFT_YELLOW : TFT_RED;
     
-    canvas.fillRect(0, SCREEN_HEIGHT - 25, SCREEN_WIDTH, 25, statusColor);
+    canvas.fillRect(0, SCREEN_HEIGHT - botBarH, SCREEN_WIDTH, botBarH, statusColor);
     canvas.setTextColor(TFT_BLACK, TFT_BLACK);
-    canvas.setTextSize(2);  // Bigger text
-    canvas.setCursor(5, SCREEN_HEIGHT - 19);
-    canvas.printf("Status|", status.c_str());
+    canvas.setTextSize(tSizeMd);
+    canvas.setCursor(5, SCREEN_HEIGHT - botBarH + (botBarH * 0.2));
+    canvas.printf("Status| %s", status.c_str());
     
     canvas.pushSprite(0, 0);
 }

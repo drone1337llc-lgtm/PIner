@@ -153,8 +153,9 @@ IRAM_ATTR void sha256_bake(const uint32_t* digest, const uint8_t* data, uint32_t
     bake[14] = 0;
 }
 
+// ✅ COMPLETE FIXED FUNCTION WITH DIFFICULTY PARAMETER
 IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data, 
-                                    const uint32_t* bake, uint8_t* hash) {
+                                    const uint32_t* bake, uint8_t* hash, float difficulty) {
     uint32_t A[8], W[64], temp1, temp2;
     
     W[0] = bake[0];
@@ -217,6 +218,7 @@ IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
         A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     }
     
+    // Output hash bytes
     for (int i = 0; i < 8; i++) {
         uint32_t val = A[i] + ((i == 0) ? 0x6A09E667 : 
                                (i == 1) ? 0xBB67AE85 :
@@ -231,5 +233,17 @@ IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
         hash[i*4+3] = val & 0xFF;
     }
     
-    return (hash[30] == 0 && hash[31] == 0);
+    // ✅ DIFFICULTY-ADJUSTABLE SHARE CHECK
+    // Higher difficulty = lower threshold = fewer shares found
+    // Difficulty 1.0 = ~256/1 = 256 threshold (almost all pass)
+    // Difficulty 10.0 = ~256/10 = 25 threshold (~10% pass)
+    // Difficulty 100.0 = ~256/100 = 2 threshold (~1% pass)
+    uint32_t threshold = (uint32_t)(256.0f / difficulty);
+    if (threshold < 1) threshold = 1;
+    if (threshold > 256) threshold = 256;
+    
+    // Check last byte against threshold
+    uint8_t last_byte = hash[31];
+    
+    return (last_byte < threshold);
 }

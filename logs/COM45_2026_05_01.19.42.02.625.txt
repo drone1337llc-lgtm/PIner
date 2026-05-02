@@ -1,0 +1,14 @@
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle
+[Status] Addr: 0x10, Hashes: 0, Job: Idle

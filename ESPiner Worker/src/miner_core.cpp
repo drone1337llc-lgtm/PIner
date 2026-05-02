@@ -11,7 +11,8 @@ MinerCore::MinerCore()
     , m_jobs_processed(0)
     , m_hashrate(0.0)
     , m_last_hashrate_update(0)
-    , m_core_id(0) {
+    , m_core_id(0)
+    , m_difficulty(10.0f) {
     memset(m_header_work, 0, sizeof(m_header_work));
     memset(&m_sha_ctx, 0, sizeof(m_sha_ctx));
 }
@@ -24,6 +25,7 @@ void MinerCore::begin() {
 
 void MinerCore::setNewJob(const JobRequest &job) {
     m_current_job = job;
+    m_difficulty = job.difficulty;
     memcpy(m_header_work, m_current_job.header_bytes, 80);
 
     sha256_midstate(m_current_job.midstate, m_header_work);
@@ -34,8 +36,8 @@ void MinerCore::setNewJob(const JobRequest &job) {
     m_mining_active.store(true);
     m_jobs_processed++;
 
-    DEBUG_PRINTF("[Miner] Job %d started, nonces: %lu-%lu\n",
-                 job.job_id, job.nonce_start, m_nonce_end);
+    DEBUG_PRINTF("[Miner] Job %d started, nonces: %lu-%lu, Diff: %.2f\n",
+                 job.job_id, job.nonce_start, m_nonce_end, m_difficulty);
 }
 
 void MinerCore::run() {
@@ -56,11 +58,12 @@ void MinerCore::runBatch(uint32_t start_nonce, uint32_t end_nonce) {
         m_header_work[74] = (nonce >> 16) & 0xFF;
         m_header_work[75] = (nonce >> 24) & 0xFF;
         
+        // ✅ Pass difficulty parameter
         if (sha256_double_baked(m_current_job.midstate, m_header_work + 64, 
-                                m_current_job.bake, hash)) {
+                                m_current_job.bake, hash, m_difficulty)) {
             m_found_nonce.store(nonce);
             LED.setPattern(LED_SHARE_FOUND);
-            DEBUG_PRINTF("!!! Share Found: %08X\n", nonce);
+            DEBUG_PRINTF("!!! Share Found: %08X (Diff: %.2f)\n", nonce, m_difficulty);
         }
         
         m_hashes_done.fetch_add(1);

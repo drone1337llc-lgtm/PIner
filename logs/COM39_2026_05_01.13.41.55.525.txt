@@ -1,0 +1,156 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+[  2052][E][esp32-hal-gpio.c:102] __pinMode(): Invalid pin selected
+[  2059][E][esp32-hal-gpio.c:102] __pinMode(): Invalid pin selected
+[  2065][E][esp32-hal-gpio.c:102] __pinMode(): Invalid pin selected
+E (2045) gpio: gpio_set_level(227): GPIO output gpio_num error
+[I2C] Initializing with SDA=21, SCL=22
+[I2C] Running bus scan...
+[I2C] ✓ Device at 0x18
+[I2C] ✓ Device at 0x20
+[I2C] ✓ Device at 0x34
+[I2C] ✓ Device at 0x51
+[I2C] Found 4 devices
+[I2C] Master initialized
+[WiFi] Connecting to Patricia27680...
+..
+[WiFi] Connected! IP: 192.168.68.16
+[I2C] Starting I2C task...
+[I2C] No slaves found, waiting...
+=== Ready ===
+[I2C] No slaves found, waiting...
+[I2C] No slaves found, waiting...
+[Pool] Connecting...
+[Pool] Connected!
+[Stratum] Sending subscribe...
+{"id": 1, "method": "mining.subscribe", "params": ["ESPMiner/2.0"]}
+[I2C] No slaves found, waiting...
+[Stratum] Subscribed - Extranonce1: 7c378cbf, Size: 4
+[Stratum] Sending authorize...
+{"id": 2, "method": "mining.authorize", "params": ["bc1q5057sfxgs5nc5703wk9x7ecvsc95042tmyskk8", "x"]}
+[Stratum] Suggest difficulty: {"id":3,"method":"mining.suggest_difficulty","params":[0.010000]}
+
+[Pool] Ready
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 100000.000000
+[Pool] Difficulty updated: 100000.000000
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fe9077 parsed successfully
+[Pool] New job received
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 0.010000
+[Pool] Difficulty updated: 0.010000
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[I2C] Feeding job 1 to 4 slaves
+[I2C] Feed failed for 0x18: -1
+[I2C] Feed failed for 0x20: -1
+[I2C] Job 1 sent to 0x34
+[I2C] Job 1 sent to 0x51
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fe951d parsed successfully
+[Pool] New job received
+[Hashrate] 0.00 KH/s
+[I2C] Feeding job 2 to 4 slaves
+[I2C] Feed failed for 0x18: -1
+[I2C] Feed failed for 0x20: -1
+[I2C] Job 2 sent to 0x34
+[I2C] Job 2 sent to 0x51
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x18
+[I2C] Added slave at 0x20
+[I2C] Added slave at 0x34
+[I2C] Added slave at 0x51
+[I2C] Total slaves: 4
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3 (DOWNLOAD_BOOT(UART0/UART1/SDIO_REI_REO_V2))
+waiting for download

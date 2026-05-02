@@ -1,0 +1,9 @@
+
+=== ESP32 Mining Slave ===
+[I2C] Slave at 0x16
+=== Slave Ready ===
+[Info] All tasks on Core 1, Core 0 free for IDLE
+[Job] ID:106 Diff:10.00
+[Job] ID:73 Diff:10.00
+[Job] ID:61 Diff:10.00
+[Job] ID:157 Diff:10.00

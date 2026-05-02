@@ -1,0 +1,1 @@
+[Status] Addr: 0x12, Hashes: 0, Job: Idle

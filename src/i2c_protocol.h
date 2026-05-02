@@ -3,19 +3,8 @@
 
 #include <stdint.h>
 #include <stddef.h>
+#include "config.h"
 
-// ============================================================================
-// MINER COMMAND CODES
-// ============================================================================
-#define MINER_CMD_FEED            0xA1
-#define MINER_CMD_REQUEST_RESULT  0xA9
-#define MINER_CMD_SLAVE_RESULT    0xAA
-#define MINER_CMD_PING            0xAB
-#define MINER_CMD_RESET           0xAC
-
-// ============================================================================
-// I2C MESSAGE STRUCTURES (Must match slave exactly)
-// ============================================================================
 #pragma pack(push, 1)
 
 struct JobI2cRequest {
@@ -27,37 +16,32 @@ struct JobI2cRequest {
     uint8_t     crc;
 };
 
-struct JobI2cResult {
-    uint8_t     cmd;
-    uint8_t     id;
-    uint32_t    nonce;
-    uint32_t    hashrate_raw;
-    uint8_t     crc;
-};
-
 struct I2CStatusResponse {
     uint8_t     cmd;
     uint8_t     status;
     uint32_t    nonce;
+    uint32_t    hash_count;
     uint8_t     crc;
 };
 
 #pragma pack(pop)
 
-// Structure sizes for validation
-#define JOB_REQUEST_SIZE    sizeof(JobI2cRequest)
-#define JOB_RESULT_SIZE     sizeof(JobI2cResult)
-#define STATUS_RESPONSE_SIZE sizeof(I2CStatusResponse)
+#define JOB_REQUEST_SIZE        sizeof(JobI2cRequest)
+#define STATUS_RESPONSE_SIZE    sizeof(I2CStatusResponse)
 
-// ============================================================================
-// SLAVE TRACKING
-// ============================================================================
+// ✅ Slave tracking struct WITH last_hash_count
 struct SlaveData {
     uint8_t     address;
     uint32_t    last_seen;
-    uint32_t    shares;
+    uint32_t    shares_submitted;
+    uint32_t    shares_accepted;
     float       hashrate;
     uint32_t    hashes_processed;
+    uint32_t    last_hash_count;  // ✅ ADDED - for overflow detection
+    bool        active;
 };
+
+// CRC function (C++ linkage)
+uint8_t crc8_compute(const void* data, size_t len);
 
 #endif

@@ -51,6 +51,7 @@ private:
     JobRequest m_current_job;
     uint8_t m_header_work[80];
     sha256_context_opt m_sha_ctx;
+    float m_difficulty;  // ✅ ADDED
     
     std::atomic<uint32_t> m_hashes_done{0};
     std::atomic<uint32_t> m_total_hashes{0};

@@ -1,0 +1,35 @@
+
+=== ESP32 Miner Slave Starting ===
+[Address] Manual I2C address: 0x11
+[System] Nonce start: 0x00000000
+[  2093][I][esp32-hal-i2c-slave.c:234] i2cSlaveInit(): Initialising I2C Slave: sda=21 scl=22 freq=100000, addr=0x11
+E (2139) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2139) gpio: GPIO_PIN mask error 
+E (2139) gpio: gpio_set_level(227): GPIO output gpio_num error
+[  2107][W][esp32-hal-i2c-slave.c:540] i2c_slave_check_line_state(): invalid state sda(21)=1, scl(22)=0
+E (2162) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2163) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2163) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2168) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2174) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2179) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2185) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2190) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2196) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2201) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2207) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2213) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2218) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2224) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2229) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2235) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2240) gpio: gpio_set_level(227): GPIO output gpio_num error
+E (2246) gpio: gpio_set_level(227): GPIO output gpio_num error
+[  2217][E][esp32-hal-i2c-slave.c:565] i2c_slave_check_line_state(): Bus Invalid State, Can't init sda=1, scl=0
+[  2237][E][esp32-hal-i2c-slave.c:309] i2cSlaveInit(): bad pin state
+[  2244][E][Wire.cpp:263] begin(): Slave Init ERROR
+[I2C] Slave initialized
+[I2C] Process task started
+[Miner] Task started
+[System] Slave 0x11 ready
+=== Ready ===

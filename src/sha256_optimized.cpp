@@ -1,9 +1,8 @@
 #include "sha256_optimized.h"
 #include <string.h>
-#include <Arduino.h>
+#include <esp_system.h>
 
-// Use PROGMEM for flash storage (compatible with all ESP32 variants)
-static const uint8_t CRC8_TABLE[256] PROGMEM = {
+DRAM_ATTR static const uint8_t CRC8_TABLE[256] = {
     0x00, 0x31, 0x62, 0x53, 0xC4, 0xF5, 0xA6, 0x97,
     0xB9, 0x88, 0xDB, 0xEA, 0x7D, 0x4C, 0x1F, 0x2E,
     0x43, 0x72, 0x21, 0x10, 0x87, 0xB6, 0xE5, 0xD4,
@@ -38,7 +37,7 @@ static const uint8_t CRC8_TABLE[256] PROGMEM = {
     0x3B, 0x0A, 0x59, 0x68, 0xFF, 0xCE, 0x9D, 0xAC
 };
 
-static const uint32_t K[64] PROGMEM = {
+DRAM_ATTR static const uint32_t K[64] = {
     0x428A2F98, 0x71374491, 0xB5C0FBCF, 0xE9B5DBA5,
     0x3956C25B, 0x59F111F1, 0x923F82A4, 0xAB1C5ED5,
     0xD807AA98, 0x12835B01, 0x243185BE, 0x550C7DC3,
@@ -77,16 +76,16 @@ static const uint32_t K[64] PROGMEM = {
         (h) = temp1 + temp2; \
     }
 
-uint8_t crc8_compute(const void* data, size_t len) {
+IRAM_ATTR uint8_t crc8_compute(const void* data, size_t len) {
     const uint8_t* ptr = (const uint8_t*)data;
     uint8_t crc = 0;
     for (size_t i = 0; i < len; i++) {
-        crc = pgm_read_byte(&CRC8_TABLE[crc ^ ptr[i]]);
+        crc = CRC8_TABLE[crc ^ ptr[i]];
     }
     return crc;
 }
 
-void sha256_midstate(uint32_t* digest, const uint8_t* data) {
+IRAM_ATTR void sha256_midstate(uint32_t* digest, const uint8_t* data) {
     uint32_t A[8] = {0x6A09E667, 0xBB67AE85, 0x3C6EF372, 0xA54FF53A,
                      0x510E527F, 0x9B05688C, 0x1F83D9AB, 0x5BE0CD19};
     uint32_t W[64], temp1, temp2;
@@ -118,7 +117,7 @@ void sha256_midstate(uint32_t* digest, const uint8_t* data) {
     }
 }
 
-void sha256_bake(const uint32_t* digest, const uint8_t* data, uint32_t* bake) {
+IRAM_ATTR void sha256_bake(const uint32_t* digest, const uint8_t* data, uint32_t* bake) {
     uint32_t W[16], A[8], temp1, temp2;
     
     bake[0] = GET_UINT32_BE(data, 0);
@@ -154,8 +153,9 @@ void sha256_bake(const uint32_t* digest, const uint8_t* data, uint32_t* bake) {
     bake[14] = 0;
 }
 
-bool sha256_double_baked(const uint32_t* digest, const uint8_t* data, 
-                         const uint32_t* bake, uint8_t* hash) {
+// ✅ COMPLETE FIXED FUNCTION WITH DIFFICULTY PARAMETER
+IRAM_ATTR bool sha256_double_baked(const uint32_t* digest, const uint8_t* data, 
+                                    const uint32_t* bake, uint8_t* hash, float difficulty) {
     uint32_t A[8], W[64], temp1, temp2;
     
     W[0] = bake[0];
@@ -168,7 +168,7 @@ bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
     
     for (int i = 0; i < 8; i++) A[i] = bake[5 + i];
     
-    temp1 = A[4] + S3(A[1]) + F1(A[1], A[2], A[3]) + pgm_read_dword(&K[4]);
+    temp1 = A[4] + S3(A[1]) + F1(A[1], A[2], A[3]) + K[4];
     temp2 = S2(A[0]) + F0(A[0], A[1], A[2]);
     A[4] += temp1;
     A[0] = temp1 + temp2;
@@ -218,6 +218,7 @@ bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
         A[3] = A[2]; A[2] = A[1]; A[1] = A[0]; A[0] = tmp;
     }
     
+    // Output hash bytes
     for (int i = 0; i < 8; i++) {
         uint32_t val = A[i] + ((i == 0) ? 0x6A09E667 : 
                                (i == 1) ? 0xBB67AE85 :
@@ -232,5 +233,17 @@ bool sha256_double_baked(const uint32_t* digest, const uint8_t* data,
         hash[i*4+3] = val & 0xFF;
     }
     
-    return (hash[30] == 0 && hash[31] == 0);
+    // ✅ DIFFICULTY-ADJUSTABLE SHARE CHECK
+    // Higher difficulty = lower threshold = fewer shares found
+    // Difficulty 1.0 = ~256/1 = 256 threshold (almost all pass)
+    // Difficulty 10.0 = ~256/10 = 25 threshold (~10% pass)
+    // Difficulty 100.0 = ~256/100 = 2 threshold (~1% pass)
+    uint32_t threshold = (uint32_t)(256.0f / difficulty);
+    if (threshold < 1) threshold = 1;
+    if (threshold > 256) threshold = 256;
+    
+    // Check last byte against threshold
+    uint8_t last_byte = hash[31];
+    
+    return (last_byte < threshold);
 }

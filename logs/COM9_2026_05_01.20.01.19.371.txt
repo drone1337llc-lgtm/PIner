@@ -1,0 +1,434 @@
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fb1374 parsed successfully
+[Pool] New job received
+[I2C] Feeding job 3 to 5 slaves
+[I2C] Feed failed for 0x11: 263
+[I2C] Feed failed for 0x12: 263
+[I2C] Feed failed for 0x13: 263
+[I2C] Feed failed for 0x14: 263
+[I2C] Feed failed for 0x15: 263
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fb17e3 parsed successfully
+[Pool] New job received
+[I2C] Feeding job 4 to 5 slaves
+[I2C] Feed failed for 0x11: 263
+[I2C] Feed failed for 0x12: 263
+[I2C] Feed failed for 0x13: 263
+[I2C] Feed failed for 0x14: 263
+[I2C] Feed failed for 0x15: 263
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fb1c54 parsed successfully
+[Pool] New job received
+[I2C] Feeding job 5 to 5 slaves
+[I2C] Feed failed for 0x11: 263
+[I2C] Feed failed for 0x12: 263
+[I2C] Feed failed for 0x13: 263
+[I2C] Feed failed for 0x14: 263
+[I2C] Feed failed for 0x15: 263
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 5
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x10
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 6
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x10
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 6
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3fb20ce parsed successfully
+[Pool] New job received
+[I2C] Feeding job 6 to 6 slaves
+[I2C] Feed failed for 0x10: 263
+[I2C] Feed failed for 0x11: 263
+[I2C] Feed failed for 0x12: 263
+[I2C] Feed failed for 0x13: 263
+[I2C] Feed failed for 0x14: 263
+[I2C] Feed failed for 0x15: 263
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x10
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 6
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[Hashrate] 0.00 KH/s
+[I2C] Scanning for slaves...
+[I2C] Added slave at 0x10
+[I2C] Added slave at 0x11
+[I2C] Added slave at 0x12
+[I2C] Added slave at 0x13
+[I2C] Added slave at 0x14
+[I2C] Added slave at 0x15
+[I2C] Total slaves: 6
+[Hashrate] 0.00 KH/s

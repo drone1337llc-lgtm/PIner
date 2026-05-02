@@ -1,0 +1,9 @@
+
+=== ESP32 Miner Slave Starting ===
+[Address] Manual I2C address: 0x16
+[System] Nonce start: 0x00000000
+[I2C] Slave initialized
+[I2C] Process task started
+[Miner] Task started[System] Slave 0x16 ready
+=== Ready ===
+

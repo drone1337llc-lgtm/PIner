@@ -1,0 +1,743 @@
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+
+[Master] Scanning I2C bus...
+[ 60000][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 600.cpp:444] en09][E][WiredTransmission(): Bus is in Slave Mode
+[ 60015][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60021][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60027][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60033][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60039][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60045][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60050][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60057][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60062][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60068][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60074][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60080][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60086][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60092][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60098][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60104][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60110][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60116][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60122][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60128][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60134][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60140][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60146][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60152][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60158][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60164][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60170][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60176][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60182][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60188][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60194][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60200][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60206][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60212][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60218][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60224][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60230][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60236][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60242][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60248][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60254][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60260][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60265][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60272][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60277][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60283][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60289][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60295][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60301][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60307][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60313][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60319][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60325][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60331][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60337][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60343][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60349][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60355][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60361][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60367][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60373][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60379][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60385][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60391][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60397][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60403][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60409][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60415][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60421][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60427][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60433][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60439][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60445][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60451][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60457][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60463][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60469][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60475][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60480][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60487][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60492][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60498][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60504][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60510][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60516][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60522][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60528][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60534][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60540][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60546][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60552][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60558][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60564][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60570][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60576][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60582][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60588][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60594][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60600][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60606][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60612][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60618][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60624][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60630][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60636][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60642][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60648][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60654][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60660][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60666][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60672][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60678][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60684][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60690][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60695][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60702][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60707][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60713][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60719][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60725][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60731][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60737][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60743][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60749][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60755][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60761][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60767][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60773][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60779][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60785][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60791][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60797][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60803][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60809][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60815][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60821][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60827][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60833][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60839][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60845][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60851][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60857][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60863][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60869][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60875][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60881][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60887][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60893][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60899][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60905][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60910][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60917][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60922][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60928][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60934][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60940][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60946][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60952][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60958][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60964][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60970][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60976][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60982][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 60988][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 60994][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61000][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61006][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61012][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61018][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61024][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61030][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61036][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61042][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61048][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61054][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61060][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61066][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61072][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61078][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61084][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61090][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61096][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61102][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61108][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61114][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61120][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61125][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61132][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61137][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61143][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[ 61149][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[ 61155][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[Master] Total Slaves Found: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+
+[Master] Scanning I2C bus...
+[120001][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120010][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120016][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120022][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120028][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120034][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120040][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120046][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120051][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120058][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120063][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120069][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120075][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120081][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120087][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120093][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120099][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120105][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120111][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120117][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120123][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120129][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120135][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120141][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120147][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120153][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120159][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120165][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120171][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120177][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120183][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120189][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120195][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120201][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120207][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120213][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120219][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120225][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120231][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120237][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120243][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120249][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120255][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120261][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120266][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120273][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120278][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120284][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120290][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120296][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120302][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120308][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120314][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120320][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120326][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120332][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120338][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120344][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120350][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120356][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120362][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120368][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120374][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120380][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120386][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120392][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120398][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120404][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120410][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120416][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120422][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120428][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120434][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120440][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120446][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120452][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120458][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120464][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120470][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120476][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120482][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120488][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120493][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120500][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120505][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120511][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120517][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120523][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120529][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120535][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120541][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120547][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120553][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120559][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120565][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120571][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120577][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120583][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120589][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120595][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120601][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120607][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120613][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120619][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120625][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120631][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120637][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120643][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120649][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120655][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120661][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120667][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120673][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120679][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120685][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120691][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120697][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120703][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120709][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120715][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120720][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120727][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120732][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120738][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120744][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120750][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120756][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120762][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120768][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120774][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120780][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120786][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120792][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120798][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120804][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120810][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120816][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120822][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120828][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120834][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120840][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120846][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120852][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120858][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120864][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120870][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120876][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120882][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120888][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120894][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120900][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120906][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120912][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120918][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120924][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120930][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120935][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120942][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120947][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120953][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120959][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120965][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120971][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120977][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120983][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[120989][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[120995][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121001][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121007][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121013][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121019][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121025][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121031][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121037][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121043][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121049][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121055][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121061][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121067][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121073][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121079][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121085][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121091][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121097][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121103][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121109][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121115][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121121][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121127][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121133][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121139][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121145][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[121151][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[121157][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[Master] Total Slaves Found: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+
+[Master] Scanning I2C bus...
+[180002][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180011][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180017][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180023][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180029][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180035][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180041][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180047][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180052][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180059][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180064][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180070][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180076][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180082][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180088][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180094][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180100][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180106][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180112][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180118][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180124][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180130][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180136][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180142][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180148][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180154][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180160][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180166][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180172][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180178][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180184][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180190][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180196][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180202][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180208][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180214][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180220][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180226][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180232][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180238][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180244][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180250][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180256][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180262][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180267][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180274][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180279][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180285][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180291][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180297][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180303][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180309][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180315][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180321][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180327][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180333][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180339][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180345][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180351][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180357][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180363][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180369][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180375][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180381][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180387][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180393][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180399][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180405][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180411][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180417][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180423][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180429][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180435][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180441][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180447][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180453][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180459][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180465][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180471][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180477][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180483][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180489][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180494][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180501][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180506][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180512][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180518][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180524][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180530][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180536][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180542][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180548][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180554][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180560][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180566][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180572][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180578][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180584][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180590][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180596][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180602][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180608][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180614][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180620][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180626][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180632][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180638][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180644][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180650][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180656][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180662][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180668][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180674][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180680][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180686][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180692][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180698][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180704][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180710][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180716][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180721][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180728][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180733][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180739][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180745][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180751][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180757][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180763][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180769][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180775][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180781][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180787][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180793][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180799][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180805][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180811][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180817][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180823][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180829][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180835][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180841][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180847][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180853][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180859][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180865][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180871][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180877][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180883][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180889][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180895][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180901][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180907][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180913][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180919][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180925][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180931][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180936][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180943][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180948][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180954][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180960][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180966][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180972][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180978][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180984][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[180990][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[180996][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181002][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181008][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181014][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181020][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181026][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181032][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181038][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181044][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181050][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181056][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181062][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181068][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181074][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181080][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181086][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181092][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181098][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181104][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181110][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181116][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181122][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181128][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181134][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181140][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181146][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[181152][E][Wire.cpp:411] beginTransmission(): Bus is in Slave Mode
+[181158][E][Wire.cpp:444] endTransmission(): Bus is in Slave Mode
+[Master] Total Slaves Found: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 0

@@ -1,0 +1,256 @@
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Self] 0.00 H/s (Total: 0)
+[Job] ID:21 Diff:10.00
+[Self] 17587.00 H/s (Total: 17587)
+[Self] 23400.00 H/s (Total: 40987)
+[Self] 23399.00 H/s (Total: 64386)
+[Self] 23399.00 H/s (Total: 87785)
+[Self] 23399.00 H/s (Total: 111184)
+E (127403) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (127403) task_wdt:  - IDLE0 (CPU 0)
+E (127403) task_wdt: Tasks currently running:
+E (127403) task_wdt: CPU 0: Miner
+E (127403) task_wdt: CPU 1: IDLE1
+E (127403) task_wdt: Aborting.
+
+abort() was called at PC 0x400d9c39 on core 0
+
+
+Backtrace: 0x40083fb1:0x3ffbea3c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 9146552b7601c05d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=== ESP32 Mining Slave ===
+[I2C] Slave at 0x16
+=== Slave Ready ===
+[Job] ID:29 Diff:10.00
+[Self] 8205.00 H/s (Total: 8205)
+[Self] 23399.00 H/s (Total: 31604)
+[Self] 23399.00 H/s (Total: 55003)
+[Self] 23399.00 H/s (Total: 78402)
+[Self] 23399.00 H/s (Total: 101801)
+E (15473) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (15473) task_wdt:  - IDLE0 (CPU 0)
+E (15473) task_wdt: Tasks currently running:
+E (15473) task_wdt: CPU 0: Miner
+E (15473) task_wdt: CPU 1: IDLE1
+E (15473) task_wdt: Aborting.
+
+abort() was called at PC 0x400d9c39 on core 0
+
+
+Backtrace: 0x40083fb1:0x3ffbea3c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 9146552b7601c05d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=== ESP32 Mining Slave ===
+[I2C] Slave at 0x16
+=== Slave Ready ===
+[Job] ID:37 Diff:10.00
+[Self] 7737.00 H/s (Total: 7737)
+[Self] 23399.00 H/s (Total: 31136)
+[Self] 23399.00 H/s (Total: 54535)
+[Self] 23399.00 H/s (Total: 77934)
+[Self] 23399.00 H/s (Total: 101333)
+E (15513) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (15513) task_wdt:  - IDLE0 (CPU 0)
+E (15513) task_wdt: Tasks currently running:
+E (15513) task_wdt: CPU 0: Miner
+E (15513) task_wdt: CPU 1: IDLE1
+E (15513) task_wdt: Aborting.
+
+abort() was called at PC 0x400d9c39 on core 0
+
+
+Backtrace: 0x40083fb1:0x3ffbea3c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 9146552b7601c05d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=== ESP32 Mining Slave ===
+[I2C] Slave at 0x16
+=== Slave Ready ===
+[Job] ID:45 Diff:10.00
+[Self] 7971.00 H/s (Total: 7971)
+[Self] 23399.00 H/s (Total: 31370)
+[Self] 23399.00 H/s (Total: 54769)
+[Self] 23399.00 H/s (Total: 78168)
+[Self] 23399.00 H/s (Total: 101567)
+E (15493) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (15493) task_wdt:  - IDLE0 (CPU 0)
+E (15493) task_wdt: Tasks currently running:
+E (15493) task_wdt: CPU 0: Miner
+E (15493) task_wdt: CPU 1: IDLE1
+E (15493) task_wdt: Aborting.
+
+abort() was called at PC 0x400d9c39 on core 0
+
+
+Backtrace: 0x40083fb1:0x3ffbea3c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 9146552b7601c05d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4
+
+=== ESP32 Mining Slave ===
+[I2C] Slave at 0x16
+=== Slave Ready ===
+[Job] ID:53 Diff:10.00
+[Self] 7971.00 H/s (Total: 7971)
+[Self] 23399.00 H/s (Total: 31370)
+[Self] 23399.00 H/s (Total: 54769)
+[Self] 23399.00 H/s (Total: 78168)
+[Self] 23399.00 H/s (Total: 101567)
+E (15493) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+E (15493) task_wdt:  - IDLE0 (CPU 0)
+E (15493) task_wdt: Tasks currently running:
+E (15493) task_wdt: CPU 0: Miner
+E (15493) task_wdt: CPU 1: IDLE1
+E (15493) task_wdt: Aborting.
+
+abort() was called at PC 0x400d9c39 on core 0
+
+
+Backtrace: 0x40083fb1:0x3ffbea3c |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 9146552b7601c05d
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:1184
+load:0x40078000,len:13232
+load:0x40080400,len:3028
+entry 0x400805e4

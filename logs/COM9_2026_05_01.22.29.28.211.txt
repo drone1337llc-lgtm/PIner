@@ -1,0 +1,2609 @@
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294875392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 20988.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23609.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294875392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 21134.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23609.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294875392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 21040.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23609.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294875392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 21103.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23610.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ��� Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 399600864.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 24396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294874624.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] ✗ Slave 0x11 Lost
+[Master] ✗ Slave 0x12 Lost
+[Master] ✗ Slave 0x13 Lost
+[Master] ✗ Slave 0x14 Lost
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x12
+[Master] ��� Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 347089408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39211.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39328.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39330.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39329.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15812.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15813.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294887680.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] �� Slave 0x12 Lost
+[Master] ✗ Slave 0x13 Lost
+[Master] �� Slave 0x14 Lost
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 56521.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 38602.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39150.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35447.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294892544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 17336.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35304.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15859.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294891520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 36881.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39238.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294891520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 37111.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55512.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31718.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294908928.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 14270.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 37030.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55304.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31718.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907136.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 36984.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55304.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23587.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31718.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907136.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 17343.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35356.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x12
+[Master] �� Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 352880224.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 958979.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 41877.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15813.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15813.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294886656.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 56577.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39328.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39329.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] �� Slave 0x12 Lost
+[Master] ✗ Slave 0x13 Lost
+[Master] �� Slave 0x14 Lost
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 39329.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15812.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15797.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294887680.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 17345.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35231.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55305.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31718.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 37031.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55304.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23586.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31679.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15859.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294891264.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 36950.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39446.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39447.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39446.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15859.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294892800.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15734.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35346.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294891520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 36902.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39237.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294891520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 17336.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 35226.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39446.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39447.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39446.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ��� Found Slave at 0x12
+[Master] �� Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] Total Slaves Found: 4
+[Status] Total: 188511264.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 17380.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 14280.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 45795.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 63373.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 63372.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 4
+[Master] ✗ Slave 0x14 Lost
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 63373.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 66313.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 28552.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47579.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15861.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15861.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47579.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15861.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47579.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15861.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47579.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 47578.00 H/s | Diff: 10.00 | Slaves: 4
+[Status] Total: 15860.00 H/s | Diff: 10.00 | Slaves: 4
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ��� Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 101680232.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 17363.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 72216.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 53583.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 39329.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 72511.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31624.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31626.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294902016.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 120975.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 78240.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 23326.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 150364.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 128177.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294890240.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95058.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52757.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118296.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118295.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94964.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907648.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95059.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52813.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118294.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118294.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94965.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95059.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52627.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118294.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118296.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94964.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907648.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95058.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52756.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118296.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118295.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94963.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907648.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95059.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52801.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118294.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 55404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118294.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94965.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294907392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 95058.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 52675.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 118295.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ��� Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 873829.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 6469868.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 96272.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79011.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294947072.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189288.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102525.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102528.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102526.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79010.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79011.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944512.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189200.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102525.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102539.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79048.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294945024.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189320.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102602.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102557.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189489.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189305.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102563.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294945024.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189386.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102577.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294946304.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 14270.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 156203.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 119945.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102581.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] �� Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] Total Slaves Found: 5
+[Status] Total: 11926655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 157779.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 159847.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15813.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 140888.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158227.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158167.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158169.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158167.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158170.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158167.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158169.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158168.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158169.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158167.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158169.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158169.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158166.00 H/s | Diff: 10.00 | Slaves: 5
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] �� Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 16673710.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85361.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78933.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78915.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78947.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78915.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78933.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78914.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78930.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78929.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78933.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78933.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78929.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78933.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78929.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78915.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78931.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 78932.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 63186.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 63188.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 57055.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] �� Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 18630160.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294945024.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189501.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189365.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102577.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189421.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71302.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4295031808.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189308.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71297.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 159830.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 14270.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] ✗ Slave 0x16 Lost
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 126617.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 7532462.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 15802373.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 96349.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102360.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189424.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944512.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189299.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79048.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294945024.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189451.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189360.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102581.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189342.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102578.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294944768.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 21458.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 28139628.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958336.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222261.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222240.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94726.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222338.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94712.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222236.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118205.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222317.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222228.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94726.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222238.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 33703604.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85600.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 34738.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4295028736.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222434.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294967296.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222417.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94726.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222423.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222333.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294991872.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85510.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23391.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222328.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94730.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222490.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85516.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23461.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222339.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 39319916.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 106826.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 43322.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 205053.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294960384.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 14270.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 189152.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 135573.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85531.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23414.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222322.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118223.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222388.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94730.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85522.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23321.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222331.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85518.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23251.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222336.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118205.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94713.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222419.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4295052800.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23369.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222312.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 44982692.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85582.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 47550.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94962.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 122855.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 170309.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85528.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23297.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222325.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222299.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85519.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23391.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222336.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85513.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23251.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222340.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94712.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222399.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94726.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294968320.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85536.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 23274.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222316.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 50681120.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 75475.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 172811.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222202.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222373.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118222.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94712.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94727.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222406.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118223.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222200.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118223.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118218.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294959104.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222490.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118221.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94729.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94725.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294958848.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 222330.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118219.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118220.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 118223.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94726.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 94728.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 4294960384.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 15760.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 181619.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 85524.00 H/s | Diff: 10.00 | Slaves: 7
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] Total Slaves Found: 6
+[Status] Total: 56261040.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 85547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 104450.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94826.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94807.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94826.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94820.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94823.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94822.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94824.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94821.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94825.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 94807.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71314.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158268.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 6
+[Master] ✗ Slave 0x15 Lost
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158271.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] Total Slaves Found: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 56390872.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 71319.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158270.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 159832.00 H/s | Diff: 10.00 | Slaves: 5
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] Total Slaves Found: 5
+[Master] ✗ Slave 0x11 Lost
+[Master] ✗ Slave 0x12 Lost
+[Master] ✗ Slave 0x13 Lost
+[Master] ✗ Slave 0x14 Lost
+[Status] Total: 15073903.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 17775.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15482.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 14278.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15876.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 15875.00 H/s | Diff: 10.00 | Slaves: 5
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 28170316.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 36699648.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 1031747.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71322.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166014.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 78669.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71315.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189448.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71310.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294779392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166026.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79047.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71320.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189444.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102543.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92810.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86733.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86731.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63251.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 62999.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 57046.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294756096.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 148589.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 70382744.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71328.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 87090.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71308.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79047.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294851072.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 78670.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71309.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294756096.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166026.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71307.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189456.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79048.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71316.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166022.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71312.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] Total Slaves Found: 5
+[Status] Total: 75040456.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 157779.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 159831.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 14270.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126620.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126617.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126620.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126620.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126620.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126620.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126619.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31655.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 126618.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 31654.00 H/s | Diff: 10.00 | Slaves: 5
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 61035036.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 18770420.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 148235.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102303.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71297.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294756096.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166040.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79047.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79046.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79047.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 84539456.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71333.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 87069.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79046.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 89204432.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71335.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 87083.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79047.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71320.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189444.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102543.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294827520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189313.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294827520.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189435.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] Total Slaves Found: 5
+[Status] Total: 93948920.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 71321.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 79338.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158271.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158271.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158270.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158275.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ��� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 98689504.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 188873.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102532.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102546.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102547.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102545.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71318.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294756096.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166020.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79060.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79060.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79061.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79063.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79065.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79060.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 71305.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158273.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 158272.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166036.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 74278.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63248.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63236.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63249.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63251.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63250.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63251.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63251.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63249.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63251.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63249.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63252.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63250.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ��� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 103151984.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 166213.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294875392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189307.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79064.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 79062.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 4294595584.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 189176.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ��� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 108463960.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92370.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112796.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ��� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 114607960.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92371.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112805.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102386.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102377.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 120751944.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112801.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102386.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102386.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102411.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 126793544.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112788.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102374.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102417.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102371.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 100079.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102189.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 104932.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102386.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 132937552.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92361.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112797.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102410.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102377.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 139081552.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92368.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112800.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102372.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102377.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102399.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102410.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 145123152.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92374.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112781.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102378.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102381.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102407.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102386.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102391.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102388.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 151267136.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112784.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102401.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102376.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 100079.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102190.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 104931.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102400.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 157411136.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 92367.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 112798.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102409.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102382.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102405.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102406.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102392.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102398.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 6
+[Status] Total: 163452752.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 21354.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 182883.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102387.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102390.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102397.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102403.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102380.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102389.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102383.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102384.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102404.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102394.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102393.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102396.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102385.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102402.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102379.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102408.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 102395.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 99858.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86581.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86581.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86583.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86575.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86588.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86568.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86594.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86580.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86582.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86567.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86581.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86582.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86579.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86583.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86575.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86588.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 86568.00 H/s | Diff: 10.00 | Slaves: 6
+[Status] Total: 63250.00 H/s | Diff: 10.00 | Slaves: 6
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] Total Slaves Found: 5
+[Status] Total: 154780352.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 62919.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 57062.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 140866.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 158274.00 H/s | Diff: 10.00 | Slaves: 5
+[Status] Total: 0.00 H/s | Diff: 10.00 | Slaves: 5
