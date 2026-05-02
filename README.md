@@ -1,5 +1,7 @@
 # PInerWorker
 
+ESPiner and soon Jetson Nano Miner are in the other branches!!
+
 # 🚀 Raspberry Pi Bitcoin Miner
 
 A high-performance, quad-core optimized Bitcoin miner designed specifically for Raspberry Pi devices. Utilizes ARM NEON SIMD instructions for maximum SHA256 hashing performance.
