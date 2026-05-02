@@ -1,0 +1,308 @@
+[Share] 0x16 Accepted (Nonce: 0x060049C5)
+[Status] Total: 104931.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06004AEE)
+[Status] Total: 85852.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06004C5E)
+[Status] Total: 104937.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06004D87)
+[Status] Total: 85850.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06004EF3)
+[Status] Total: 104935.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600501D)
+[Status] Total: 85852.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005189)
+[Status] Total: 104935.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060052B6)
+[Status] Total: 85854.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005422)
+[Status] Total: 104937.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600554B)
+[Status] Total: 85848.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060056B7)
+[Status] Total: 104938.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060057E1)
+[Status] Total: 85850.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005950)
+[Status] Total: 104942.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005A7A)
+[Status] Total: 85857.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005BE6)
+[Status] Total: 104930.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005D0F)
+[Status] Total: 85854.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005E7B)
+[Status] Total: 104934.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06005FA8)
+[Status] Total: 85856.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006114)
+[Status] Total: 104932.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600623E)
+[Status] Total: 85864.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060063AA)
+[Status] Total: 104925.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060064D3)
+[Status] Total: 85869.00 H/s | Diff: 2.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006643)
+[Status] Total: 104922.00 H/s | Diff: 2.00 | Slaves: 7
+
+[Diff] Success: 100.0% (Target: 95.0%)
+[Diff] Submitted: 30, Accepted: 30
+[Diff] �� Increased to 2.50
+[Share] 0x16 Accepted (Nonce: 0x0600676C)
+[Status] Total: 85867.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060068D8)
+[Status] Total: 105012.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006A02)
+[Status] Total: 85868.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006B6E)
+[Status] Total: 104918.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006C9B)
+[Status] Total: 85871.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006E07)
+[Status] Total: 104920.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06006F30)
+[Status] Total: 85865.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600709C)
+[Status] Total: 104922.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060071C6)
+[Status] Total: 85864.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007335)
+[Status] Total: 104925.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600745F)
+[Status] Total: 85864.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060075CB)
+[Status] Total: 104924.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060076F4)
+[Status] Total: 85870.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007860)
+[Status] Total: 104918.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600798D)
+[Status] Total: 85874.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007AF9)
+[Status] Total: 104916.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007C23)
+[Status] Total: 85868.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007D8F)
+[Status] Total: 104920.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06007EB9)
+[Status] Total: 85867.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008028)
+[Status] Total: 104907.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008152)
+[Status] Total: 85871.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060082BE)
+[Status] Total: 104917.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060083E7)
+[Status] Total: 85870.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008553)
+[Status] Total: 104916.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008680)
+[Status] Total: 85872.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060087EC)
+[Status] Total: 104917.00 H/s | Diff: 2.50 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ��� Found Slave at 0x14
+[Master] �� Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Share] 0x16 Accepted (Nonce: 0x06008916)
+[Status] Total: 11052259.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008A5F)
+[Status] Total: 329.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008BAB)
+[Status] Total: 190232.00 H/s | Diff: 2.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008D17)
+[Status] Total: 104922.00 H/s | Diff: 2.50 | Slaves: 7
+
+[Diff] Success: 100.0% (Target: 95.0%)
+[Diff] Submitted: 30, Accepted: 30
+[Diff] �� Increased to 3.00
+[Share] 0x16 Accepted (Nonce: 0x06008E43)
+[Status] Total: 85870.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06008FB0)
+[Status] Total: 104998.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060090D9)
+[Status] Total: 85871.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009245)
+[Status] Total: 104900.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600936F)
+[Status] Total: 85874.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x060094DE)
+[Status] Total: 104915.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009608)
+[Status] Total: 85873.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009774)
+[Status] Total: 104913.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600989D)
+[Status] Total: 85871.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009A09)
+[Status] Total: 104900.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009B36)
+[Status] Total: 85878.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009CA2)
+[Status] Total: 104911.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009DCC)
+[Status] Total: 85873.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x06009F38)
+[Status] Total: 104912.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A061)
+[Status] Total: 85872.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A1D1)
+[Status] Total: 104917.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A2FA)
+[Status] Total: 85871.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A467)
+[Status] Total: 104916.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A590)
+[Status] Total: 85868.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A6FC)
+[Status] Total: 104915.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A829)
+[Status] Total: 85874.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600A995)
+[Status] Total: 104915.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600AABF)
+[Status] Total: 85868.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600AC2B)
+[Status] Total: 104918.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600AD54)
+[Status] Total: 85865.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600AEC4)
+[Status] Total: 104925.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600AFED)
+[Status] Total: 85863.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B159)
+[Status] Total: 104922.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B283)
+[Status] Total: 85862.00 H/s | Diff: 3.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B3EF)
+[Status] Total: 104923.00 H/s | Diff: 3.00 | Slaves: 7
+
+[Diff] Success: 100.0% (Target: 95.0%)
+[Diff] Submitted: 30, Accepted: 30
+[Diff] ↑ Increased to 3.50
+[Share] 0x16 Accepted (Nonce: 0x0600B51B)
+[Status] Total: 85864.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B688)
+[Status] Total: 105020.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B7B1)
+[Status] Total: 85859.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600B91D)
+[Status] Total: 104925.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600BA47)
+[Status] Total: 85860.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600BBB6)
+[Status] Total: 104928.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600BCE0)
+[Status] Total: 85859.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600BE4C)
+[Status] Total: 104928.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600BF75)
+[Status] Total: 85855.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C0E1)
+[Status] Total: 104931.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C20E)
+[Status] Total: 85857.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C37A)
+[Status] Total: 104931.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C4A4)
+[Status] Total: 85854.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C610)
+[Status] Total: 104932.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C73A)
+[Status] Total: 85853.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C8A6)
+[Status] Total: 104936.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600C9D3)
+[Status] Total: 85853.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600CB3F)
+[Status] Total: 104935.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600CC68)
+[Status] Total: 85849.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600CDD4)
+[Status] Total: 104938.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600CEFE)
+[Status] Total: 85850.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D06D)
+[Status] Total: 104940.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D197)
+[Status] Total: 85857.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D303)
+[Status] Total: 104929.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D42C)
+[Status] Total: 85855.00 H/s | Diff: 3.50 | Slaves: 7
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x15
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D598)
+[Status] Total: 16689925.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D6E5)
+[Status] Total: 95182.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D80E)
+[Status] Total: 85855.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600D97A)
+[Status] Total: 104933.00 H/s | Diff: 3.50 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600DAA7)
+[Status] Total: 85855.00 H/s | Diff: 3.50 | Slaves: 7
+
+[Diff] Success: 100.0% (Target: 95.0%)
+[Diff] Submitted: 30, Accepted: 30
+[Diff] ↑ Increased to 4.00
+[Share] 0x16 Accepted (Nonce: 0x0600DC13)
+[Status] Total: 104934.00 H/s | Diff: 4.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600DD3D)
+[Status] Total: 14568.00 H/s | Diff: 4.00 | Slaves: 7
+[Share] 0x16 Accepted (Nonce: 0x0600DD60)
+[Status] Total: 186899.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129837.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106208.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129836.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106211.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129843.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106202.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129834.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106215.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129847.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106210.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129839.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106209.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129840.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106209.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129839.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106209.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129825.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106223.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129828.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106229.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129818.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106230.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129819.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106228.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129815.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106244.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129811.00 H/s | Diff: 4.00 | Slaves: 7
+
+[Diff] Waiting for more shares (have 3, need 10)
+[Status] Total: 106234.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129801.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106245.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129816.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106231.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129814.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106233.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129817.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106229.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 129804.00 H/s | Diff: 4.00 | Slaves: 7
+[Status] Total: 106235.00 H/s | Diff: 4.00 | Slaves: 7

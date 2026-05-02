@@ -1,0 +1,1778 @@
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 6
+[Stratum] Submitting: {"id":99,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000088ca"]}
+
+[Share] ��� Submitted: 000088CA from 0x16 (Total: 7)
+[Share] 0x16 Accepted
+[Status] Total: 5790.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 7
+[Stratum] Submitting: {"id":100,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000898b"]}
+
+[Share] ✓ Submitted: 0000898B from 0x16 (Total: 8)
+[Share] 0x16 Accepted
+[Status] Total: 1930.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 8
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 8
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 8
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 8
+[Stratum] Submitting: {"id":101,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008a0f"]}
+
+[Share] ✓ Submitted: 00008A0F from 0x16 (Total: 9)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 9
+[Stratum] Submitting: {"id":102,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008b2f"]}
+
+[Share] ✓ Submitted: 00008B2F from 0x16 (Total: 10)
+[Share] 0x16 Accepted
+[Status] Total: 2880.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 10
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 10
+[Stratum] Submitting: {"id":103,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008bd2"]}
+
+[Share] ��� Submitted: 00008BD2 from 0x16 (Total: 11)
+[Share] 0x16 Accepted
+[Status] Total: 1630.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 11
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 11
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 11
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 11
+[Stratum] Submitting: {"id":104,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008c74"]}
+
+[Share] ✓ Submitted: 00008C74 from 0x16 (Total: 12)
+[Share] 0x16 Accepted
+[Status] Total: 1620.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 12
+[Stratum] Submitting: {"id":105,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008c96"]}
+
+[Share] ��� Submitted: 00008C96 from 0x16 (Total: 13)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 13
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 13
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 13
+[Stratum] Submitting: {"id":106,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008cf7"]}
+
+[Share] ��� Submitted: 00008CF7 from 0x16 (Total: 14)
+[Share] 0x16 Accepted
+[Status] Total: 970.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 14
+[Stratum] Submitting: {"id":107,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008d19"]}
+
+[Share] ��� Submitted: 00008D19 from 0x16 (Total: 15)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 15
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 15
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 15
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 15
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 15
+[Stratum] Submitting: {"id":108,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008d9c"]}
+
+[Share] ��� Submitted: 00008D9C from 0x16 (Total: 16)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 16
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 16
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 1 | Submitted: 16
+
+[Diff] Success: 93.8% (Target: 90.0%)
+[Diff] ↑ Increased to 0.501
+[Stratum] Submitting: {"id":109,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008e1c"]}
+
+[Share] ��� Submitted: 00008E1C from 0x16 (Total: 1)
+[Share] 0x16 Rejected
+[Status] Total: 1280.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 1
+[Stratum] Submitting: {"id":110,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008e3e"]}
+
+[Share] ��� Submitted: 00008E3E from 0x16 (Total: 2)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 2
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 2
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 2
+[Stratum] Submitting: {"id":111,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008e7f"]}
+
+[Share] ��� Submitted: 00008E7F from 0x16 (Total: 3)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 3
+[Stratum] Submitting: {"id":112,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008ea2"]}
+
+[Share] �� Submitted: 00008EA2 from 0x16 (Total: 4)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 4
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 4
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 4
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 4
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":113,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00008f22"]}
+
+[Share] ✓ Submitted: 00008F22 from 0x16 (Total: 5)
+[Share] 0x16 Accepted
+[Status] Total: 1280.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 5
+[Stratum] Submitting: {"id":114,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009024"]}
+
+[Share] �� Submitted: 00009024 from 0x16 (Total: 6)
+[Share] 0x16 Accepted
+[Status] Total: 2580.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 6
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 6
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 6
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 6
+[Stratum] Submitting: {"id":115,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000090c9"]}
+
+[Share] �� Submitted: 000090C9 from 0x16 (Total: 7)
+[Share] 0x16 Accepted
+[Status] Total: 1650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 7
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 7
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 7
+[Stratum] Submitting: {"id":116,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000910b"]}
+
+[Share] �� Submitted: 0000910B from 0x16 (Total: 8)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 8
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 8
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 8
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 8
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 8
+[Stratum] Submitting: {"id":117,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000091ad"]}
+
+[Share] �� Submitted: 000091AD from 0x16 (Total: 9)
+[Share] 0x16 Accepted
+[Status] Total: 1620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 9
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 9
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 9
+[Stratum] Submitting: {"id":118,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000924f"]}
+
+[Share] �� Submitted: 0000924F from 0x16 (Total: 10)
+[Share] 0x16 Accepted
+[Status] Total: 1620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 10
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 10
+[Stratum] Submitting: {"id":119,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000092f1"]}
+
+[Share] �� Submitted: 000092F1 from 0x16 (Total: 11)
+[Share] 0x16 Accepted
+[Status] Total: 1620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 11
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 11
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 11
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 11
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 11
+[Stratum] Submitting: {"id":120,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009394"]}
+
+[Share] �� Submitted: 00009394 from 0x16 (Total: 12)
+[Share] 0x16 Accepted
+[Status] Total: 1630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 12
+[Stratum] Submitting: {"id":121,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009473"]}
+
+[Share] ✓ Submitted: 00009473 from 0x16 (Total: 13)
+[Share] 0x16 Accepted
+[Status] Total: 2230.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 13
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 13
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 13
+[Stratum] Submitting: {"id":122,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000094f7"]}
+
+[Share] ✓ Submitted: 000094F7 from 0x16 (Total: 14)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 14
+[Stratum] Submitting: {"id":123,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009519"]}
+
+[Share] ✓ Submitted: 00009519 from 0x16 (Total: 15)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 15
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 15
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 15
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 15
+[Stratum] Submitting: {"id":124,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000957a"]}
+
+[Share] ✓ Submitted: 0000957A from 0x16 (Total: 16)
+[Share] 0x16 Accepted
+[Status] Total: 970.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 16
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 16
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 16
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 16
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":125,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000095fd"]}
+
+[Share] ��� Submitted: 000095FD from 0x16 (Total: 17)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 17
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 17
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 17
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 17
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 17
+[Stratum] Submitting: {"id":126,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000096be"]}
+
+[Share] ✓ Submitted: 000096BE from 0x16 (Total: 18)
+[Share] 0x16 Accepted
+[Status] Total: 1930.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 18
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 18
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 18
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 18
+[Stratum] Submitting: {"id":127,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009722"]}
+
+[Share] ✓ Submitted: 00009722 from 0x16 (Total: 19)
+[Share] 0x16 Rejected
+[Status] Total: 1000.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 19
+[Stratum] Submitting: {"id":128,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009861"]}
+
+[Share] ✓ Submitted: 00009861 from 0x16 (Total: 20)
+[Share] 0x16 Accepted
+[Status] Total: 3190.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 20
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 20
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 20
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 20
+[Stratum] Submitting: {"id":129,"method":"mining.submit","params":["worker","40db44c","","69f64e50","000098e3"]}
+
+[Share] ✓ Submitted: 000098E3 from 0x16 (Total: 21)
+[Share] 0x16 Accepted
+[Status] Total: 1300.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 21
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 21
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 21
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 21
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 21
+[Stratum] Submitting: {"id":130,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009986"]}
+
+[Share] ✓ Submitted: 00009986 from 0x16 (Total: 22)
+[Share] 0x16 Accepted
+[Status] Total: 1630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 22
+[Stratum] Submitting: {"id":131,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009a47"]}
+
+[Share] ✓ Submitted: 00009A47 from 0x16 (Total: 23)
+[Share] 0x16 Accepted
+[Status] Total: 1930.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 23
+[Stratum] Submitting: {"id":132,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009ae9"]}
+
+[Share] ✓ Submitted: 00009AE9 from 0x16 (Total: 24)
+[Share] 0x16 Rejected
+[Status] Total: 1620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 24
+[Stratum] Submitting: {"id":133,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009d8f"]}
+
+[Share] ✓ Submitted: 00009D8F from 0x16 (Total: 25)
+[Share] 0x16 Accepted
+[Status] Total: 6780.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 25
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 25
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 25
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 25
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 25
+[Stratum] Submitting: {"id":134,"method":"mining.submit","params":["worker","40db44c","","69f64e50","00009e11"]}
+
+[Share] ✓ Submitted: 00009E11 from 0x16 (Total: 26)
+[Share] 0x16 Accepted
+[Status] Total: 1300.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 26
+[Stratum] Submitting: {"id":135,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a118"]}
+
+[Share] ✓ Submitted: 0000A118 from 0x16 (Total: 27)
+[Share] 0x16 Accepted
+[Status] Total: 7750.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 27
+[Stratum] Submitting: {"id":136,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a200"]}
+
+[Share] ✓ Submitted: 0000A200 from 0x16 (Total: 28)
+[Share] 0x16 Accepted
+[Status] Total: 2320.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 28
+[Stratum] Submitting: {"id":137,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a2e3"]}
+
+[Share] ✓ Submitted: 0000A2E3 from 0x16 (Total: 29)
+[Share] 0x16 Accepted
+[Status] Total: 2270.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 29
+[Stratum] Submitting: {"id":138,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a3a4"]}
+
+[Share] ✓ Submitted: 0000A3A4 from 0x16 (Total: 30)
+[Share] 0x16 Accepted
+[Status] Total: 1930.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 30
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 30
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 30
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 30
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 30
+[Stratum] Submitting: {"id":139,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a447"]}
+
+[Share] ✓ Submitted: 0000A447 from 0x16 (Total: 31)
+[Share] 0x16 Accepted
+[Status] Total: 1630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 31
+[Stratum] Submitting: {"id":140,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a608"]}
+
+[Share] ✓ Submitted: 0000A608 from 0x16 (Total: 32)
+[Share] 0x16 Accepted
+[Status] Total: 4490.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 32
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 32
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 32
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 32
+[Stratum] Submitting: {"id":141,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a6ac"]}
+
+[Share] ✓ Submitted: 0000A6AC from 0x16 (Total: 33)
+[Share] 0x16 Accepted
+[Status] Total: 1640.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 33
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 33
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 33
+[Stratum] Submitting: {"id":142,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a6ee"]}
+
+[Share] ✓ Submitted: 0000A6EE from 0x16 (Total: 34)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 34
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 34
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 34
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 34
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 34
+[Stratum] Submitting: {"id":143,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a791"]}
+
+[Share] ✓ Submitted: 0000A791 from 0x16 (Total: 35)
+[Share] 0x16 Rejected
+[Status] Total: 1630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 35
+[Stratum] Submitting: {"id":144,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a870"]}
+
+[Share] ✓ Submitted: 0000A870 from 0x16 (Total: 36)
+[Share] 0x16 Accepted
+[Status] Total: 2230.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 36
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 36
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 36
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 36
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 36
+[Stratum] Submitting: {"id":145,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a913"]}
+
+[Share] ✓ Submitted: 0000A913 from 0x16 (Total: 37)
+[Share] 0x16 Accepted
+[Status] Total: 1630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 37
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 37
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 37
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 37
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 37
+[Stratum] Submitting: {"id":146,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000a9b5"]}
+
+[Share] ✓ Submitted: 0000A9B5 from 0x16 (Total: 38)
+[Share] 0x16 Accepted
+[Status] Total: 1620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 38
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 38
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 38
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 38
+[Stratum] Submitting: {"id":147,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000aa56"]}
+
+[Share] ✓ Submitted: 0000AA56 from 0x16 (Total: 39)
+[Share] 0x16 Accepted
+[Status] Total: 1610.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 39
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 39
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 39
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 39
+[Stratum] Submitting: {"id":148,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000aab9"]}
+
+[Share] ✓ Submitted: 0000AAB9 from 0x16 (Total: 40)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 40
+[Stratum] Submitting: {"id":149,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000ae37"]}
+
+[Share] ✓ Submitted: 0000AE37 from 0x16 (Total: 41)
+[Share] 0x16 Accepted
+[Status] Total: 8940.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 41
+[Stratum] Submitting: {"id":150,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000af3c"]}
+
+[Share] ✓ Submitted: 0000AF3C from 0x16 (Total: 42)
+[Share] 0x16 Accepted
+[Status] Total: 2610.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 42
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 42
+[Stratum] Submitting: {"id":151,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000af7a"]}
+
+[Share] ✓ Submitted: 0000AF7A from 0x16 (Total: 43)
+[Share] 0x16 Accepted
+[Status] Total: 620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 43
+[Stratum] Submitting: {"id":152,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000af9c"]}
+
+[Share] ✓ Submitted: 0000AF9C from 0x16 (Total: 44)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 44
+[Stratum] Submitting: {"id":153,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b2a2"]}
+
+[Share] ✓ Submitted: 0000B2A2 from 0x16 (Total: 45)
+[Share] 0x16 Accepted
+[Status] Total: 7740.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 45
+[Stratum] Submitting: {"id":154,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b365"]}
+
+[Share] ✓ Submitted: 0000B365 from 0x16 (Total: 46)
+[Share] 0x16 Rejected
+[Status] Total: 1950.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 46
+[Stratum] Submitting: {"id":155,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b426"]}
+
+[Share] ✓ Submitted: 0000B426 from 0x16 (Total: 47)
+[Share] 0x16 Accepted
+[Status] Total: 1930.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 47
+[Stratum] Submitting: {"id":156,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b549"]}
+
+[Share] ✓ Submitted: 0000B549 from 0x16 (Total: 48)
+[Share] 0x16 Accepted
+[Status] Total: 2910.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 48
+[Stratum] Submitting: {"id":157,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b689"]}
+
+[Share] ✓ Submitted: 0000B689 from 0x16 (Total: 49)
+[Share] 0x16 Accepted
+[Status] Total: 3200.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 49
+[Stratum] Submitting: {"id":158,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b6ab"]}
+
+[Share] ✓ Submitted: 0000B6AB from 0x16 (Total: 50)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 50
+[Stratum] Submitting: {"id":159,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b790"]}
+
+[Share] ✓ Submitted: 0000B790 from 0x16 (Total: 51)
+[Share] 0x16 Accepted
+[Status] Total: 2290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 51
+[Stratum] Submitting: {"id":160,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000b9f2"]}
+
+[Share] ✓ Submitted: 0000B9F2 from 0x16 (Total: 52)
+[Share] 0x16 Accepted
+[Status] Total: 6100.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 52
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 52
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 52
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 52
+[Stratum] Submitting: {"id":161,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000ba74"]}
+
+[Share] ✓ Submitted: 0000BA74 from 0x16 (Total: 53)
+[Share] 0x16 Accepted
+[Status] Total: 1300.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 53
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 53
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":162,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bab6"]}
+
+[Share] ✓ Submitted: 0000BAB6 from 0x16 (Total: 54)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 54
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 54
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":163,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000baf8"]}
+
+[Share] ✓ Submitted: 0000BAF8 from 0x16 (Total: 55)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 55
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 55
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":164,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bb3a"]}
+
+[Share] ✓ Submitted: 0000BB3A from 0x16 (Total: 56)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 56
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 56
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":165,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bb7c"]}
+
+[Share] ✓ Submitted: 0000BB7C from 0x16 (Total: 57)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 57
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 57
+[Stratum] Submitting: {"id":166,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bbbd"]}
+
+[Share] ✓ Submitted: 0000BBBD from 0x16 (Total: 58)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 58
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 58
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 58
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 58
+[Stratum] Submitting: {"id":167,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bc40"]}
+
+[Share] ✓ Submitted: 0000BC40 from 0x16 (Total: 59)
+[Share] 0x16 Rejected
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 59
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 59
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":168,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bc7f"]}
+
+[Share] ✓ Submitted: 0000BC7F from 0x16 (Total: 60)
+[Share] 0x16 Accepted
+[Status] Total: 630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 60
+[Stratum] Submitting: {"id":169,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bca1"]}
+
+[Share] ✓ Submitted: 0000BCA1 from 0x16 (Total: 61)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 61
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 61
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 61
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 61
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":170,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bd24"]}
+
+[Share] ✓ Submitted: 0000BD24 from 0x16 (Total: 62)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 62
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 62
+[Stratum] Submitting: {"id":171,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bd65"]}
+
+[Share] ��� Submitted: 0000BD65 from 0x16 (Total: 63)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 63
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 63
+[Stratum] Submitting: {"id":172,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bda7"]}
+
+[Share] ✓ Submitted: 0000BDA7 from 0x16 (Total: 64)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 64
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 64
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":173,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bde9"]}
+
+[Share] ✓ Submitted: 0000BDE9 from 0x16 (Total: 65)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 65
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 65
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":174,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000be2b"]}
+
+[Share] ✓ Submitted: 0000BE2B from 0x16 (Total: 66)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 66
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 66
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":175,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000be69"]}
+
+[Share] ✓ Submitted: 0000BE69 from 0x16 (Total: 67)
+[Share] 0x16 Accepted
+[Status] Total: 620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 67
+[Stratum] Submitting: {"id":176,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000be8b"]}
+
+[Share] ✓ Submitted: 0000BE8B from 0x16 (Total: 68)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 68
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 68
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 68
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 68
+[Stratum] Submitting: {"id":177,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bf0e"]}
+
+[Share] ✓ Submitted: 0000BF0E from 0x16 (Total: 69)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 69
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 69
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":178,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bf50"]}
+
+[Share] ✓ Submitted: 0000BF50 from 0x16 (Total: 70)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 70
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 70
+[Stratum] Submitting: {"id":179,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bf92"]}
+
+[Share] ��� Submitted: 0000BF92 from 0x16 (Total: 71)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 71
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 71
+[Stratum] Submitting: {"id":180,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000bfd4"]}
+
+[Share] ��� Submitted: 0000BFD4 from 0x16 (Total: 72)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 72
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 72
+[Stratum] Submitting: {"id":181,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c015"]}
+
+[Share] ��� Submitted: 0000C015 from 0x16 (Total: 73)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 73
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 73
+[Stratum] Submitting: {"id":182,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c057"]}
+
+[Share] ��� Submitted: 0000C057 from 0x16 (Total: 74)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 74
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 74
+[Stratum] Submitting: {"id":183,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c096"]}
+
+[Share] ��� Submitted: 0000C096 from 0x16 (Total: 75)
+[Share] 0x16 Accepted
+[Status] Total: 630.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 75
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":184,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c0b8"]}
+
+[Share] ✓ Submitted: 0000C0B8 from 0x16 (Total: 76)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 76
+[Stratum] Submitting: {"id":185,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c1ff"]}
+
+[Share] ��� Submitted: 0000C1FF from 0x16 (Total: 77)
+[Share] 0x16 Accepted
+[Status] Total: 3270.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 77
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 77
+[Stratum] Submitting: {"id":186,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c240"]}
+
+[Share] ��� Submitted: 0000C240 from 0x16 (Total: 78)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 78
+[Stratum] Submitting: {"id":187,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c263"]}
+
+[Share] �� Submitted: 0000C263 from 0x16 (Total: 79)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 79
+[Stratum] Submitting: {"id":188,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c4e2"]}
+
+[Share] �� Submitted: 0000C4E2 from 0x16 (Total: 80)
+[Share] 0x16 Accepted
+[Status] Total: 6390.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 80
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 80
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 80
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":189,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c563"]}
+
+[Share] ✓ Submitted: 0000C563 from 0x16 (Total: 81)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 81
+[Stratum] Submitting: {"id":190,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c585"]}
+
+[Share] �� Submitted: 0000C585 from 0x16 (Total: 82)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 82
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 82
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 82
+[Stratum] Submitting: {"id":191,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c5e5"]}
+
+[Share] �� Submitted: 0000C5E5 from 0x16 (Total: 83)
+[Share] 0x16 Accepted
+[Status] Total: 960.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 83
+[Stratum] Submitting: {"id":192,"method":"mining.submit","params":["worker","40db44c","","69f64e50","0000c607"]}
+
+[Share] �� Submitted: 0000C607 from 0x16 (Total: 84)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[Stratum] Parsing mining.notify...
+[Stratum] Job 40db8b7 parsed successfully
+[Pool] New job received
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[I2C] Send job to 0x16 failed: 5
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 84
+[Stratum] Submitting: {"id":193,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c88d"]}
+
+[Share] �� Submitted: 0000C88D from 0x16 (Total: 85)
+[Share] 0x16 Accepted
+[Status] Total: 6460.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 85
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 85
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 85
+[Stratum] Submitting: {"id":194,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c8f0"]}
+
+[Share] ✓ Submitted: 0000C8F0 from 0x16 (Total: 86)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 86
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 86
+[Stratum] Submitting: {"id":195,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c932"]}
+
+[Share] ✓ Submitted: 0000C932 from 0x16 (Total: 87)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 87
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 87
+[Stratum] Submitting: {"id":196,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c970"]}
+
+[Share] ✓ Submitted: 0000C970 from 0x16 (Total: 88)
+[Share] 0x16 Accepted
+[Status] Total: 620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 88
+[Stratum] Submitting: {"id":197,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c993"]}
+
+[Share] ✓ Submitted: 0000C993 from 0x16 (Total: 89)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 89
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 89
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 89
+[Stratum] Submitting: {"id":198,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000c9f3"]}
+
+[Share] ✓ Submitted: 0000C9F3 from 0x16 (Total: 90)
+[Share] 0x16 Accepted
+[Status] Total: 960.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 90
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 90
+[Stratum] Submitting: {"id":199,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000ca35"]}
+
+[Share] ✓ Submitted: 0000CA35 from 0x16 (Total: 91)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 91
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 91
+[Stratum] Submitting: {"id":200,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000ca77"]}
+
+[Share] ✓ Submitted: 0000CA77 from 0x16 (Total: 92)
+[Share] 0x16 Rejected
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 92
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 92
+[Stratum] Submitting: {"id":201,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cab5"]}
+
+[Share] ✓ Submitted: 0000CAB5 from 0x16 (Total: 93)
+[Share] 0x16 Accepted
+[Status] Total: 620.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 93
+[Stratum] Submitting: {"id":202,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cad8"]}
+
+[Share] ✓ Submitted: 0000CAD8 from 0x16 (Total: 94)
+[Share] 0x16 Rejected
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 94
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 94
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 94
+[Stratum] Submitting: {"id":203,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cb38"]}
+
+[Share] ✓ Submitted: 0000CB38 from 0x16 (Total: 95)
+[Share] 0x16 Accepted
+[Status] Total: 960.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 95
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 95
+[Stratum] Submitting: {"id":204,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cb5a"]}
+
+[Share] ✓ Submitted: 0000CB5A from 0x16 (Total: 96)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 96
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 96
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 96
+[Stratum] Submitting: {"id":205,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cbdb"]}
+
+[Share] ✓ Submitted: 0000CBDB from 0x16 (Total: 97)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 97
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 97
+[Stratum] Submitting: {"id":206,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cbfd"]}
+
+[Share] ✓ Submitted: 0000CBFD from 0x16 (Total: 98)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 98
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 98
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 98
+[Stratum] Submitting: {"id":207,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cc7e"]}
+
+[Share] ✓ Submitted: 0000CC7E from 0x16 (Total: 99)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 99
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 99
+[Stratum] Submitting: {"id":208,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cca1"]}
+
+[Share] ✓ Submitted: 0000CCA1 from 0x16 (Total: 100)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 100
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 100
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 100
+[Stratum] Submitting: {"id":209,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cd21"]}
+
+[Share] ✓ Submitted: 0000CD21 from 0x16 (Total: 101)
+[Share] 0x16 Accepted
+[Status] Total: 1280.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 101
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 101
+[Stratum] Submitting: {"id":210,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cd44"]}
+
+[Share] ✓ Submitted: 0000CD44 from 0x16 (Total: 102)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 102
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 102
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 102
+[Stratum] Submitting: {"id":211,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cdc4"]}
+
+[Share] ✓ Submitted: 0000CDC4 from 0x16 (Total: 103)
+[Share] 0x16 Accepted
+[Status] Total: 1280.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 103
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 103
+[Stratum] Submitting: {"id":212,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cde7"]}
+
+[Share] ✓ Submitted: 0000CDE7 from 0x16 (Total: 104)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 104
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 104
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 104
+[Stratum] Submitting: {"id":213,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000ce68"]}
+
+[Share] ✓ Submitted: 0000CE68 from 0x16 (Total: 105)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 105
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 105
+[Stratum] Submitting: {"id":214,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000ce8a"]}
+
+[Share] ✓ Submitted: 0000CE8A from 0x16 (Total: 106)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 106
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 106
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 106
+[Stratum] Submitting: {"id":215,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cf0b"]}
+
+[Share] ✓ Submitted: 0000CF0B from 0x16 (Total: 107)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 107
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 107
+[Stratum] Submitting: {"id":216,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cf2d"]}
+
+[Share] ✓ Submitted: 0000CF2D from 0x16 (Total: 108)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 108
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 108
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 108
+[Stratum] Submitting: {"id":217,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cfae"]}
+
+[Share] ✓ Submitted: 0000CFAE from 0x16 (Total: 109)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 109
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 109
+[Stratum] Submitting: {"id":218,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000cfd0"]}
+
+[Share] ✓ Submitted: 0000CFD0 from 0x16 (Total: 110)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 110
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 110
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 1 | Submitted: 110
+
+[Master] Scanning I2C bus...
+[Master] �� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 2
+[Stratum] Submitting: {"id":219,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d054"]}
+
+[Share] ✓ Submitted: 0000D054 from 0x16 (Total: 111)
+[Share] 0x16 Accepted
+[Status] Total: 629960.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 111
+[Stratum] Submitting: {"id":220,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d077"]}
+
+[Share] ✓ Submitted: 0000D077 from 0x16 (Total: 112)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 112
+[Stratum] Submitting: {"id":221,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d17b"]}
+
+[Share] ✓ Submitted: 0000D17B from 0x16 (Total: 113)
+[Share] 0x16 Rejected
+[Status] Total: 2600.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 113
+[Stratum] Submitting: {"id":222,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d19e"]}
+
+[Share] ✓ Submitted: 0000D19E from 0x16 (Total: 114)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 114
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 114
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 114
+[Stratum] Submitting: {"id":223,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d201"]}
+
+[Share] ✓ Submitted: 0000D201 from 0x16 (Total: 115)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 115
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 115
+[Stratum] Submitting: {"id":224,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d223"]}
+
+[Share] ✓ Submitted: 0000D223 from 0x16 (Total: 116)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 116
+[Stratum] Submitting: {"id":225,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d246"]}
+
+[Share] ✓ Submitted: 0000D246 from 0x16 (Total: 117)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 117
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 117
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 117
+[Stratum] Submitting: {"id":226,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d2ca"]}
+
+[Share] ✓ Submitted: 0000D2CA from 0x16 (Total: 118)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 118
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 118
+[Stratum] Submitting: {"id":227,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d2ec"]}
+
+[Share] ✓ Submitted: 0000D2EC from 0x16 (Total: 119)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 119
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 119
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 119
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":228,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d370"]}
+
+[Share] �� Submitted: 0000D370 from 0x16 (Total: 120)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 120
+[Stratum] Submitting: {"id":229,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d39f"]}
+
+[Share] ✓ Submitted: 0000D39F from 0x16 (Total: 121)
+[Share] 0x16 Accepted
+[Status] Total: 470.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 121
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 121
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 121
+[Stratum] Submitting: {"id":230,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d404"]}
+
+[Share] ✓ Submitted: 0000D404 from 0x16 (Total: 122)
+[Share] 0x16 Rejected
+[Status] Total: 1010.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 122
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 122
+[Stratum] Submitting: {"id":231,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d446"]}
+
+[Share] ✓ Submitted: 0000D446 from 0x16 (Total: 123)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 123
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 123
+[Stratum] Submitting: {"id":232,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d468"]}
+
+[Share] ✓ Submitted: 0000D468 from 0x16 (Total: 124)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 124
+[Stratum] Submitting: {"id":233,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d48a"]}
+
+[Share] ✓ Submitted: 0000D48A from 0x16 (Total: 125)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 125
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 125
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 125
+[Stratum] Submitting: {"id":234,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d50b"]}
+
+[Share] ✓ Submitted: 0000D50B from 0x16 (Total: 126)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 126
+[Stratum] Submitting: {"id":235,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d52e"]}
+
+[Share] ✓ Submitted: 0000D52E from 0x16 (Total: 127)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 127
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 127
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 127
+[Stratum] Submitting: {"id":236,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d591"]}
+
+[Share] ✓ Submitted: 0000D591 from 0x16 (Total: 128)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 128
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 128
+[Stratum] Submitting: {"id":237,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d5b3"]}
+
+[Share] ✓ Submitted: 0000D5B3 from 0x16 (Total: 129)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 129
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 129
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 129
+[Stratum] Submitting: {"id":238,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d637"]}
+
+[Share] ✓ Submitted: 0000D637 from 0x16 (Total: 130)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 130
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 130
+[Stratum] Submitting: {"id":239,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d65a"]}
+
+[Share] ✓ Submitted: 0000D65A from 0x16 (Total: 131)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 131
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":240,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d67c"]}
+
+[Share] ✓ Submitted: 0000D67C from 0x16 (Total: 132)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 132
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 132
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 132
+[Stratum] Submitting: {"id":241,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d700"]}
+
+[Share] ✓ Submitted: 0000D700 from 0x16 (Total: 133)
+[Share] 0x16 Rejected
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 133
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 133
+[Stratum] Submitting: {"id":242,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d742"]}
+
+[Share] ✓ Submitted: 0000D742 from 0x16 (Total: 134)
+[Share] 0x16 Rejected
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 134
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 134
+[Stratum] Submitting: {"id":243,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d764"]}
+
+[Share] ✓ Submitted: 0000D764 from 0x16 (Total: 135)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 135
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 135
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 135
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":244,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d7e9"]}
+
+[Share] ��� Submitted: 0000D7E9 from 0x16 (Total: 136)
+[Share] 0x16 Accepted
+[Status] Total: 1330.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 136
+[Stratum] Submitting: {"id":245,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d812"]}
+
+[Share] ✓ Submitted: 0000D812 from 0x16 (Total: 137)
+[Share] 0x16 Accepted
+[Status] Total: 410.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 137
+
+[Diff] Success: 86.9% (Target: 90.0%)
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 0
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 0
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 0
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":246,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d895"]}
+
+[Share] ✓ Submitted: 0000D895 from 0x16 (Total: 1)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 1
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":247,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d8ba"]}
+
+[Share] ✓ Submitted: 0000D8BA from 0x16 (Total: 2)
+[Share] 0x16 Rejected
+[Status] Total: 380.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 2
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 2
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 2
+[Stratum] Submitting: {"id":248,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d91b"]}
+
+[Share] ✓ Submitted: 0000D91B from 0x16 (Total: 3)
+[Share] 0x16 Rejected
+[Status] Total: 960.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 3
+[Stratum] Submitting: {"id":249,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d93d"]}
+
+[Share] ✓ Submitted: 0000D93D from 0x16 (Total: 4)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 4
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 4
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 4
+[Stratum] Submitting: {"id":250,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d9a1"]}
+
+[Share] ✓ Submitted: 0000D9A1 from 0x16 (Total: 5)
+[Share] 0x16 Accepted
+[Status] Total: 1000.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 5
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":251,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000d9c3"]}
+
+[Share] ✓ Submitted: 0000D9C3 from 0x16 (Total: 6)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 6
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 6
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 6
+[Stratum] Submitting: {"id":252,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000da24"]}
+
+[Share] ✓ Submitted: 0000DA24 from 0x16 (Total: 7)
+[Share] 0x16 Accepted
+[Status] Total: 970.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 7
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":253,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000da46"]}
+
+[Share] ✓ Submitted: 0000DA46 from 0x16 (Total: 8)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 8
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 8
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 8
+[Stratum] Submitting: {"id":254,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000daa9"]}
+
+[Share] ✓ Submitted: 0000DAA9 from 0x16 (Total: 9)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 9
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":255,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dacb"]}
+
+[Share] ✓ Submitted: 0000DACB from 0x16 (Total: 10)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 10
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 10
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 10
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":256,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000db4e"]}
+
+[Share] ✓ Submitted: 0000DB4E from 0x16 (Total: 11)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 11
+[Stratum] Submitting: {"id":257,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000db71"]}
+
+[Share] ✓ Submitted: 0000DB71 from 0x16 (Total: 12)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 12
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 12
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 12
+[Stratum] Submitting: {"id":258,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dbd4"]}
+
+[Share] ✓ Submitted: 0000DBD4 from 0x16 (Total: 13)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 13
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":259,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dbf6"]}
+
+[Share] ✓ Submitted: 0000DBF6 from 0x16 (Total: 14)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 14
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 14
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 14
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 14
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":260,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dc79"]}
+
+[Share] ✓ Submitted: 0000DC79 from 0x16 (Total: 15)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 15
+[Stratum] Submitting: {"id":261,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dc9b"]}
+
+[Share] ✓ Submitted: 0000DC9B from 0x16 (Total: 16)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 16
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 16
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 16
+[Stratum] Submitting: {"id":262,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dcff"]}
+
+[Share] ✓ Submitted: 0000DCFF from 0x16 (Total: 17)
+[Share] 0x16 Accepted
+[Status] Total: 1000.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 17
+[Stratum] Submitting: {"id":263,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dd21"]}
+
+[Share] ✓ Submitted: 0000DD21 from 0x16 (Total: 18)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 18
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 18
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 18
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 18
+[Stratum] Submitting: {"id":264,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dda4"]}
+
+[Share] ✓ Submitted: 0000DDA4 from 0x16 (Total: 19)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 19
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":265,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000ddc6"]}
+
+[Share] ✓ Submitted: 0000DDC6 from 0x16 (Total: 20)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 20
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 20
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 20
+[Stratum] Submitting: {"id":266,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000de29"]}
+
+[Share] ✓ Submitted: 0000DE29 from 0x16 (Total: 21)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 21
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 21
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":267,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000de4b"]}
+
+[Share] ✓ Submitted: 0000DE4B from 0x16 (Total: 22)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 22
+[Stratum] Submitting: {"id":268,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000de70"]}
+
+[Share] ✓ Submitted: 0000DE70 from 0x16 (Total: 23)
+[Share] 0x16 Accepted
+[Status] Total: 380.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 23
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 23
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 23
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":269,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000def2"]}
+
+[Share] ✓ Submitted: 0000DEF2 from 0x16 (Total: 24)
+[Share] 0x16 Accepted
+[Status] Total: 1290.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 24
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 24
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":270,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000df14"]}
+
+[Share] ✓ Submitted: 0000DF14 from 0x16 (Total: 25)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 25
+[Stratum] Submitting: {"id":271,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000df37"]}
+
+[Share] ✓ Submitted: 0000DF37 from 0x16 (Total: 26)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 26
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 26
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 26
+[Stratum] Submitting: {"id":272,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dfbb"]}
+
+[Share] ✓ Submitted: 0000DFBB from 0x16 (Total: 27)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 27
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":273,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000dfdd"]}
+
+[Share] ✓ Submitted: 0000DFDD from 0x16 (Total: 28)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 28
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 28
+[Stratum] Submitting: {"id":274,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e01e"]}
+
+[Share] ✓ Submitted: 0000E01E from 0x16 (Total: 29)
+[Share] 0x16 Accepted
+[Status] Total: 650.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 29
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 29
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 29
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":275,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e082"]}
+
+[Share] ✓ Submitted: 0000E082 from 0x16 (Total: 30)
+[Share] 0x16 Accepted
+[Status] Total: 1000.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 30
+[Stratum] Submitting: {"id":276,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e0a4"]}
+
+[Share] ✓ Submitted: 0000E0A4 from 0x16 (Total: 31)
+[Share] 0x16 Rejected
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 31
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 31
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 31
+[Stratum] Submitting: {"id":277,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e127"]}
+
+[Share] ✓ Submitted: 0000E127 from 0x16 (Total: 32)
+[Share] 0x16 Accepted
+[Status] Total: 1310.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 32
+[Stratum] Submitting: {"id":278,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e149"]}
+
+[Share] ✓ Submitted: 0000E149 from 0x16 (Total: 33)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 33
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 33
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 33
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":279,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e1ac"]}
+
+[Share] ✓ Submitted: 0000E1AC from 0x16 (Total: 34)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 34
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":280,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e1cf"]}
+
+[Share] ✓ Submitted: 0000E1CF from 0x16 (Total: 35)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 35
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 35
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 35
+[Stratum] Submitting: {"id":281,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e251"]}
+
+[Share] ✓ Submitted: 0000E251 from 0x16 (Total: 36)
+[Share] 0x16 Accepted
+[Status] Total: 1300.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 36
+[Stratum] Submitting: {"id":282,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e274"]}
+
+[Share] ✓ Submitted: 0000E274 from 0x16 (Total: 37)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 37
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 37
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 37
+[Stratum] Submitting: {"id":283,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e2d7"]}
+
+[Share] ✓ Submitted: 0000E2D7 from 0x16 (Total: 38)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 38
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 38
+[Stratum] Submitting: {"id":284,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e2f9"]}
+
+[Share] ✓ Submitted: 0000E2F9 from 0x16 (Total: 39)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 39
+[Stratum] Submitting: {"id":285,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e31c"]}
+
+[Share] ✓ Submitted: 0000E31C from 0x16 (Total: 40)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 40
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 40
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 40
+[Stratum] Submitting: {"id":286,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e3a0"]}
+
+[Share] ✓ Submitted: 0000E3A0 from 0x16 (Total: 41)
+[Share] 0x16 Accepted
+[Status] Total: 1320.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 41
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 41
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":287,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e3e2"]}
+
+[Share] ✓ Submitted: 0000E3E2 from 0x16 (Total: 42)
+[Share] 0x16 Accepted
+[Status] Total: 660.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 42
+[Stratum] Submitting: {"id":288,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e404"]}
+
+[Share] ✓ Submitted: 0000E404 from 0x16 (Total: 43)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 43
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 43
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 43
+[Stratum] Submitting: {"id":289,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e465"]}
+
+[Share] ✓ Submitted: 0000E465 from 0x16 (Total: 44)
+[Share] 0x16 Rejected
+[Status] Total: 970.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 44
+[Stratum] Submitting: {"id":290,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e487"]}
+
+[Share] ✓ Submitted: 0000E487 from 0x16 (Total: 45)
+[Share] 0x16 Accepted
+[Status] Total: 340.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 45
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 45
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":291,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e4ea"]}
+
+[Share] ✓ Submitted: 0000E4EA from 0x16 (Total: 46)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 46
+[Stratum] Submitting: {"id":292,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e50d"]}
+
+[Share] ✓ Submitted: 0000E50D from 0x16 (Total: 47)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 47
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 47
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 47
+[Stratum] Submitting: {"id":293,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e58f"]}
+
+[Share] ✓ Submitted: 0000E58F from 0x16 (Total: 48)
+[Share] 0x16 Accepted
+[Status] Total: 1300.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 48
+[Stratum] Submitting: {"id":294,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e5b2"]}
+
+[Share] ✓ Submitted: 0000E5B2 from 0x16 (Total: 49)
+[Share] 0x16 Accepted
+[Status] Total: 350.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 49
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 49
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 49
+[Stratum] Submitting: {"id":295,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e615"]}
+
+[Share] ✓ Submitted: 0000E615 from 0x16 (Total: 50)
+[Share] 0x16 Accepted
+[Status] Total: 990.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 50
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 50
+[Stratum] Submitting: {"id":296,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e653"]}
+
+[Share] ✓ Submitted: 0000E653 from 0x16 (Total: 51)
+[Share] 0x16 Accepted
+[Status] Total: 620.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 51
+[Stratum] Submitting: {"id":297,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","00000310"]}
+
+[Share] ✓ Submitted: 00000310 from 0x10 (Total: 52)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":298,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e679"]}
+
+[Share] ✓ Submitted: 0000E679 from 0x16 (Total: 53)
+[Share] 0x16 Accepted
+[Status] Total: 8230.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 53
+[Stratum] Submitting: {"id":299,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000068b"]}
+
+[Share] ✓ Submitted: 0000068B from 0x10 (Total: 54)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":300,"method":"mining.submit","params":["worker","40db8b7","","69f64e8c","0000e69b"]}
+
+[Share] ✓ Submitted: 0000E69B from 0x16 (Total: 55)
+[Share] 0x16 Accepted
+[Status] Total: 9250.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 55
+[Status] Total: 0.00 H/s | Diff: 0.501 | Slaves: 2 | Submitted: 55

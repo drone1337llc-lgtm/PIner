@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #include <atomic>
-#include "config.h"
+#include "config.h"  // ✅ THIS WAS MISSING - adds LED_PIN definition
 
 enum LedPattern {
     LED_OFF = 0,

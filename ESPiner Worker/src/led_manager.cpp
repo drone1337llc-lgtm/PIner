@@ -1,5 +1,5 @@
 #include "led_manager.h"
-#include "config.h"
+#include "config.h"  // ✅ THIS WAS MISSING - adds LED_PIN and LED_UPDATE_INTERVAL_MS
 
 LedManager& LedManager::getInstance() {
     static LedManager instance;

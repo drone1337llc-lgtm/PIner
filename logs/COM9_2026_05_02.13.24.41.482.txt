@@ -1,0 +1,396 @@
+[Stratum] Submitting: {"id":86,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a215b"]}
+
+[Share] ✓ Submitted: 030A215B from 0x13 (Total: 83)
+[Share] 0x13 Accepted
+[Status] Total: 23560.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 83
+[Stratum] Submitting: {"id":87,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008a7d4"]}
+
+[Share] ✓ Submitted: 0008A7D4 from 0x10 (Total: 84)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":88,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0110da17"]}
+
+[Share] ✓ Submitted: 0110DA17 from 0x11 (Total: 85)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":89,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0210dc5b"]}
+
+[Share] ✓ Submitted: 0210DC5B from 0x12 (Total: 86)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":90,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a2504"]}
+
+[Share] ✓ Submitted: 030A2504 from 0x13 (Total: 87)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":91,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0402dc4d"]}
+
+[Share] ✓ Submitted: 0402DC4D from 0x14 (Total: 88)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":92,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009c20"]}
+
+[Share] ✓ Submitted: 04009C20 from 0x16 (Total: 89)
+[Share] 0x16 Accepted
+[Status] Total: 116460.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 89
+[Stratum] Submitting: {"id":93,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008ab8e"]}
+
+[Share] ✓ Submitted: 0008AB8E from 0x10 (Total: 90)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":94,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0110de30"]}
+
+[Share] ✓ Submitted: 0110DE30 from 0x11 (Total: 91)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":95,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0210e0c5"]}
+
+[Share] ✓ Submitted: 0210E0C5 from 0x12 (Total: 92)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":96,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a29c4"]}
+
+[Share] ��� Submitted: 030A29C4 from 0x13 (Total: 93)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":97,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0402e165"]}
+
+[Share] ✓ Submitted: 0402E165 from 0x14 (Total: 94)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":98,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0502dd79"]}
+
+[Share] ��� Submitted: 0502DD79 from 0x15 (Total: 95)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":99,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009c58"]}
+
+[Share] ✓ Submitted: 04009C58 from 0x16 (Total: 96)
+[Share] 0x16 Accepted
+[Status] Total: 109470.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 96
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 96
+[Stratum] Submitting: {"id":100,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008b2ba"]}
+
+[Share] ✓ Submitted: 0008B2BA from 0x10 (Total: 97)
+[Share] 0x10 Rejected
+[Stratum] Submitting: {"id":101,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0502e2d3"]}
+
+[Share] ✓ Submitted: 0502E2D3 from 0x15 (Total: 98)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":102,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009c88"]}
+
+[Share] ✓ Submitted: 04009C88 from 0x16 (Total: 99)
+[Share] 0x16 Accepted
+[Status] Total: 32540.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 99
+[Stratum] Submitting: {"id":103,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008b643"]}
+
+[Share] ✓ Submitted: 0008B643 from 0x10 (Total: 100)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":104,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0110e8c0"]}
+
+[Share] ✓ Submitted: 0110E8C0 from 0x11 (Total: 101)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":105,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a3341"]}
+
+[Share] ✓ Submitted: 030A3341 from 0x13 (Total: 102)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":106,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0402ea7f"]}
+
+[Share] ✓ Submitted: 0402EA7F from 0x14 (Total: 103)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":107,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0502e6d8"]}
+
+[Share] ✓ Submitted: 0502E6D8 from 0x15 (Total: 104)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":108,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009cb5"]}
+
+[Share] ✓ Submitted: 04009CB5 from 0x16 (Total: 105)
+[Share] 0x16 Accepted
+[Status] Total: 94440.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 105
+[Stratum] Submitting: {"id":109,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0110ec29"]}
+
+[Share] ✓ Submitted: 0110EC29 from 0x11 (Total: 106)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":110,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0210eead"]}
+
+[Share] ✓ Submitted: 0210EEAD from 0x12 (Total: 107)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":111,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a3770"]}
+
+[Share] ✓ Submitted: 030A3770 from 0x13 (Total: 108)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":112,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0402ef50"]}
+
+[Share] ✓ Submitted: 0402EF50 from 0x14 (Total: 109)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":113,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0502eba2"]}
+
+[Share] ✓ Submitted: 0502EBA2 from 0x15 (Total: 110)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":114,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009ce5"]}
+
+[Share] �� Submitted: 04009CE5 from 0x16 (Total: 111)
+[Share] 0x16 Rejected
+[Status] Total: 80100.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 111
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 111
+[Stratum] Submitting: {"id":115,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008c0a7"]}
+
+[Share] ✓ Submitted: 0008C0A7 from 0x10 (Total: 112)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":116,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a3d95"]}
+
+[Share] �� Submitted: 030A3D95 from 0x13 (Total: 113)
+[Share] 0x13 Rejected
+[Status] Total: 42330.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 113
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":117,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008c451"]}
+
+[Share] ✓ Submitted: 0008C451 from 0x10 (Total: 114)
+[Share] 0x10 Rejected
+[Stratum] Submitting: {"id":118,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0110f6b3"]}
+
+[Share] ✓ Submitted: 0110F6B3 from 0x11 (Total: 115)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":119,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a41ac"]}
+
+[Share] ✓ Submitted: 030A41AC from 0x13 (Total: 116)
+[Share] 0x13 Rejected
+[Stratum] Submitting: {"id":120,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0402f8b9"]}
+
+[Share] ✓ Submitted: 0402F8B9 from 0x14 (Total: 117)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":121,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0502f4a7"]}
+
+[Share] ✓ Submitted: 0502F4A7 from 0x15 (Total: 118)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":122,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009d3b"]}
+
+[Share] �� Submitted: 04009D3B from 0x16 (Total: 119)
+[Share] 0x16 Accepted
+[Status] Total: 94870.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 119
+[Stratum] Submitting: {"id":123,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008dbc0"]}
+
+[Share] ✓ Submitted: 0008DBC0 from 0x10 (Total: 120)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":124,"method":"mining.submit","params":["worker","3f42509","","69f64f78","01110eb9"]}
+
+[Share] ✓ Submitted: 01110EB9 from 0x11 (Total: 121)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":125,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0211108f"]}
+
+[Share] ✓ Submitted: 0211108F from 0x12 (Total: 122)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":126,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a59ae"]}
+
+[Share] ✓ Submitted: 030A59AE from 0x13 (Total: 123)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":127,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0403112d"]}
+
+[Share] ✓ Submitted: 0403112D from 0x14 (Total: 124)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":128,"method":"mining.submit","params":["worker","3f42509","","69f64f78","05030d55"]}
+
+[Share] ✓ Submitted: 05030D55 from 0x15 (Total: 125)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":129,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009e36"]}
+
+[Share] ✓ Submitted: 04009E36 from 0x16 (Total: 126)
+[Share] 0x16 Accepted
+[Status] Total: 397940.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 126
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":130,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0211142f"]}
+
+[Share] ✓ Submitted: 0211142F from 0x12 (Total: 127)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":131,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a5d5e"]}
+
+[Share] �� Submitted: 030A5D5E from 0x13 (Total: 128)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":132,"method":"mining.submit","params":["worker","3f42509","","69f64f78","040314d3"]}
+
+[Share] ��� Submitted: 040314D3 from 0x14 (Total: 129)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":133,"method":"mining.submit","params":["worker","3f42509","","69f64f78","050310f5"]}
+
+[Share] ✓ Submitted: 050310F5 from 0x15 (Total: 130)
+[Share] 0x15 Rejected
+[Stratum] Submitting: {"id":134,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009e5c"]}
+
+[Share] ✓ Submitted: 04009E5C from 0x16 (Total: 131)
+[Share] 0x16 Accepted
+[Status] Total: 37760.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 131
+[Stratum] Submitting: {"id":135,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008e2fc"]}
+
+[Share] ✓ Submitted: 0008E2FC from 0x10 (Total: 132)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":136,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0111159f"]}
+
+[Share] ✓ Submitted: 0111159F from 0x11 (Total: 133)
+[Share] 0x11 Accepted
+[Status] Total: 36180.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 133
+[Stratum] Submitting: {"id":137,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008e665"]}
+
+[Share] ✓ Submitted: 0008E665 from 0x10 (Total: 134)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":138,"method":"mining.submit","params":["worker","3f42509","","69f64f78","01111964"]}
+
+[Share] ��� Submitted: 01111964 from 0x11 (Total: 135)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":139,"method":"mining.submit","params":["worker","3f42509","","69f64f78","02111b58"]}
+
+[Share] ✓ Submitted: 02111B58 from 0x12 (Total: 136)
+[Share] 0x12 Accepted
+[Status] Total: 36710.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 136
+[Stratum] Ignoring false positive difficulty error
+[Status] Total: 0.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 136
+[Stratum] Submitting: {"id":140,"method":"mining.submit","params":["worker","3f42509","","69f64f78","02112185"]}
+
+[Share] ✓ Submitted: 02112185 from 0x12 (Total: 137)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":141,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a6a70"]}
+
+[Share] ✓ Submitted: 030A6A70 from 0x13 (Total: 138)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":142,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0403211f"]}
+
+[Share] ✓ Submitted: 0403211F from 0x14 (Total: 139)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":143,"method":"mining.submit","params":["worker","3f42509","","69f64f78","05031cd9"]}
+
+[Share] ✓ Submitted: 05031CD9 from 0x15 (Total: 140)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":144,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009ece"]}
+
+[Share] ✓ Submitted: 04009ECE from 0x16 (Total: 141)
+[Share] 0x16 Accepted
+[Status] Total: 112310.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 141
+[Stratum] Submitting: {"id":145,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008f06e"]}
+
+[Share] ✓ Submitted: 0008F06E from 0x10 (Total: 142)
+[Share] 0x10 Accepted
+[Stratum] Submitting: {"id":146,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0111231e"]}
+
+[Share] ✓ Submitted: 0111231E from 0x11 (Total: 143)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":147,"method":"mining.submit","params":["worker","3f42509","","69f64f78","02112536"]}
+
+[Share] ✓ Submitted: 02112536 from 0x12 (Total: 144)
+[Share] 0x12 Accepted
+[Stratum] Submitting: {"id":148,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a6e8e"]}
+
+[Share] ✓ Submitted: 030A6E8E from 0x13 (Total: 145)
+[Share] 0x13 Accepted
+[Stratum] Submitting: {"id":149,"method":"mining.submit","params":["worker","3f42509","","69f64f78","040325dd"]}
+
+[Share] ✓ Submitted: 040325DD from 0x14 (Total: 146)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":150,"method":"mining.submit","params":["worker","3f42509","","69f64f78","050321eb"]}
+
+[Share] �� Submitted: 050321EB from 0x15 (Total: 147)
+[Share] 0x15 Accepted
+[Stratum] Submitting: {"id":151,"method":"mining.submit","params":["worker","3f42509","","69f64f78","04009f05"]}
+
+[Share] ✓ Submitted: 04009F05 from 0x16 (Total: 148)
+[Share] 0x16 Accepted
+[Status] Total: 96270.00 H/s | Diff: 0.001 | Slaves: 7 | Submitted: 148
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Ignoring false positive difficulty error
+[Stratum] Submitting: {"id":152,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0008f408"]}
+
+[Share] ✓ Submitted: 0008F408 from 0x10 (Total: 149)
+[Share] 0x10 Rejected
+[Stratum] Submitting: {"id":153,"method":"mining.submit","params":["worker","3f42509","","69f64f78","01112713"]}
+
+[Share] ✓ Submitted: 01112713 from 0x11 (Total: 150)
+[Share] 0x11 Accepted
+[Stratum] Submitting: {"id":154,"method":"mining.submit","params":["worker","3f42509","","69f64f78","0211297b"]}
+
+[Share] ✓ Submitted: 0211297B from 0x12 (Total: 151)
+[Share] 0x12 Rejected
+[Stratum] Submitting: {"id":155,"method":"mining.submit","params":["worker","3f42509","","69f64f78","030a72d6"]}
+
+[Share] ✓ Submitted: 030A72D6 from 0x13 (Total: 152)
+[Share] 0x13 Rejected
+[Stratum] Submitting: {"id":156,"method":"mining.submit","params":["worker","3f42509","","69f64f78","040329c8"]}
+
+[Share] ✓ Submitted: 040329C8 from 0x14 (Total: 153)
+[Share] 0x14 Accepted
+[Stratum] Submitting: {"id":157,"method":"mining.submit","params":["worker","3f42509","","69f64f78","05032622"]}
+
+[Share] ✓ Submitted: 050

@@ -1,0 +1,94 @@
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] �� Found Slave at 0x12
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 5
+[WiFi] Connecting...
+.
+[WiFi] Connected! IP: 192.168.68.87
+[Pool] Connecting...
+[Pool] Connected!
+[Stratum] Sending subscribe...
+{"id": 1, "method": "mining.subscribe", "params": ["ESPMiner/2.0"]}
+[Stratum] Subscribed - Extranonce1: 16b9c485, Size: 4
+[Stratum] Sending authorize...
+{"id": 2, "method": "mining.authorize", "params": ["bc1q5057sfxgs5nc5703wk9x7ecvsc95042tmyskk8", "x"]}
+[Stratum] Suggest difficulty: {"id":3,"method":"mining.suggest_difficulty","params":[0.001000]}
+
+[Pool] Ready
+=== Master Ready ===
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 100000.000000
+[Pool] Difficulty: 100000.000000
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3f45ae9 parsed successfully
+[Stratum] Parsing set_difficulty...
+[Stratum] Difficulty set to: 0.001000
+[Stratum] ERROR 21: Job not found
+[Stratum] ERROR 21: Job not found
+[Stratum] ERROR 21: Job not found
+[Stratum] ERROR 21: Job not found
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3f45f56 parsed successfully
+[Pool] New job received
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[I2C] Send job to 0x12 failed: 2
+[Master] ✗ Slave 0x12 Lost
+
+[Master] Scanning I2C bus...
+[Master] ��� Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] ✓ Found Slave at 0x16
+[Master] Total Slaves Found: 5
+
+[Diff] Success: 89.3% (Target: 90.0%)
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3f463d0 parsed successfully
+[Pool] New job received
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[I2C] Send job to 0x11 failed: 2
+[Master] ✗ Slave 0x11 Lost
+
+[Master] Scanning I2C bus...
+[Master] ✓ Found Slave at 0x10
+[Master] ✓ Found Slave at 0x11
+[Master] ✓ Found Slave at 0x12
+[Master] ✓ Found Slave at 0x13
+[Master] ✓ Found Slave at 0x14
+[Master] �� Found Slave at 0x16
+[Master] Total Slaves Found: 6
+
+[Diff] Success: 88.1% (Target: 90.0%)
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[Stratum] Parsing mining.notify...
+[Stratum] Job 3f46851 parsed successfully
+[Pool] New job received
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[I2C] Send job to 0x10 failed: 2
+[Master] ��� Slave 0x10 Lost

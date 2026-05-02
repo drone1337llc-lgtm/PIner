@@ -3,7 +3,6 @@
 
 #include <stdint.h>
 #include <stddef.h>
-#include "config.h"
 
 #pragma pack(push, 1)
 
@@ -29,7 +28,6 @@ struct I2CStatusResponse {
 #define JOB_REQUEST_SIZE        sizeof(JobI2cRequest)
 #define STATUS_RESPONSE_SIZE    sizeof(I2CStatusResponse)
 
-// ✅ Slave tracking struct WITH last_hash_count
 struct SlaveData {
     uint8_t     address;
     uint32_t    last_seen;
@@ -37,11 +35,10 @@ struct SlaveData {
     uint32_t    shares_accepted;
     float       hashrate;
     uint32_t    hashes_processed;
-    uint32_t    last_hash_count;  // ✅ ADDED - for overflow detection
+    uint32_t    last_hash_count;
     bool        active;
 };
 
-// CRC function (C++ linkage)
 uint8_t crc8_compute(const void* data, size_t len);
 
 #endif

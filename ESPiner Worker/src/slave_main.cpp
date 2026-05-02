@@ -1,9 +1,20 @@
 #include <Arduino.h>
 #include <driver/i2c.h>
-#include <esp_task_wdt.h>
 #include "config.h"
 #include "i2c_protocol.h"
 #include "sha256_optimized.h"
+
+// ============================================================================
+// ⚙️ SLAVE ADDRESS - CHANGE THIS PER BOARD (0x10 to 0x70)
+// ============================================================================
+#define SLAVE_I2C_ADDRESS   0x15
+// ============================================================================
+
+// ============================================================================
+// SERIAL OUTPUT LIMITING
+// ============================================================================
+volatile uint32_t g_last_serial_output = 0;
+#define SERIAL_OUTPUT_INTERVAL_MS 1000
 
 // ============================================================================
 // SLAVE STATE
@@ -11,7 +22,7 @@
 volatile uint32_t g_hashes_computed = 0;
 volatile uint32_t g_found_nonce = 0xFFFFFFFF;
 volatile bool g_has_job = false;
-volatile float g_current_difficulty = 10.0f;
+volatile float g_current_difficulty = 0.01f;
 uint8_t g_job_header[80];
 uint32_t g_job_midstate[8];
 uint32_t g_job_bake[15];
@@ -22,6 +33,33 @@ static uint8_t* i2c_rx_buf = nullptr;
 static uint8_t g_rx_data[256];
 static volatile bool g_rx_ready = false;
 static volatile int g_rx_len = 0;
+
+// ============================================================================
+// LED HELPERS
+// ============================================================================
+void setLed(bool on) {
+    digitalWrite(LED_PIN, on ? HIGH : LOW);
+}
+
+void blinkLed(int times, int interval_ms) {
+    for (int i = 0; i < times; i++) {
+        setLed(true);
+        delay(interval_ms);
+        setLed(false);
+        if (i < times - 1) delay(interval_ms);
+    }
+}
+
+// ============================================================================
+// SERIAL HELPER
+// ============================================================================
+bool canPrintSerial() {
+    if (millis() - g_last_serial_output >= SERIAL_OUTPUT_INTERVAL_MS) {
+        g_last_serial_output = millis();
+        return true;
+    }
+    return false;
+}
 
 // ============================================================================
 // I2C SLAVE TASK (Core 1)
@@ -52,7 +90,7 @@ void i2c_slave_task(void* pv) {
         return;
     }
     
-    Serial.printf("[I2C] Slave at 0x%02X\n", SLAVE_I2C_ADDRESS);
+    Serial.printf("[I2C] ✓ Slave at 0x%02X\n", SLAVE_I2C_ADDRESS);
     
     i2c_rx_buf = (uint8_t*)malloc(256);
     if (!i2c_rx_buf) {
@@ -79,7 +117,14 @@ void i2c_slave_task(void* pv) {
                 
                 i2c_slave_write_buffer(I2C_PORT, (uint8_t*)&resp, sizeof(resp), 10 / portTICK_PERIOD_MS);
                 
-                if (resp.status == 0x02) g_found_nonce = 0xFFFFFFFF;
+                if (resp.status == 0x02) {
+                    if (canPrintSerial()) {
+                        Serial.printf("[Share] Found: %08X\n", resp.nonce);
+                    }
+                    // ✅ LED: Flash 3x on share found
+                    blinkLed(3, 100);
+                    g_found_nonce = 0xFFFFFFFF;
+                }
             }
         }
         vTaskDelay(1);
@@ -111,10 +156,13 @@ void i2c_process_task(void* pv) {
                     g_current_difficulty = req.difficulty;
                     g_has_job = true;
                     
-                    Serial.printf("[Job] ID:%d Diff:%.2f\n", req.id, req.difficulty);
+                    if (canPrintSerial()) {
+                        Serial.printf("[Job] ✓ ID:%d Diff:%.3f\n", req.id, req.difficulty);
+                    }
                 } else {
-                    Serial.printf("[I2C] CRC fail (exp:0x%02X got:0x%02X)\n", 
-                                 exp_crc, crc8_compute(&req, sizeof(req) - 1));
+                    if (canPrintSerial()) {
+                        Serial.printf("[I2C] ✗ CRC fail\n");
+                    }
                 }
             }
         }
@@ -123,15 +171,15 @@ void i2c_process_task(void* pv) {
 }
 
 // ============================================================================
-// MINING TASK (Core 1) - ALL TASKS ON CORE 1
+// MINING TASK (Core 1) - WITH LED INDICATORS
 // ============================================================================
 void mining_task(void* pv) {
     uint8_t hash[32];
-    uint32_t hash_count = 0;
+    uint32_t last_led_update = 0;
+    bool led_state = false;
     
     while (1) {
         if (g_has_job) {
-            // ✅ Small batches for frequent yields (prevents WDT)
             uint32_t batch_size = 64;
             uint32_t batch_end = g_nonce_current + batch_size;
             if (batch_end > g_nonce_end) batch_end = g_nonce_end;
@@ -142,26 +190,42 @@ void mining_task(void* pv) {
                 g_job_header[74] = (n >> 16) & 0xFF;
                 g_job_header[75] = (n >> 24) & 0xFF;
                 
-                // ✅ Pass difficulty to hash function for share detection
                 if (sha256_double_baked(g_job_midstate, g_job_header + 64, g_job_bake, hash, g_current_difficulty)) {
                     g_found_nonce = n;
-                    Serial.printf("!!! SHARE: 0x%08X (Diff: %.2f)\n", n, g_current_difficulty);
+                    if (canPrintSerial()) {
+                        Serial.printf("!!! SHARE: 0x%08X (Diff: %.3f)\n", n, g_current_difficulty);
+                    }
+                    // ✅ LED: Flash 3x on share found
+                    blinkLed(3, 100);
                 }
                 
                 g_hashes_computed++;
-                hash_count++;
+            }
+            
+            // ✅ LED: Slow blink while mining active (500ms on/off)
+            if (millis() - last_led_update >= 500) {
+                led_state = !led_state;
+                setLed(led_state);
+                last_led_update = millis();
             }
             
             g_nonce_current = batch_end;
             if (g_nonce_current >= g_nonce_end) {
                 g_has_job = false;
-                Serial.println("[Miner] Job complete, waiting...");
+                setLed(false);  // LED off when job complete
+                if (canPrintSerial()) {
+                    Serial.println("[Miner] Job complete");
+                }
             }
             
-            // ✅ Yield after every batch (critical for stability)
             vTaskDelay(0);
         } else {
-            // No job - wait for new one
+            // ✅ LED: Quick blink when waiting for job (2 seconds on/off)
+            if (millis() - last_led_update >= 2000) {
+                led_state = !led_state;
+                setLed(led_state);
+                last_led_update = millis();
+            }
             vTaskDelay(10);
         }
     }
@@ -175,12 +239,13 @@ void status_task(void* pv) {
     uint32_t last_t = millis();
     
     while (1) {
-        vTaskDelay(HASHRATE_UPDATE_MS);
+        vTaskDelay(5000);
         uint32_t h = g_hashes_computed;
         uint32_t t = millis();
         float dt = (t - last_t) / 1000.0f;
         if (dt > 0) {
-            Serial.printf("[Self] %.2f H/s (Total: %lu)\n", (h - last_h)/dt, h);
+            Serial.printf("[Status] %.2f H/s | Total: %lu | Job: %s\n", 
+                         (h - last_h)/dt, h, g_has_job ? "Active" : "Idle");
         }
         last_h = h;
         last_t = t;
@@ -194,24 +259,28 @@ void setup() {
     Serial.begin(115200);
     delay(2000);
     Serial.println("\n=== ESP32 Mining Slave ===");
+    Serial.printf("[Address] 0x%02X\n", SLAVE_I2C_ADDRESS);
     
-    // ✅ Disable WDT - we yield properly so don't need it
-    esp_task_wdt_deinit();
+    // ✅ Initialize LED
+    pinMode(LED_PIN, OUTPUT);
+    setLed(false);
+    
+    // ✅ Boot blink indicator (2 quick blinks)
+    blinkLed(2, 200);
     
     pinMode(I2C_SDA_PIN, INPUT_PULLUP);
     pinMode(I2C_SCL_PIN, INPUT_PULLUP);
     
-    // ✅ ALL TASKS ON CORE 1 - Core 0 stays free for IDLE
     xTaskCreatePinnedToCore(i2c_slave_task, "I2C_Slave", MINING_STACK_SIZE, NULL, 6, NULL, 1);
     xTaskCreatePinnedToCore(i2c_process_task, "I2C_Proc", MINING_STACK_SIZE, NULL, 5, NULL, 1);
     xTaskCreatePinnedToCore(mining_task, "Miner", MINING_STACK_SIZE, NULL, 4, NULL, 1);
     xTaskCreatePinnedToCore(status_task, "Status", 4000, NULL, 3, NULL, 1);
     
+    g_last_serial_output = millis();
+    
     Serial.println("=== Slave Ready ===");
-    Serial.printf("[Info] All tasks on Core 1, Core 0 free for IDLE\n");
 }
 
 void loop() {
-    // Core 0 just idles - keeps IDLE0 task happy
     vTaskDelay(100);
 }

@@ -3,7 +3,7 @@
 
 #include <Arduino.h>
 #include <atomic>
-#include "config.h"
+#include "config.h" 
 #include "sha256_optimized.h"
 #include "i2c_protocol.h"
 

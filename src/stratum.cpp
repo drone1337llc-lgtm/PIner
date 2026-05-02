@@ -31,7 +31,7 @@ bool checkError(const JsonDocument& jsonDoc) {
                 
                 if (errorCode == 23 && errorMessage != nullptr && 
                     strcmp(errorMessage, "Difficulty too low") == 0) {
-                    Serial.println("[Stratum] Ignoring false positive difficulty error");
+                    //Serial.println("[Stratum] Ignoring false positive difficulty error");
                     return false;
                 }
                 
@@ -240,8 +240,8 @@ bool tx_mining_submit(WiFiClient& client, mining_subscribe& mWorker,
             g_id, mWorker.wName, mJob.job_id.c_str(), 
             mWorker.extranonce2.c_str(), mJob.ntime.c_str(), nonceStr);
     
-    Serial.print("[Stratum] Submitting: ");
-    Serial.println(payload);
+    //Serial.print("[Stratum] Submitting: ");
+    //Serial.println(payload);
     client.print(payload);
     
     return true;
