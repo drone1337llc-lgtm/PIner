@@ -5,14 +5,16 @@
 #include <thread>
 #include <atomic>
 #include <sched.h>
+#include <cstdint>
 
 class MiningWorker {
 public:
-    MiningWorker(int worker_id);
+    MiningWorker(int worker_id, int core_id);
     ~MiningWorker();
     
     void start();
-    void updateJob(const uint8_t* header, uint32_t nonce_start, uint32_t nonce_end, double difficulty, uint64_t job_version);
+    void updateJob(const uint8_t* header, uint32_t nonce_start, uint32_t nonce_end, 
+                   double difficulty, uint64_t job_version);
     void stop();
     
     uint64_t getHashCount() const;
@@ -22,15 +24,17 @@ public:
     bool hasFoundShare() const { return m_found_nonce.load(std::memory_order_acquire) != 0xFFFFFFFF; }
     void clearFoundNonce() { m_found_nonce.store(0xFFFFFFFF, std::memory_order_release); }
     int getId() const { return m_worker_id; }
+    int getCoreId() const { return m_core_id; }
 
 private:
     int m_worker_id;
+    int m_core_id;
     std::thread m_thread;
     std::atomic<bool> m_running{false};
     std::atomic<uint32_t> m_found_nonce{0xFFFFFFFF};
     std::atomic<uint64_t> m_job_version{0};
     
-    SHA256Miner m_miner;
+    alignas(64) SHA256Miner m_miner;          // Cache-line aligned
     
     void workerThread();
 };

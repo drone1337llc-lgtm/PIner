@@ -11,7 +11,8 @@
 class StratumClient {
 public:
     StratumClient();
-    StratumClient(const std::string& host, int port, const std::string& user, const std::string& pass, double difficulty = 5000.0);
+    StratumClient(const std::string& host, int port, const std::string& user, 
+                  const std::string& pass, double difficulty = 5000.0);
     ~StratumClient();
 
     bool connect();
@@ -19,38 +20,23 @@ public:
     void disconnect();
     void update();
 
-    bool hasNewJob() { return m_new_job_available.load(); }
-    void clearNewJobFlag() { m_new_job_available.store(false); }
+    bool hasNewJob() { return m_new_job_available.load(std::memory_order_acquire); }
+    void clearNewJobFlag() { m_new_job_available.store(false, std::memory_order_release); }
     
-    const uint8_t* getHeader() { 
-        std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
-        return m_current_header; 
-    }
-    
-    double getDifficulty() { return m_difficulty.load(); }
-    std::string getJobId() { 
-        std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
-        return m_job_id; 
-    }
-    
-    // NEW: Getters for share submission
-    std::string getExtranonce2() {
-        std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
-        return m_extranonce2;
-    }
-    std::string getNtime() {
-        std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
-        return m_current_ntime;
-    }
+    const uint8_t* getHeader() { return m_current_header; }
+    double getDifficulty() { return m_difficulty.load(std::memory_order_relaxed); }
+    std::string getJobId() { return m_job_id; }
+    std::string getExtranonce2() { return m_extranonce2; }
+    std::string getNtime() { return m_current_ntime; }
 
     bool submitShare(uint32_t nonce, const std::string& job_id);
-    bool submitShare(const std::string& job_id, const std::string& en2, const std::string& ntime, uint32_t nonce);
+    bool submitShare(const std::string& job_id, const std::string& en2, 
+                     const std::string& ntime, uint32_t nonce);
     
-    bool isConnected() const { return m_socket_fd >= 0 && m_connected.load(); }
+    bool isConnected() const { return m_socket_fd >= 0 && m_connected.load(std::memory_order_acquire); }
     
-    // Share tracking
-    uint64_t getAcceptedCount() const { return m_shares_accepted.load(); }
-    uint64_t getRejectedCount() const { return m_shares_rejected.load(); }
+    uint64_t getAcceptedCount() const { return m_shares_accepted.load(std::memory_order_relaxed); }
+    uint64_t getRejectedCount() const { return m_shares_rejected.load(std::memory_order_relaxed); }
 
 private:
     double m_suggested_difficulty{5000.0};
@@ -62,7 +48,7 @@ private:
     std::atomic<bool> m_running;
     std::atomic<bool> m_connected{false};
     std::thread m_rx_thread;
-    std::recursive_mutex m_data_mutex;
+    std::mutex m_data_mutex;
     uint8_t m_current_header[80];
     
     std::string m_job_id;
@@ -80,7 +66,6 @@ private:
     int m_extranonce2_size;
     uint32_t m_extranonce2_counter;
     
-    // Share tracking
     std::atomic<uint64_t> m_shares_accepted{0};
     std::atomic<uint64_t> m_shares_rejected{0};
 

@@ -5,7 +5,7 @@
 #include <vector>
 #include <cstdint>
 
-struct DisplayStats {
+struct alignas(16) DisplayStats {
     uint64_t shares_accepted;
     uint64_t shares_rejected;
     uint64_t total_nonces;

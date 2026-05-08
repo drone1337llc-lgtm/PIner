@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <sys/socket.h>
 #include <arpa/inet.h>
+#include <netinet/tcp.h>
 #include <netdb.h>
 #include <unistd.h>
 #include <fcntl.h>
@@ -14,39 +15,22 @@
 #include <sched.h>
 
 StratumClient::StratumClient() 
-    : m_socket_fd(-1)
-    , m_running(false)
-    , m_connected(false)
-    , m_difficulty(4.0)
-    , m_new_job_available(false)
-    , m_extranonce2_size(4)
-    , m_extranonce2_counter(0)
-    , m_shares_accepted(0)
-    , m_shares_rejected(0) {
+    : m_socket_fd(-1), m_running(false), m_connected(false), m_difficulty(4.0),
+      m_new_job_available(false), m_extranonce2_size(4), m_extranonce2_counter(0),
+      m_shares_accepted(0), m_shares_rejected(0) {
     std::memset(m_current_header, 0, 80);
 }
 
-StratumClient::StratumClient(const std::string& host, int port, const std::string& user, const std::string& pass, double difficulty)
-    : m_host(host)
-    , m_port(port)
-    , m_user(user)
-    , m_pass(pass)
-    , m_suggested_difficulty(difficulty)
-    , m_socket_fd(-1)
-    , m_running(false)
-    , m_connected(false)
-    , m_difficulty(1.0)
-    , m_new_job_available(false)
-    , m_extranonce2_size(4)
-    , m_extranonce2_counter(0)
-    , m_shares_accepted(0)
-    , m_shares_rejected(0) {
+StratumClient::StratumClient(const std::string& host, int port, const std::string& user, 
+                              const std::string& pass, double difficulty)
+    : m_host(host), m_port(port), m_user(user), m_pass(pass), m_suggested_difficulty(difficulty),
+      m_socket_fd(-1), m_running(false), m_connected(false), m_difficulty(1.0),
+      m_new_job_available(false), m_extranonce2_size(4), m_extranonce2_counter(0),
+      m_shares_accepted(0), m_shares_rejected(0) {
     std::memset(m_current_header, 0, 80);
 }
 
-StratumClient::~StratumClient() {
-    disconnect();
-}
+StratumClient::~StratumClient() { disconnect(); }
 
 bool StratumClient::connect() {
     LOG_INFO("Connecting to " + m_host + ":" + std::to_string(m_port) + "...");
@@ -63,9 +47,11 @@ bool StratumClient::connect() {
         return false;
     }
     
-    // Set socket options for stability
     int keepalive = 1;
     setsockopt(m_socket_fd, SOL_SOCKET, SO_KEEPALIVE, &keepalive, sizeof(keepalive));
+    
+    int tcp_nodelay = 1;
+    setsockopt(m_socket_fd, IPPROTO_TCP, TCP_NODELAY, &tcp_nodelay, sizeof(tcp_nodelay));
     
     struct sockaddr_in serv_addr;
     std::memset(&serv_addr, 0, sizeof(serv_addr));
@@ -73,7 +59,6 @@ bool StratumClient::connect() {
     std::memcpy(&serv_addr.sin_addr.s_addr, server->h_addr, server->h_length);
     serv_addr.sin_port = htons(m_port);
 
-    // Use blocking connect for reliability
     int connect_result = ::connect(m_socket_fd, (struct sockaddr*)&serv_addr, sizeof(serv_addr));
     if (connect_result < 0) {
         LOG_ERROR_ALWAYS("Connection failed: " + std::string(strerror(errno)));
@@ -93,7 +78,8 @@ bool StratumClient::connect() {
     usleep(200000);
     
     LOG_INFO("Sending authorize...");
-    std::string auth = "{\"id\":2,\"method\":\"mining.authorize\",\"params\":[\"" + m_user + "\",\"" + m_pass + "\"]}\n";
+    std::string auth = "{\"id\":2,\"method\":\"mining.authorize\",\"params\":[\"" + 
+                       m_user + "\",\"" + m_pass + "\"]}\n";
     sendMessage(auth);
     usleep(200000);
     
@@ -117,6 +103,7 @@ void StratumClient::disconnect() {
     m_running = false;
     stopReceiveThread();
     if (m_socket_fd >= 0) {
+        shutdown(m_socket_fd, SHUT_RDWR);
         close(m_socket_fd);
         m_socket_fd = -1;
     }
@@ -127,8 +114,8 @@ void StratumClient::startReceiveThread() {
     m_rx_thread = std::thread(&StratumClient::receiveLoop, this);
     
     struct sched_param sp;
-    sp.sched_priority = 0;
-    pthread_setschedparam(m_rx_thread.native_handle(), SCHED_OTHER, &sp);
+    sp.sched_priority = 15;
+    pthread_setschedparam(m_rx_thread.native_handle(), SCHED_FIFO, &sp);
     
     cpu_set_t cpuset;
     CPU_ZERO(&cpuset);
@@ -141,7 +128,7 @@ void StratumClient::stopReceiveThread() {
 }
 
 bool StratumClient::sendMessage(const std::string& message) {
-    if (m_socket_fd < 0 || !m_connected.load()) return false;
+    if (m_socket_fd < 0 || !m_connected.load(std::memory_order_acquire)) return false;
     ssize_t sent = send(m_socket_fd, message.c_str(), message.length(), MSG_NOSIGNAL);
     if (sent < 0) {
         m_connected.store(false, std::memory_order_release);
@@ -192,13 +179,8 @@ std::vector<std::string> StratumClient::parseStratumParams(const std::string& pa
     while (pos < params_str.length()) {
         char c = params_str[pos];
         
-        if (c == '\\' && in_string) {
-            pos++;
-            continue;
-        }
-        if (c == '"') {
-            in_string = !in_string;
-        }
+        if (c == '\\' && in_string) { pos++; continue; }
+        if (c == '"') in_string = !in_string;
         if (c == '[' && !in_string) {
             bracket_depth++;
             if (bracket_depth == 1) element_start = pos;
@@ -266,26 +248,20 @@ std::vector<std::string> StratumClient::extractMerkleBranches(const std::string&
 }
 
 void StratumClient::parseLine(const std::string& line) {
-    std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
+    std::lock_guard<std::mutex> lock(m_data_mutex);
     
-    if (line.find("\"id\":1") != std::string::npos && 
-        line.find("\"result\"") != std::string::npos) {
-        
+    if (line.find("\"id\":1") != std::string::npos && line.find("\"result\"") != std::string::npos) {
         size_t pos = line.find("]]");
         if (pos != std::string::npos) {
             pos += 2;
             while (pos < line.length() && (line[pos] == ',' || line[pos] == ' ' || line[pos] == '"')) {
-                if (line[pos] == '"') {
-                    pos++;
-                    break;
-                }
+                if (line[pos] == '"') { pos++; break; }
                 pos++;
             }
             
             size_t en1_end = line.find('"', pos);
             if (en1_end != std::string::npos && en1_end > pos) {
                 m_extranonce1 = line.substr(pos, en1_end - pos);
-                
                 pos = en1_end + 1;
                 while (pos < line.length() && (line[pos] == ',' || line[pos] == ' ')) pos++;
                 
@@ -301,9 +277,7 @@ void StratumClient::parseLine(const std::string& line) {
         return;
     }
     
-    if (line.find("\"method\"") != std::string::npos && 
-        line.find("\"mining.notify\"") != std::string::npos) {
-        
+    if (line.find("\"method\"") != std::string::npos && line.find("\"mining.notify\"") != std::string::npos) {
         if (m_extranonce1.empty()) {
             LOG_ERROR_ALWAYS("extranonce1 not set!");
             return;
@@ -320,9 +294,8 @@ void StratumClient::parseLine(const std::string& line) {
         bool in_string = false;
         while (array_end < line.length() && bracket_depth > 0) {
             char c = line[array_end];
-            if (c == '"' && (array_end == 0 || line[array_end-1] != '\\')) {
-                in_string = !in_string;
-            } else if (!in_string) {
+            if (c == '"' && (array_end == 0 || line[array_end-1] != '\\')) in_string = !in_string;
+            else if (!in_string) {
                 if (c == '[') bracket_depth++;
                 else if (c == ']') bracket_depth--;
             }
@@ -345,7 +318,6 @@ void StratumClient::parseLine(const std::string& line) {
                 }
                 
                 m_extranonce2 = generateExtranonce2();
-                
                 std::string merkle = SHA256Utils::calculateMerkleRoot(
                     coinb1, m_extranonce1, m_extranonce2, coinb2, m_merkle_branches);
                 m_merkle_root = merkle;
@@ -355,11 +327,9 @@ void StratumClient::parseLine(const std::string& line) {
                 m_current_ntime = elements[7];
                 
                 buildHeader();
-                
                 m_new_job_available.store(true, std::memory_order_release);
                 
                 LOG_INFO("New job: " + m_job_id + " en2=" + m_extranonce2 + " ntime=" + m_current_ntime);
-                
             } catch (const std::exception& e) {
                 LOG_ERROR_ALWAYS("Parse error: " + std::string(e.what()));
             }
@@ -373,10 +343,7 @@ void StratumClient::parseLine(const std::string& line) {
             size_t diff_end = line.find(']', diff_start);
             if (diff_end != std::string::npos) {
                 std::string diff_str = line.substr(diff_start + 1, diff_end - diff_start - 1);
-                try {
-                    m_difficulty.store(std::stod(diff_str));
-                    LOG_INFO("Difficulty: " + std::to_string(m_difficulty.load()));
-                } catch (...) {}
+                try { m_difficulty.store(std::stod(diff_str)); } catch (...) {}
             }
         }
         return;
@@ -405,7 +372,6 @@ std::string StratumClient::generateExtranonce2() {
     } else if ((int)result.length() < hex_len) {
         result = std::string(hex_len - result.length(), '0') + result;
     }
-    
     return result;
 }
 
@@ -450,21 +416,20 @@ void StratumClient::buildHeader() {
 }
 
 void StratumClient::update() {
-    if (!m_connected.load()) {
+    if (!m_connected.load(std::memory_order_acquire)) {
         LOG_INFO("Attempting reconnect...");
         reconnect();
     }
 }
 
 bool StratumClient::submitShare(uint32_t nonce, const std::string& job_id) {
-    std::lock_guard<std::recursive_mutex> lock(m_data_mutex);
-    if (!m_connected.load()) {
-        return false;
-    }
+    std::lock_guard<std::mutex> lock(m_data_mutex);
+    if (!m_connected.load(std::memory_order_acquire)) return false;
     return submitShare(job_id, m_extranonce2, m_current_ntime, nonce);
 }
 
-bool StratumClient::submitShare(const std::string& job_id, const std::string& en2, const std::string& ntime, uint32_t nonce) {
+bool StratumClient::submitShare(const std::string& job_id, const std::string& en2, 
+                                 const std::string& ntime, uint32_t nonce) {
     char nonce_str[9];
     snprintf(nonce_str, sizeof(nonce_str), "%08x", nonce);
     

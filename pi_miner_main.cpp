@@ -16,7 +16,12 @@
 #include "stratum_client.h"
 #include "web_server.h"
 #include "logger.h"
+#include <fstream>
+#include <sstream>
 
+std::atomic<double> g_cpu_temp{0.0};
+std::atomic<int> g_cpu_freq{0};
+std::atomic<bool> g_hashrate_warning{false};
 std::atomic<bool> g_running{true};
 std::atomic<uint64_t> g_total_hashes{0};
 std::atomic<uint64_t> g_shares_found{0};
@@ -50,24 +55,76 @@ std::string g_current_extranonce2;
 std::string g_current_ntime;
 std::atomic<uint64_t> g_current_job_version{0};
 
+void systemMonitorThread() {
+    LOG_INFO("SystemMonitor thread started");
+    uint64_t last_check = 0;
+    double last_hashrate = 0.0;
+    int low_hashrate_counter = 0;
+    
+    while (g_running.load(std::memory_order_acquire)) {
+        std::this_thread::sleep_for(std::chrono::milliseconds(CPU_FREQ_CHECK_MS));
+        
+        std::ifstream temp_file("/sys/class/thermal/thermal_zone0/temp");
+        if (temp_file.is_open()) {
+            int temp_raw;
+            temp_file >> temp_raw;
+            g_cpu_temp.store(temp_raw / 1000.0, std::memory_order_relaxed);
+            
+            if (g_cpu_temp.load(std::memory_order_relaxed) > THERMAL_THROTTLE_TEMP) {
+                LOG_WARN("High temperature detected: " + std::to_string(g_cpu_temp.load()) + "°C");
+            }
+        }
+        
+        std::ifstream freq_file("/sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq");
+        if (freq_file.is_open()) {
+            int freq_khz;
+            freq_file >> freq_khz;
+            g_cpu_freq.store(freq_khz, std::memory_order_relaxed);
+        }
+        
+        double current_hashrate = g_hashrate.load(std::memory_order_relaxed);
+        if (last_hashrate > 0 && current_hashrate < last_hashrate * 0.7) {
+            low_hashrate_counter++;
+            if (low_hashrate_counter >= 3) {
+                LOG_WARN("Hashrate dropped significantly: " + 
+                    std::to_string(current_hashrate/1000000) + " MH/s");
+                g_hashrate_warning.store(true);
+            }
+        } else {
+            low_hashrate_counter = 0;
+            g_hashrate_warning.store(false);
+        }
+        last_hashrate = current_hashrate;
+        
+        static int log_counter = 0;
+        if (++log_counter >= 10) {
+            log_counter = 0;
+            std::stringstream ss;
+            ss << "System: " << g_cpu_temp.load() << "°C | " 
+               << g_cpu_freq.load()/1000 << " MHz | "
+               << (g_hashrate.load()/1000000) << " MH/s | Workers: " << NUM_MINING_THREADS;
+            LOG_INFO(ss.str());
+        }
+    }
+    LOG_INFO("SystemMonitor thread stopped");
+}
+
 void signalHandler(int signum) {
     LOG_INFO("Received signal " + std::to_string(signum) + ", shutting down...");
-    g_running.store(false);
+    g_running.store(false, std::memory_order_release);
 }
 
 void shareSubmissionThread() {
     LOG_INFO("ShareSubmission thread started");
     
-    {
-        std::lock_guard<std::mutex> lock(g_share_mutex);
-        g_pending_shares.clear();
-    }
-    while (g_running.load()) {
+    { std::lock_guard<std::mutex> lock(g_share_mutex); g_pending_shares.clear(); }
+    
+    while (g_running.load(std::memory_order_acquire)) {
         std::vector<PendingShare> shares_to_submit;
         {
             std::unique_lock<std::mutex> lock(g_share_mutex);
             g_share_cv.wait_for(lock, std::chrono::milliseconds(10), []{
-                return !g_pending_shares.empty() || !g_running.load();
+                return !g_pending_shares.empty() || !g_running.load(std::memory_order_acquire);
             });
             if (!g_pending_shares.empty()) {
                 shares_to_submit = std::move(g_pending_shares);
@@ -99,7 +156,7 @@ void miningCoordinatorThread() {
 
     for (auto &worker : g_workers) worker->start();
 
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         if (g_stratum && g_stratum->hasNewJob()) {
             const uint8_t *header = g_stratum->getHeader();
             std::string job_id = g_stratum->getJobId();
@@ -119,6 +176,7 @@ void miningCoordinatorThread() {
                     g_current_ntime = ntime;
                 }
 
+                // Distribute nonce range across all workers
                 uint32_t total_nonces = NONCES_PER_THREAD * g_workers.size();
                 uint32_t nonces_per_worker = total_nonces / g_workers.size();
                 
@@ -133,6 +191,7 @@ void miningCoordinatorThread() {
             }
         }
 
+        // Check all workers for found shares
         for (auto &worker : g_workers) {
             if (worker->hasFoundShare()) {
                 uint32_t nonce = worker->getFoundNonce();
@@ -156,6 +215,7 @@ void miningCoordinatorThread() {
             }
         }
 
+        // Update hashrate
         uint64_t current_time = std::chrono::duration_cast<std::chrono::milliseconds>(
                                     std::chrono::system_clock::now().time_since_epoch()).count();
         uint64_t time_delta = current_time - last_hashrate_update;
@@ -171,7 +231,8 @@ void miningCoordinatorThread() {
                 if (instant_hashrate > 0 && instant_hashrate < 1000000000.0) {
                     std::lock_guard<std::mutex> lock(g_hashrate_mutex);
                     g_hashrate_samples.push_back(instant_hashrate);
-                    if (g_hashrate_samples.size() > 10) g_hashrate_samples.pop_front();
+                    if (g_hashrate_samples.size() > HASHRATE_SAMPLE_COUNT) 
+                        g_hashrate_samples.pop_front();
                     double sum = 0.0;
                     for (double sample : g_hashrate_samples) sum += sample;
                     g_total_hashes.store(total_hashes, std::memory_order_relaxed);
@@ -190,12 +251,12 @@ void miningCoordinatorThread() {
 
 void webStatsThread() {
     LOG_INFO("WebStats thread started");
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         WebServerStats stats;
         stats.hashrate = g_hashrate.load(std::memory_order_relaxed);
-        stats.shares_accepted = g_shares_accepted.load();
-        stats.shares_rejected = g_shares_rejected.load();
-        stats.total_nonces = g_total_hashes.load();
+        stats.shares_accepted = g_shares_accepted.load(std::memory_order_relaxed);
+        stats.shares_rejected = g_shares_rejected.load(std::memory_order_relaxed);
+        stats.total_nonces = g_total_hashes.load(std::memory_order_relaxed);
         stats.uptime_seconds = (std::chrono::duration_cast<std::chrono::milliseconds>(
                                     std::chrono::system_clock::now().time_since_epoch()).count() - g_start_time) / 1000;
         stats.difficulty = g_stratum ? g_stratum->getDifficulty() : 0;
@@ -211,28 +272,38 @@ void webStatsThread() {
 void shareResponseThread() {
     LOG_INFO("ShareResponse thread started");
     uint64_t last_accepted = 0, last_rejected = 0;
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         uint64_t accepted = g_stratum ? g_stratum->getAcceptedCount() : 0;
         uint64_t rejected = g_stratum ? g_stratum->getRejectedCount() : 0;
-        if (accepted > last_accepted) { g_shares_accepted.fetch_add(accepted - last_accepted); last_accepted = accepted; }
-        if (rejected > last_rejected) { g_shares_rejected.fetch_add(rejected - last_rejected); last_rejected = rejected; }
+        if (accepted > last_accepted) { 
+            g_shares_accepted.fetch_add(accepted - last_accepted, std::memory_order_relaxed); 
+            last_accepted = accepted; 
+        }
+        if (rejected > last_rejected) { 
+            g_shares_rejected.fetch_add(rejected - last_rejected, std::memory_order_relaxed); 
+            last_rejected = rejected; 
+        }
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
     }
     LOG_INFO("ShareResponse thread stopped");
 }
 
 void keepaliveThread();
+
 void statusReportThread() {
     LOG_INFO("StatusReport thread started");
     int counter = 0;
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         std::this_thread::sleep_for(std::chrono::seconds(1));
         if (++counter % 30 == 0) {
-            uint64_t total = g_shares_accepted.load() + g_shares_rejected.load();
-            double rate = total > 0 ? (100.0 * g_shares_accepted.load() / total) : 100.0;
+            uint64_t total = g_shares_accepted.load(std::memory_order_relaxed) + 
+                            g_shares_rejected.load(std::memory_order_relaxed);
+            double rate = total > 0 ? (100.0 * g_shares_accepted.load(std::memory_order_relaxed) / total) : 100.0;
             std::stringstream ss;
-            ss << "Hashrate: " << (g_hashrate.load() / 1000000.0) << " MH/s | Shares: " 
-               << g_shares_accepted.load() << "/" << g_shares_rejected.load() << " (" << rate << "%)";
+            ss << "Hashrate: " << (g_hashrate.load(std::memory_order_relaxed) / 1000000.0) 
+               << " MH/s | Shares: " << g_shares_accepted.load(std::memory_order_relaxed) << "/" 
+               << g_shares_rejected.load(std::memory_order_relaxed) << " (" << rate << "%) | Workers: " 
+               << NUM_MINING_THREADS;
             LOG_INFO(ss.str());
         }
     }
@@ -241,7 +312,7 @@ void statusReportThread() {
 
 void connectionMonitorThread() {
     LOG_INFO("ConnectionMonitor thread started");
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         std::this_thread::sleep_for(std::chrono::seconds(10));
         if (g_stratum && !g_stratum->isConnected()) {
             LOG_INFO("Connection lost, reconnecting...");
@@ -253,7 +324,7 @@ void connectionMonitorThread() {
 
 int main(int argc, char **argv) {
     Logger::getInstance().init("miner.log", false);
-    LOG_INFO("=== Pi Bitcoin Miner Starting ===");
+    LOG_INFO("=== Pi Bitcoin Miner Starting (Multi-Worker Optimized) ===");
     
     std::string pool_host = DEFAULT_POOL_HOST;
     int pool_port = DEFAULT_POOL_PORT;
@@ -279,14 +350,26 @@ int main(int argc, char **argv) {
 
     LOG_INFO("Pool: " + pool_host + ":" + std::to_string(pool_port));
     LOG_INFO("User: " + pool_user);
-    LOG_INFO("Threads: " + std::to_string(NUM_MINING_THREADS));
+    LOG_INFO("Mining Cores: " + std::to_string(MINING_CORES) + " (cores " + 
+             std::to_string(MINING_CORE_START) + "-" + std::to_string(MINING_CORE_START + MINING_CORES - 1) + ")");
+    LOG_INFO("Workers: " + std::to_string(NUM_MINING_THREADS) + " (" + 
+             std::to_string(WORKERS_PER_CORE) + " per core)");
     LOG_INFO("Dashboard: http://localhost:" + std::to_string(WEB_PORT));
 
-    struct sched_param sp; sp.sched_priority = 0;
-    pthread_setschedparam(pthread_self(), SCHED_OTHER, &sp);
+    // Set main thread to core 0 (system/stratum)
+    struct sched_param sp; 
+    sp.sched_priority = 30;  // Highest priority for main thread
+    cpu_set_t main_cpuset;
+    CPU_ZERO(&main_cpuset);
+    CPU_SET(0, &main_cpuset);
+    pthread_setaffinity_np(pthread_self(), sizeof(main_cpuset), &main_cpuset);
+    pthread_setschedparam(pthread_self(), SCHED_FIFO, &sp);
 
-    for (int i = 0; i < NUM_MINING_THREADS; i++)
-        g_workers.push_back(std::make_unique<MiningWorker>(i));
+    // Create workers distributed across mining cores
+    for (int i = 0; i < NUM_MINING_THREADS; i++) {
+        int core_id = MINING_CORE_START + (i % MINING_CORES);
+        g_workers.push_back(std::make_unique<MiningWorker>(i, core_id));
+    }
 
     g_stratum = std::make_unique<StratumClient>(pool_host, pool_port, pool_user, pool_pass, DEFAULT_DIFFICULTY);
     g_web_server = std::make_unique<WebServer>(WEB_PORT);
@@ -308,7 +391,7 @@ int main(int argc, char **argv) {
         LOG_ERROR_ALWAYS("No job received from pool!");
         return 1;
     }
-    LOG_INFO("Job received, starting miners...");
+    LOG_INFO("Job received, starting " + std::to_string(NUM_MINING_THREADS) + " workers...");
 
     std::thread share_submit_thread(shareSubmissionThread);
     std::thread share_response_thread(shareResponseThread);
@@ -317,14 +400,16 @@ int main(int argc, char **argv) {
     std::thread status_report_thread(statusReportThread);
     std::thread connection_monitor_thread(connectionMonitorThread);
     std::thread keepalive_thread(keepaliveThread);
+    std::thread system_monitor_thread(systemMonitorThread);
 
     try {
-        while (g_running.load()) std::this_thread::sleep_for(std::chrono::seconds(1));
+        while (g_running.load(std::memory_order_acquire)) 
+            std::this_thread::sleep_for(std::chrono::seconds(1));
     } catch (const std::exception &e) {
-        LOG_ERROR_ALWAYS("Exception: " + std::string(e.what()));
+        LOG_ERROR_ALWAYS("Exception: " + std::to_string(e.what()));
     }
 
-    g_running.store(false);
+    g_running.store(false, std::memory_order_release);
     g_share_cv.notify_all();
 
     if (share_submit_thread.joinable()) share_submit_thread.join();
@@ -334,6 +419,7 @@ int main(int argc, char **argv) {
     if (status_report_thread.joinable()) status_report_thread.join();
     if (connection_monitor_thread.joinable()) connection_monitor_thread.join();
     if (keepalive_thread.joinable()) keepalive_thread.join();
+    if (system_monitor_thread.joinable()) system_monitor_thread.join();
 
     g_stratum->disconnect();
     g_web_server->stop();
@@ -344,7 +430,7 @@ int main(int argc, char **argv) {
 
 void keepaliveThread() {
     LOG_INFO("Keepalive thread started");
-    while (g_running.load()) {
+    while (g_running.load(std::memory_order_acquire)) {
         std::this_thread::sleep_for(std::chrono::seconds(30));
         if (g_stratum) g_stratum->update();
     }
